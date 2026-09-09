@@ -4,6 +4,8 @@ class Solution {
 
         for (int i = 0; i < length; i++) {
             if (arr[i] == 0 && i + 1 < length) {
+
+                // Shift elements to make space for duplicate zero
                 for (int j = length - 1; j > i + 1; j--) {
                     arr[j] = arr[j - 1];
                 }
