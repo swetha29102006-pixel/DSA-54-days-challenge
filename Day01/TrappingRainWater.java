@@ -4,5 +4,9 @@ class Solution {
         int left = 0, right = n - 1;
         int leftMax = 0, rightMax = 0;
         int res = 0;
+
+        while (left <= right) {
+            
+        }
     }
 }
