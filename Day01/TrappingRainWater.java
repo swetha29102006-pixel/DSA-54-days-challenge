@@ -5,6 +5,7 @@ class Solution {
         int leftMax = 0, rightMax = 0;
         int res = 0;
 
+        // Use two pointers to calculate trapped water in O(n) time
         while (left <= right) {
             if (height[left] <= height[right]) {
                 if (height[left] >= leftMax) {
