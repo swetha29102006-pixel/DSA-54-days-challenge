@@ -13,6 +13,13 @@ class Solution {
                     res += leftMax - height[left];
                 }
                 left++;
+            } else {
+                if (height[right] >= rightMax) {
+                    rightMax = height[right];
+                } else {
+                    res += rightMax - height[right];
+                }
+                right--;
             }
         }
     }
