@@ -17,5 +17,7 @@ class Solution {
             res[i] *= suf;
             suf *= nums[i];
         }
+
+        return res;
     }
 }
