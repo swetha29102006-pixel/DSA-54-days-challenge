@@ -20,5 +20,7 @@ class Solution {
                 res.add(nums[q.peek()]);
             }
         }
+
+        return res.stream().mapToInt(i -> i).toArray();
     }
 }
