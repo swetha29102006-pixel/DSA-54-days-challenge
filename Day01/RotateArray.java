@@ -5,4 +5,8 @@ class Solution {
         int n = nums.length;
         k %= n;
     }
+
+    private void reverse(int[] nums, int start, int end) {
+        
+    }
 }
