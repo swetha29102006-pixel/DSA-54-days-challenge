@@ -10,5 +10,7 @@ class Solution {
             res[i] = pre;
             pre *= nums[i];
         }
+
+        int suf = 1;
     }
 }
