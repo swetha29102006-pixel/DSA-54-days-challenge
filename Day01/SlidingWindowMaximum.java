@@ -15,6 +15,10 @@ class Solution {
             if (q.getFirst() == i - k) {
                 q.removeFirst();
             }
+
+            if (i >= k - 1) {
+                res.add(nums[q.peek()]);
+            }
         }
     }
 }
