@@ -11,6 +11,10 @@ class Solution {
             }
 
             q.addLast(i);
+
+            if (q.getFirst() == i - k) {
+                q.removeFirst();
+            }
         }
     }
 }
