@@ -24,7 +24,10 @@ class Solution {
         Integer[] ans = new Integer[n];
 
         for (int i = n - 1; i >= 0; i--) {
-            
+            int x = nums[i] + 10001;
+
+            ans[i] = sum(x);
+            add(x + 1);
         }
 
         return Arrays.asList(ans);
