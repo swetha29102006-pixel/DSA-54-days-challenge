@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     int[] bit = new int[20002];
 
