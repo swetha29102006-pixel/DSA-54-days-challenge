@@ -16,6 +16,8 @@ class Solution {
 
             if (pairsCount < k) {
                 minDistance = midDistance + 1;
+            } else {
+                maxDistance = midDistance;
             }
         }
 
