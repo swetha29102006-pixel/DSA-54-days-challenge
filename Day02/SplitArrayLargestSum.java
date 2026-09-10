@@ -13,6 +13,19 @@ class Solution {
     private int find(int l, int h, int n[], int k) {
         if (l > h) return l;
         
+        int c = 1;
+        int m = l + (h - l) / 2;
+        int sum = 0;
+        
+        for (int i : n) {
+            if (i + sum > m) {
+                sum = i;
+                c++;
+            } else {
+                sum += i;
+            }
+        }
+        
         return 0;
     }
 }
