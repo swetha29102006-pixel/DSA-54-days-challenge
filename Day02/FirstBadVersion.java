@@ -5,6 +5,12 @@ public class Solution extends VersionControl {
         int l = 0;
         int r = n;
 
-        return 1;
+        int fBR = -1;
+
+        while (l <= r) {
+            
+        }
+
+        return fBR;
     }
 }
