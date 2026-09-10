@@ -8,6 +8,17 @@ class Solution {
         }
     }
 
+    int sum(int i) {
+        int s = 0;
+
+        while (i > 0) {
+            s += bit[i];
+            i -= i & -i;
+        }
+
+        return s;
+    }
+
     public List<Integer> countSmaller(int[] nums) {
         int n = nums.length;
         Integer[] ans = new Integer[n];
