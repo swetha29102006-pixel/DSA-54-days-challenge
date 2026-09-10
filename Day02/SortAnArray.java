@@ -36,6 +36,8 @@ class Solution {
 
             mergeSort(arr, low, middle);
             mergeSort(arr, middle + 1, high);
+
+            mergeFun(arr, low, middle, high);
         }
     }
 }
