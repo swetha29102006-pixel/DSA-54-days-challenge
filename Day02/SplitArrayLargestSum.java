@@ -26,6 +26,9 @@ class Solution {
             }
         }
         
+        if (c <= k)
+            return find(l, m - 1, n, k);
+        
         return 0;
     }
 }
