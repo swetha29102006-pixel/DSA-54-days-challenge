@@ -11,6 +11,11 @@ public class Solution extends VersionControl {
             int mid = l + (r - l) / 2;
 
             boolean res = isBadVersion(mid);
+
+            if (res) {
+                fBR = mid;
+                r = mid - 1;
+            }
         }
 
         return fBR;
