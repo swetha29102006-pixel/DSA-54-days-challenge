@@ -4,7 +4,7 @@ public class Solution extends GuessGame {
         int high = n;
 
         while (low <= high) {
-            
+            int mid = low + (high - low) / 2;
         }
 
         return -1;
