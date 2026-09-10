@@ -13,6 +13,10 @@ class Solution {
 
             int pairsCount =
                 countPairsWithinDistance(numbers, midDistance);
+
+            if (pairsCount < k) {
+                minDistance = midDistance + 1;
+            }
         }
 
         return minDistance;
