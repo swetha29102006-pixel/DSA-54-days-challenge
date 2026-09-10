@@ -5,6 +5,8 @@ public class Solution extends GuessGame {
 
         while (low <= high) {
             int mid = low + (high - low) / 2;
+
+            int result = guess(mid);
         }
 
         return -1;
