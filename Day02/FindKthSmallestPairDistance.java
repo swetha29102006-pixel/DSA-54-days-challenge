@@ -7,6 +7,11 @@ class Solution {
         int minDistance = 0;
         int maxDistance = numbers[numbers.length - 1] - numbers[0];
 
-        return 0;
+        while (minDistance < maxDistance) {
+            int midDistance =
+                minDistance + (maxDistance - minDistance) / 2;
+        }
+
+        return minDistance;
     }
 }
