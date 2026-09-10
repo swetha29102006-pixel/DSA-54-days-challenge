@@ -8,7 +8,9 @@ public class Solution extends VersionControl {
         int fBR = -1;
 
         while (l <= r) {
-            
+            int mid = l + (r - l) / 2;
+
+            boolean res = isBadVersion(mid);
         }
 
         return fBR;
