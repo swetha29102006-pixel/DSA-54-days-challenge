@@ -9,7 +9,16 @@ class Solution {
         int n2 = r - m;
 
         int[] left = new int[n1];
+
+        for (int i = 0; i < n1; i++) {
+            left[i] = arr[l + i];
+        }
+
         int[] right = new int[n2];
+
+        for (int i = 0; i < n2; i++) {
+            right[i] = arr[m + 1 + i];
+        }
     }
 
     public static void mergeSort(int[] arr, int low, int high) {
