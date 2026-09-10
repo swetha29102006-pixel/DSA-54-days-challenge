@@ -12,6 +12,8 @@ public class Solution extends GuessGame {
                 return mid;
             } else if (result == -1) {
                 high = mid - 1;
+            } else {
+                low = mid + 1;
             }
         }
 
