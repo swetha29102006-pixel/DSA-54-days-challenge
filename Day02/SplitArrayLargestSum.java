@@ -29,6 +29,6 @@ class Solution {
         if (c <= k)
             return find(l, m - 1, n, k);
         
-        return 0;
+        return find(m + 1, h, n, k);
     }
 }
