@@ -1,3 +1,6 @@
+/* The guess API is defined in the parent class GuessGame.
+      int guess(int num); */
+
 public class Solution extends GuessGame {
     public int guessNumber(int n) {
         int low = 1;
