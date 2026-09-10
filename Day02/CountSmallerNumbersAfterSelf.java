@@ -23,6 +23,10 @@ class Solution {
         int n = nums.length;
         Integer[] ans = new Integer[n];
 
+        for (int i = n - 1; i >= 0; i--) {
+            
+        }
+
         return Arrays.asList(ans);
     }
 }
