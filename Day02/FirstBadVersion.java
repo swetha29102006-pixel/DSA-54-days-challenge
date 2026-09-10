@@ -15,6 +15,8 @@ public class Solution extends VersionControl {
             if (res) {
                 fBR = mid;
                 r = mid - 1;
+            } else {
+                l = mid + 1;
             }
         }
 
