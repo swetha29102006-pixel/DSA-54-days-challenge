@@ -19,6 +19,15 @@ class Solution {
         for (int i = 0; i < n2; i++) {
             right[i] = arr[m + 1 + i];
         }
+
+        int i = 0, j = 0, k = l;
+
+        while (i < n1 || j < n2) {
+            if (j == n2 || i < n1 && left[i] < right[j])
+                arr[k++] = left[i++];
+            else
+                arr[k++] = right[j++];
+        }
     }
 
     public static void mergeSort(int[] arr, int low, int high) {
