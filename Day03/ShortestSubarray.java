@@ -13,6 +13,13 @@ class Solution {
             if (curSum >= k) {
                 res = Math.min(res, r + 1);
             }
+
+            while (!q.isEmpty() &&
+                   curSum - q.peekFirst().getKey() >= k) {
+
+                Pair<Long, Integer> front = q.pollFirst();
+                res = Math.min(res, r - front.getValue());
+            }
         }
 
         return res == Integer.MAX_VALUE ? -1 : res;
