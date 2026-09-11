@@ -13,8 +13,14 @@ class Solution {
 
             currMin = Math.min(nums[i], currMin + nums[i]);
             minSum = Math.min(currMin, minSum);
+
+            totalSum += nums[i];
         }
 
-        return maxSum;
+        if (minSum == totalSum) {
+            return maxSum;
+        }
+
+        return Math.max(maxSum, totalSum - minSum);
     }
 }
