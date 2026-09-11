@@ -9,9 +9,13 @@ class Solution {
 
         for (int r = 0; r < nums.length; r++) {
             curSum += nums[r];
+
+            if (curSum >= k) {
+                res = Math.min(res, r + 1);
+            }
         }
 
-        return -1;
+        return res == Integer.MAX_VALUE ? -1 : res;
     }
 
     static class Pair<K, V> {
