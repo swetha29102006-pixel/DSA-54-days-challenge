@@ -5,5 +5,7 @@ class Solution {
         for (int num : nums) {
             total += num;
         }
+
+        int leftTotal = 0;
     }
 }
