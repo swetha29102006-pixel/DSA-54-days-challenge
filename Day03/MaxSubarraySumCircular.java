@@ -10,6 +10,9 @@ class Solution {
         for (int i = 1; i < nums.length; i++) {
             currMax = Math.max(nums[i], currMax + nums[i]);
             maxSum = Math.max(maxSum, currMax);
+
+            currMin = Math.min(nums[i], currMin + nums[i]);
+            minSum = Math.min(currMin, minSum);
         }
 
         return maxSum;
