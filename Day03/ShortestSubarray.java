@@ -14,6 +14,7 @@ class Solution {
                 res = Math.min(res, r + 1);
             }
 
+            // Find the minimum valid window ending at r
             while (!q.isEmpty() &&
                    curSum - q.peekFirst().getKey() >= k) {
 
@@ -21,6 +22,7 @@ class Solution {
                 res = Math.min(res, r - front.getValue());
             }
 
+            // Maintain monotonic increasing prefix sums
             while (!q.isEmpty() &&
                    q.peekLast().getKey() > curSum) {
 
@@ -33,6 +35,7 @@ class Solution {
         return res == Integer.MAX_VALUE ? -1 : res;
     }
 
+    // Helper class to store pairs
     static class Pair<K, V> {
         private K key;
         private V value;
