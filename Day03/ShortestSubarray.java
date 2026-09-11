@@ -7,6 +7,10 @@ class Solution {
 
         Deque<Pair<Long, Integer>> q = new ArrayDeque<>();
 
+        for (int r = 0; r < nums.length; r++) {
+            curSum += nums[r];
+        }
+
         return -1;
     }
 
