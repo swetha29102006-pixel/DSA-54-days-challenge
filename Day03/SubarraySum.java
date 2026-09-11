@@ -6,6 +6,8 @@ class Solution {
 
         int prefixSum = 0;
 
+        hm.put(0, 1);
+
         return 0;
     }
 }
