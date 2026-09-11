@@ -20,6 +20,14 @@ class Solution {
                 Pair<Long, Integer> front = q.pollFirst();
                 res = Math.min(res, r - front.getValue());
             }
+
+            while (!q.isEmpty() &&
+                   q.peekLast().getKey() > curSum) {
+
+                q.pollLast();
+            }
+
+            q.offerLast(new Pair<>(curSum, r));
         }
 
         return res == Integer.MAX_VALUE ? -1 : res;
