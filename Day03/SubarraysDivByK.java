@@ -14,6 +14,10 @@ class Solution {
             prefix_sum += nums[i];
 
             int rem = prefix_sum % k;
+
+            if (rem < 0) {
+                rem = rem + k;
+            }
         }
 
         return count;
