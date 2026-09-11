@@ -8,9 +8,10 @@ class Solution {
         int totalSum = nums[0];
 
         for (int i = 1; i < nums.length; i++) {
-
+            currMax = Math.max(nums[i], currMax + nums[i]);
+            maxSum = Math.max(maxSum, currMax);
         }
 
-        return 0;
+        return maxSum;
     }
 }
