@@ -10,9 +10,16 @@ class Solution {
 
         for (int i = n - 2; i >= 0; i--) {
             int rev = reverse(nums[i]);
+
+            if (map.containsKey(rev)) {
+                int j = map.get(rev);
+                ans = Math.min(ans, j - i);
+            }
+
+            map.put(nums[i], i);
         }
 
-        return -1;
+        return ans == Integer.MAX_VALUE ? -1 : ans;
     }
 
     public int reverse(int n) {
