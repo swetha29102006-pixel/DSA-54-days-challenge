@@ -5,6 +5,8 @@ class Solution {
         int minSum = nums[0];
         int maxSum = nums[0];
 
+        int totalSum = nums[0];
+
         return 0;
     }
 }
