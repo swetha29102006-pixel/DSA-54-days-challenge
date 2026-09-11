@@ -18,6 +18,8 @@ class Solution {
             if (hm.containsKey(remove)) {
                 noOfSubArrayPossible += hm.get(remove);
             }
+
+            hm.put(prefixSum, hm.getOrDefault(prefixSum, 0) + 1);
         }
 
         return noOfSubArrayPossible;
