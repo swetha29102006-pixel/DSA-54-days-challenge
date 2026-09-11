@@ -7,6 +7,10 @@ class Solution {
 
         int totalSum = nums[0];
 
+        for (int i = 1; i < nums.length; i++) {
+
+        }
+
         return 0;
     }
 }
