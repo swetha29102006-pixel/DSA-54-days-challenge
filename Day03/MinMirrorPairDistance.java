@@ -5,6 +5,10 @@ class Solution {
         Map<Integer, Integer> map = new HashMap<>();
         int ans = Integer.MAX_VALUE;
 
+        int n = nums.length;
+
+        map.put(nums[n - 1], n - 1);
+
         return -1;
     }
 }
