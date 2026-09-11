@@ -21,6 +21,5 @@ class Solution {
             return maxSum;
         }
 
-        return Math.max(maxSum, totalSum - minSum);
     }
 }
