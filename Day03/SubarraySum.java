@@ -12,6 +12,12 @@ class Solution {
 
         for (int i = 0; i < nums.length; i++) {
             prefixSum += nums[i];
+
+            int remove = prefixSum - k;
+
+            if (hm.containsKey(remove)) {
+                noOfSubArrayPossible += hm.get(remove);
+            }
         }
 
         return noOfSubArrayPossible;
