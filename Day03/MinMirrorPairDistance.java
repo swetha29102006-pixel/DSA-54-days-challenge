@@ -31,6 +31,5 @@ class Solution {
             n /= 10;
         }
 
-        return t;
     }
-}
+
