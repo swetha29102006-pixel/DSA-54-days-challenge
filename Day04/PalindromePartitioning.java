@@ -23,6 +23,10 @@ class Solution {
             if (isPalindrome(s, idx, i)) {
 
                 path.add(s.substring(idx, i + 1));
+
+                func(i + 1, s, path, ans);
+
+                path.remove(path.size() - 1);
             }
         }
     }
