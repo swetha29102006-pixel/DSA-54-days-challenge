@@ -20,6 +20,10 @@ class Solution {
 
         for (int i = idx; i < s.length(); i++) {
 
+            if (isPalindrome(s, idx, i)) {
+
+                path.add(s.substring(idx, i + 1));
+            }
         }
     }
 }
