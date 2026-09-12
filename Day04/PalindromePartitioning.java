@@ -30,4 +30,14 @@ class Solution {
             }
         }
     }
+
+    public List<List<String>> partition(String s) {
+
+        List<List<String>> ans = new ArrayList<>();
+        List<String> path = new ArrayList<>();
+
+        func(0, s, path, ans);
+
+        return ans;
+    }
 }
