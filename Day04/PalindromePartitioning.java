@@ -12,6 +12,14 @@ class Solution {
     }
 
     private void func(int idx, String s, List<String> path, List<List<String>> ans) {
-        
+
+        if (idx == s.length()) {
+            ans.add(new ArrayList<>(path));
+            return;
+        }
+
+        for (int i = idx; i < s.length(); i++) {
+
+        }
     }
 }
