@@ -3,5 +3,7 @@ class Solution {
         if (n <= 1) {
             return n;
         }
+
+        int[] dp = new int[n + 1];
     }
 }
