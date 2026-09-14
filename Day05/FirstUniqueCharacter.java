@@ -7,5 +7,9 @@ class Solution {
             freq[ch - 'a']++;
         }
 
+        for (int i = 0; i < s.length(); i++) {
+
+        }
+
     }
 }
