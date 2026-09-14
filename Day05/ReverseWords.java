@@ -3,5 +3,7 @@ class Solution {
 
         s = s.trim();
 
+        String[] words = s.split("\\s+");
+
     }
 }
