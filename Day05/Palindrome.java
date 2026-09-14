@@ -6,6 +6,10 @@ class Solution {
 
         while (left < right) {
 
+            while (left < right && !Character.isLetterOrDigit(s.charAt(left))) {
+                left++;
+            }
+
         }
 
     }
