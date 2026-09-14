@@ -29,5 +29,6 @@ class Solution {
             map2.put(word, ch);
         }
 
+        return true;
     }
 }
