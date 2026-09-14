@@ -13,6 +13,8 @@ class Solution {
                 return false;
             }
 
+            map1[a] = i + 1;
+            map2[b] = i + 1;
         }
 
     }
