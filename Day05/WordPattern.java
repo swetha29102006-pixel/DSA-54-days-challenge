@@ -7,5 +7,8 @@ class Solution {
             return false;
         }
 
+        HashMap<Character, String> map1 = new HashMap<>();
+        HashMap<String, Character> map2 = new HashMap<>();
+
     }
 }
