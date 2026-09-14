@@ -3,5 +3,9 @@ class Solution {
 
         String[] words = s.split(" ");
 
+        if (pattern.length() != words.length) {
+            return false;
+        }
+
     }
 }
