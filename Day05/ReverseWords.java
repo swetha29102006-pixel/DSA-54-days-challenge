@@ -5,5 +5,9 @@ class Solution {
 
         StringBuilder result = new StringBuilder();
 
+        for (int i = words.length - 1; i >= 0; i--) {
+
+        }
+
     }
 }
