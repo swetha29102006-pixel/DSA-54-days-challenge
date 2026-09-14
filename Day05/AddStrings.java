@@ -22,6 +22,8 @@ class Solution {
                 j--;
             }
 
+            result.append(sum % 10);
+            carry = sum / 10;
         }
 
     }
