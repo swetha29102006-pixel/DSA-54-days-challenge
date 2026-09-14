@@ -9,6 +9,10 @@ class Solution {
             char a = s.charAt(i);
             char b = t.charAt(i);
 
+            if (map1[a] != map2[b]) {
+                return false;
+            }
+
         }
 
     }
