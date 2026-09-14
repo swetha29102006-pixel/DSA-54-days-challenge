@@ -12,6 +12,16 @@ class Solution {
 
             int sum = carry;
 
+            if (i >= 0) {
+                sum += num1.charAt(i) - '0';
+                i--;
+            }
+
+            if (j >= 0) {
+                sum += num2.charAt(j) - '0';
+                j--;
+            }
+
         }
 
     }
