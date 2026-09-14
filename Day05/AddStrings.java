@@ -6,5 +6,7 @@ class Solution {
 
         int carry = 0;
 
+        StringBuilder result = new StringBuilder();
+
     }
 }
