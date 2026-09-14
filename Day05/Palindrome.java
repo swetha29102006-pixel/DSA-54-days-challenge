@@ -19,7 +19,10 @@ class Solution {
                 return false;
             }
 
+            left++;
+            right--;
         }
 
+        return true;
     }
 }
