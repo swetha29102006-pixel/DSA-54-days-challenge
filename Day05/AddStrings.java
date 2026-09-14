@@ -26,5 +26,6 @@ class Solution {
             carry = sum / 10;
         }
 
+        return result.reverse().toString();
     }
 }
