@@ -8,5 +8,11 @@ class Solution {
 
         StringBuilder result = new StringBuilder();
 
+        while (i >= 0 || j >= 0 || carry != 0) {
+
+            int sum = carry;
+
+        }
+
     }
 }
