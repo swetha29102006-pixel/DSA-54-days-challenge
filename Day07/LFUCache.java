@@ -30,6 +30,14 @@ class LFUCache {
             return;
         }
 
+        if (keyToVal.size() == capacity) {
+            final int keyToEvict =
+                freqToLRUKeys.get(minFreq).iterator().next();
+
+            freqToLRUKeys.get(minFreq).remove(keyToEvict);
+            keyToVal.remove(keyToEvict);
+        }
+
         minFreq = 1;
         putFreq(key, minFreq);
         keyToVal.put(key, value);
