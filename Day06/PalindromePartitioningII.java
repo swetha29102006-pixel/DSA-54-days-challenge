@@ -19,6 +19,13 @@ class Solution {
 
         for (int i = 0; i < n; i++) {
 
+            if (isPalindrome[0][i]) {
+                minCuts[i] = 0;
+            } else {
+
+                int min = i;
+
+            }
         }
 
     }
