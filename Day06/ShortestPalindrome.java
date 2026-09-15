@@ -26,5 +26,10 @@ class Solution {
 
         String remaining = s.substring(palindromeLength);
 
+        String add = new StringBuilder(remaining)
+                        .reverse()
+                        .toString();
+
+        return add + s;
     }
 }
