@@ -20,6 +20,9 @@ class Solution {
                 }
             }
 
+            if (valid) {
+                return true;
+            }
         }
 
         return false;
