@@ -17,6 +17,9 @@ class Solution {
                     childTail.next = nextNode;
                     nextNode.prev = childTail;
                 }
+
+                curr.next = curr.child;
+                curr.child.prev = curr;
             }
 
             curr = curr.next;
