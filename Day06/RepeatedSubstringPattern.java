@@ -3,5 +3,10 @@ class Solution {
 
         int n = s.length();
 
+        for (int len = 1; len <= n / 2; len++) {
+
+        }
+
+        return false;
     }
 }
