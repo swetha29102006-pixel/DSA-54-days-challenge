@@ -50,5 +50,16 @@ class Solution {
             }
         }
 
+        return ans;
+    }
+
+    private boolean isPal(String word, int i, int j) {
+
+        while (i < j) {
+            if (word.charAt(i++) != word.charAt(j--))
+                return false;
+        }
+
+        return true;
     }
 }
