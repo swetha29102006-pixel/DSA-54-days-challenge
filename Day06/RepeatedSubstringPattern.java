@@ -9,6 +9,9 @@ class Solution {
                 continue;
             }
 
+            String part = s.substring(0, len);
+            boolean valid = true;
+
         }
 
         return false;
