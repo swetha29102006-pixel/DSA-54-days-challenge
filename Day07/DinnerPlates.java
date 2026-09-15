@@ -38,10 +38,14 @@ class DinnerPlates {
 
         int idx = lt.size() - 1;
         Stack<Integer> st = lt.get(idx);
-
         int val = st.pop();
 
         set.add(idx);
+
+        while (!lt.isEmpty() && lt.get(lt.size() - 1).isEmpty()) {
+            set.remove(lt.size() - 1);
+            lt.remove(lt.size() - 1);
+        }
 
         return val;
     }
