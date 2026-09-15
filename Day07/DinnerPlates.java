@@ -5,9 +5,9 @@ class DinnerPlates {
     int capacity;
 
     public DinnerPlates(int capacity) {
+        set = new TreeSet<>();
         this.capacity = capacity;
         lt = new ArrayList<>();
-        set = new TreeSet<>();
     }
 
     public void push(int val) {
