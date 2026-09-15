@@ -8,6 +8,10 @@ class Solution {
             fast = fast.next.next;
         }
 
+        ListNode prev = slow;
+        slow = slow.next;
+        prev.next = null;
+
         return false;
     }
 }
