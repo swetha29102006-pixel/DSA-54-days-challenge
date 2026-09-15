@@ -10,6 +10,8 @@ class Solution {
             curr = curr.next;
         }
 
-        return new int[0];
+        int a[] = new int[list.size()];
+
+        return a;
     }
 }
