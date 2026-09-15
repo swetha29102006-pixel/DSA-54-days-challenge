@@ -25,6 +25,14 @@ class Solution {
 
                 int min = i;
 
+                for (int j = 0; j < i; j++) {
+
+                    if (isPalindrome[j + 1][i]) {
+                        min = Math.min(min, minCuts[j] + 1);
+                    }
+                }
+
+                minCuts[i] = min;
             }
         }
 
