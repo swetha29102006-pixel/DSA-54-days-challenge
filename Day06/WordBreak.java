@@ -1,6 +1,6 @@
 class Solution {
     public boolean wordBreak(String s, List<String> wordDict) {
-        return recWay1(s, wordDict);
+        return recWay2(s, wordDict);
     }
 
     boolean recWay2(String s, List<String> wordDict) {
