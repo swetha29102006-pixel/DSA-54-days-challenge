@@ -1,5 +1,4 @@
 class LFUCache {
-
     public LFUCache(int capacity) {
         this.capacity = capacity;
     }
@@ -9,6 +8,7 @@ class LFUCache {
             return -1;
 
         final int freq = keyToFreq.get(key);
+
         freqToLRUKeys.get(freq).remove(key);
 
         if (freq == minFreq && freqToLRUKeys.get(freq).isEmpty()) {
@@ -16,7 +16,9 @@ class LFUCache {
             ++minFreq;
         }
 
+        // Increase key's frequency by 1
         putFreq(key, freq + 1);
+
         return keyToVal.get(key);
     }
 
@@ -31,6 +33,7 @@ class LFUCache {
         }
 
         if (keyToVal.size() == capacity) {
+            // Evict LRU key from the minimum-frequency list
             final int keyToEvict =
                 freqToLRUKeys.get(minFreq).iterator().next();
 
@@ -39,19 +42,26 @@ class LFUCache {
         }
 
         minFreq = 1;
+
         putFreq(key, minFreq);
         keyToVal.put(key, value);
     }
 
     private int capacity;
     private int minFreq = 0;
+
     private Map<Integer, Integer> keyToVal = new HashMap<>();
     private Map<Integer, Integer> keyToFreq = new HashMap<>();
     private Map<Integer, LinkedHashSet<Integer>> freqToLRUKeys = new HashMap<>();
 
     private void putFreq(int key, int freq) {
         keyToFreq.put(key, freq);
-        freqToLRUKeys.putIfAbsent(freq, new LinkedHashSet<>());
+
+        freqToLRUKeys.putIfAbsent(
+            freq,
+            new LinkedHashSet<>()
+        );
+
         freqToLRUKeys.get(freq).add(key);
     }
 }
