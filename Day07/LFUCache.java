@@ -5,6 +5,7 @@ class LFUCache {
 
     private Map<Integer, Integer> keyToVal = new HashMap<>();
     private Map<Integer, Integer> keyToFreq = new HashMap<>();
+    private Map<Integer, LinkedHashSet<Integer>> freqToLRUKeys = new HashMap<>();
 
     public LFUCache(int capacity) {
         this.capacity = capacity;
@@ -17,5 +18,11 @@ class LFUCache {
         final int freq = keyToFreq.get(key);
 
         return keyToVal.get(key);
+    }
+
+    private void putFreq(int key, int freq) {
+        keyToFreq.put(key, freq);
+        freqToLRUKeys.putIfAbsent(freq, new LinkedHashSet<>());
+        freqToLRUKeys.get(freq).add(key);
     }
 }
