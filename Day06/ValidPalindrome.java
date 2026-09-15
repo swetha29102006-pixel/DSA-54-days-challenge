@@ -12,6 +12,8 @@ class Solution {
                     || isPalindrome(s, left, right - 1);
             }
 
+            left++;
+            right--;
         }
 
         return true;
