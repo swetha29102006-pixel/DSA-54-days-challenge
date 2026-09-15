@@ -31,6 +31,23 @@ class Solution {
                 if (res != i)
                     ans.add(List.of(i, res));
             }
+
+            for (int j = 1; j < bw.length(); j++) {
+
+                if (isPal(bw, 0, j - 1)) {
+                    String s = bw.substring(j);
+
+                    if (wmap.containsKey(s))
+                        ans.add(List.of(i, wmap.get(s)));
+                }
+
+                if (isPal(bw, j, bw.length() - 1)) {
+                    String s = bw.substring(0, j);
+
+                    if (wmap.containsKey(s))
+                        ans.add(List.of(wmap.get(s), i));
+                }
+            }
         }
 
     }
