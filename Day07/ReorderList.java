@@ -30,5 +30,16 @@ class Solution {
         ListNode lh = head;
         ListNode rh = prev;
         ListNode nxtL, nxtR;
+
+        while (lh != null && rh != null) {
+            nxtL = lh.next;
+            lh.next = rh;
+
+            nxtR = rh.next;
+            rh.next = nxtL;
+
+            rh = nxtR;
+            lh = nxtL;
+        }
     }
 }
