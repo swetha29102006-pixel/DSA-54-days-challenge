@@ -1,4 +1,5 @@
-class Solution 
+class Solution {
+    public int[] nextLargerNodes(ListNode head) {
 
         ArrayList<Integer> list = new ArrayList<>();
 
