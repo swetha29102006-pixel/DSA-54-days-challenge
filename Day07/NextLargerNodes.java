@@ -12,6 +12,19 @@ class Solution {
 
         int a[] = new int[list.size()];
 
+        for (int i = 0; i < list.size() - 1; i++) {
+
+            int max = list.get(i);
+
+            for (int j = i + 1; j < list.size(); j++) {
+
+                if (max < list.get(j)) {
+                    max = list.get(j);
+                    break;
+                }
+            }
+        }
+
         return a;
     }
 }
