@@ -10,5 +10,9 @@ class Solution {
             slow = slow.next;
             fast = fast.next.next;
         }
+
+        ListNode curr = slow.next;
+
+        slow.next = null;
     }
 }
