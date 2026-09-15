@@ -11,6 +11,15 @@ class Solution {
 
             int j = lps[i - 1];
 
+            while (j > 0 && combined.charAt(i) != combined.charAt(j)) {
+                j = lps[j - 1];
+            }
+
+            if (combined.charAt(i) == combined.charAt(j)) {
+                j++;
+            }
+
+            lps[i] = j;
         }
 
     }
