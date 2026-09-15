@@ -11,21 +11,15 @@ class Solution {
     boolean wordBreak2(String s, Set<String> wordDict, int k, Boolean[] memo) {
         int n = s.length();
 
-        if (k == n) {
-            return true;
-        }
+        if (k == n) return true;
 
-        if (memo[k] != null) {
-            return memo[k];
-        }
+        if (memo[k] != null) return memo[k];
 
         for (int i = k + 1; i <= n; i++) {
             String word = s.substring(k, i);
 
-            if (wordDict.contains(word)) {
-                if (wordBreak2(s, wordDict, i, memo)) {
-                    return memo[k] = true;
-                }
+            if (wordDict.contains(word) && wordBreak2(s, wordDict, i, memo)) {
+                return memo[k] = true;
             }
         }
 
