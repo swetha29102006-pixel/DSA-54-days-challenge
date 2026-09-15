@@ -24,7 +24,9 @@ class Solution {
                 }
             }
 
-            if (max != list.get(i)) {
+            if (max == list.get(i)) {
+                a[i] = 0;
+            } else {
                 a[i] = max;
             }
         }
