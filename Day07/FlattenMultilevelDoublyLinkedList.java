@@ -6,10 +6,16 @@ class Solution {
 
         while (curr != null) {
             if (curr.child != null) {
+                Node nextNode = curr.next;
                 Node childTail = curr.child;
 
                 while (childTail.next != null) {
                     childTail = childTail.next;
+                }
+
+                if (nextNode != null) {
+                    childTail.next = nextNode;
+                    nextNode.prev = childTail;
                 }
             }
 
