@@ -1,19 +1,19 @@
 class Solution {
     public boolean isPalindrome(ListNode head) {
-        ListNode slow = head;
-        ListNode fast = head;
+        ListNode slow = head, fast = head, prev, temp;
 
+        // Find middle
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
 
-        ListNode prev = slow;
+        // Separate the second half
+        prev = slow;
         slow = slow.next;
         prev.next = null;
 
-        ListNode temp;
-
+        // Reverse second half
         while (slow != null) {
             temp = slow.next;
             slow.next = prev;
@@ -21,6 +21,7 @@ class Solution {
             slow = temp;
         }
 
+        // Compare both halves
         fast = head;
         slow = prev;
 
