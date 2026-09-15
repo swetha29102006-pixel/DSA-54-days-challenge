@@ -49,4 +49,15 @@ class DinnerPlates {
 
         return val;
     }
+
+    public int popAtStack(int index) {
+        if (index >= lt.size() || lt.get(index).isEmpty()) {
+            return -1;
+        }
+
+        int ele = lt.get(index).pop();
+        set.add(index);
+
+        return ele;
+    }
 }
