@@ -22,5 +22,9 @@ class Solution {
             lps[i] = j;
         }
 
+        int palindromeLength = lps[combined.length() - 1];
+
+        String remaining = s.substring(palindromeLength);
+
     }
 }
