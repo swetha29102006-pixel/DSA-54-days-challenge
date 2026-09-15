@@ -14,5 +14,16 @@ class Solution {
         ListNode curr = slow.next;
 
         slow.next = null;
+
+        ListNode prev = null;
+        ListNode next = null;
+
+        // reverse right part
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
     }
 }
