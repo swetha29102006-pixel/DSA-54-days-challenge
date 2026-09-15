@@ -20,6 +20,7 @@ class Solution {
 
                 curr.next = curr.child;
                 curr.child.prev = curr;
+                curr.child = null;
             }
 
             curr = curr.next;
