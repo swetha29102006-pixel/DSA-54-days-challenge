@@ -20,6 +20,17 @@ class Solution {
                 }
                 continue;
             }
+
+            StringBuilder sb = new StringBuilder(words[i]);
+            sb.reverse();
+            String bw = sb.toString();
+
+            if (wmap.containsKey(bw)) {
+                int res = wmap.get(bw);
+
+                if (res != i)
+                    ans.add(List.of(i, res));
+            }
         }
 
     }
