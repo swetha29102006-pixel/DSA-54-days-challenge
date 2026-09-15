@@ -7,5 +7,11 @@ class Solution {
 
         int[] lps = new int[combined.length()];
 
+        for (int i = 1; i < combined.length(); i++) {
+
+            int j = lps[i - 1];
+
+        }
+
     }
 }
