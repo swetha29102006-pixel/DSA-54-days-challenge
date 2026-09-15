@@ -19,5 +19,10 @@ class DinnerPlates {
             lt.add(new Stack<>());
             set.add(lt.size() - 1);
         }
+
+        int idx = set.first();
+        Stack<Integer> st = lt.get(idx);
+
+        st.push(val);
     }
 }
