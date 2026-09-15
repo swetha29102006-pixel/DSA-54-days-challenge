@@ -9,7 +9,6 @@ class LFUCache {
             return -1;
 
         final int freq = keyToFreq.get(key);
-
         freqToLRUKeys.get(freq).remove(key);
 
         if (freq == minFreq && freqToLRUKeys.get(freq).isEmpty()) {
@@ -18,8 +17,22 @@ class LFUCache {
         }
 
         putFreq(key, freq + 1);
-
         return keyToVal.get(key);
+    }
+
+    public void put(int key, int value) {
+        if (capacity == 0)
+            return;
+
+        if (keyToVal.containsKey(key)) {
+            keyToVal.put(key, value);
+            get(key);
+            return;
+        }
+
+        minFreq = 1;
+        putFreq(key, minFreq);
+        keyToVal.put(key, value);
     }
 
     private int capacity;
