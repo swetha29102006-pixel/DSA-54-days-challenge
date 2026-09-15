@@ -7,6 +7,9 @@ class Solution {
 
             // Odd length palindrome
             count += expand(s, i, i);
+
+            // Even length palindrome
+            count += expand(s, i, i + 1);
         }
 
         return count;
