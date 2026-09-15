@@ -5,6 +5,10 @@ class Solution {
 
         for (int len = 1; len <= n / 2; len++) {
 
+            if (n % len != 0) {
+                continue;
+            }
+
         }
 
         return false;
