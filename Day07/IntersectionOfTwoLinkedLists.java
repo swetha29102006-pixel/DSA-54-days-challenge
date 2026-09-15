@@ -4,7 +4,7 @@ public class Solution {
         ListNode b = headB;
 
         while (a != b) {
-            
+            a = a != null ? a.next : headB;
         }
     }
 }
