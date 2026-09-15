@@ -24,5 +24,9 @@ class DinnerPlates {
         Stack<Integer> st = lt.get(idx);
 
         st.push(val);
+
+        if (st.size() == capacity) {
+            set.remove(idx);
+        }
     }
 }
