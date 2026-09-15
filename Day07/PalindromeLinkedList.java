@@ -21,6 +21,9 @@ class Solution {
             slow = temp;
         }
 
+        fast = head;
+        slow = prev;
+
         return false;
     }
 }
