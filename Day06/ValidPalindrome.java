@@ -7,7 +7,6 @@ class Solution {
         while (left < right) {
 
             if (s.charAt(left) != s.charAt(right)) {
-
                 return isPalindrome(s, left + 1, right)
                     || isPalindrome(s, left, right - 1);
             }
