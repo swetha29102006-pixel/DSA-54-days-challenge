@@ -12,6 +12,15 @@ class Solution {
         slow = slow.next;
         prev.next = null;
 
+        ListNode temp;
+
+        while (slow != null) {
+            temp = slow.next;
+            slow.next = prev;
+            prev = slow;
+            slow = temp;
+        }
+
         return false;
     }
 }
