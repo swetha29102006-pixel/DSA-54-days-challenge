@@ -9,4 +9,15 @@ class DinnerPlates {
         lt = new ArrayList<>();
         set = new TreeSet<>();
     }
+
+    public void push(int val) {
+        while (!set.isEmpty() && set.first() >= lt.size()) {
+            set.pollFirst();
+        }
+
+        if (set.isEmpty()) {
+            lt.add(new Stack<>());
+            set.add(lt.size() - 1);
+        }
+    }
 }
