@@ -11,8 +11,8 @@ class Solution {
             fast = fast.next.next;
         }
 
+        // separate the two halves
         ListNode curr = slow.next;
-
         slow.next = null;
 
         ListNode prev = null;
@@ -32,14 +32,20 @@ class Solution {
         ListNode nxtL, nxtR;
 
         while (lh != null && rh != null) {
+
+            // save next nodes
             nxtL = lh.next;
+            nxtR = rh.next;
+
+            // connect left node to right node
             lh.next = rh;
 
-            nxtR = rh.next;
+            // connect right node to next left node
             rh.next = nxtL;
 
-            rh = nxtR;
+            // move pointers forward
             lh = nxtL;
+            rh = nxtR;
         }
     }
 }
