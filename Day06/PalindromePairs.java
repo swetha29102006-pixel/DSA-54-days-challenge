@@ -7,5 +7,20 @@ class Solution {
         for (int i = 0; i < words.length; i++)
             wmap.put(words[i], i);
 
+        for (int i = 0; i < words.length; i++) {
+
+            if (words[i].equals("")) {
+                for (int j = 0; j < words.length; j++) {
+                    String w = words[j];
+
+                    if (isPal(w, 0, w.length() - 1) && j != i) {
+                        ans.add(List.of(i, j));
+                        ans.add(List.of(j, i));
+                    }
+                }
+                continue;
+            }
+        }
+
     }
 }
