@@ -25,5 +25,10 @@ class Solution {
             prev = curr;
             curr = next;
         }
+
+        // zigzag merge
+        ListNode lh = head;
+        ListNode rh = prev;
+        ListNode nxtL, nxtR;
     }
 }
