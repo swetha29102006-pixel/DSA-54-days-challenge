@@ -23,6 +23,10 @@ class Solution {
                     break;
                 }
             }
+
+            if (max != list.get(i)) {
+                a[i] = max;
+            }
         }
 
         return a;
