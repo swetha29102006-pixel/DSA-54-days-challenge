@@ -1,5 +1,9 @@
 class Solution {
     public boolean wordBreak(String s, List<String> wordDict) {
+        return recWay1(s, wordDict);
+    }
+
+    boolean recWay1(String s, List<String> wordDict) {
         Boolean[] memo = new Boolean[s.length() + 1];
         return wordBreak(s, wordDict, 0, memo);
     }
