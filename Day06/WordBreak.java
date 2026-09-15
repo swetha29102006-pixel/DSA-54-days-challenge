@@ -8,6 +8,16 @@ class Solution {
             return true;
         }
 
+        for (int i = 0; i < wordDict.size(); i++) {
+            String word = wordDict.get(i);
+
+            if (s.startsWith(word, k)) {
+                if (wordBreak(s, wordDict, k + word.length())) {
+                    return true;
+                }
+            }
+        }
+
         return false;
     }
 }
