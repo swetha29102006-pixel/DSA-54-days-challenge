@@ -17,6 +17,17 @@ class Solution {
 
     private int expand(String s, int left, int right) {
 
-        return 0;
+        int count = 0;
+
+        while (left >= 0 && right < s.length()
+                && s.charAt(left) == s.charAt(right)) {
+
+            count++;
+
+            left--;
+            right++;
+        }
+
+        return count;
     }
 }
