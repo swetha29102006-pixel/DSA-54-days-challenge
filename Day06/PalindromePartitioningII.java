@@ -6,6 +6,7 @@ class Solution {
         boolean[][] isPalindrome = new boolean[n][n];
         int[] minCuts = new int[n];
 
+        // Step 1
         for (int end = 0; end < n; end++) {
             for (int start = 0; start <= end; start++) {
 
@@ -17,6 +18,7 @@ class Solution {
             }
         }
 
+        // Step 2
         for (int i = 0; i < n; i++) {
 
             if (isPalindrome[0][i]) {
@@ -36,5 +38,6 @@ class Solution {
             }
         }
 
+        return minCuts[n - 1];
     }
 }
