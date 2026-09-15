@@ -5,6 +5,14 @@ class Solution {
         Node curr = head;
 
         while (curr != null) {
+            if (curr.child != null) {
+                Node childTail = curr.child;
+
+                while (childTail.next != null) {
+                    childTail = childTail.next;
+                }
+            }
+
             curr = curr.next;
         }
 
