@@ -19,6 +19,7 @@ class Solution {
 
                 if (value > ans) {
                     ans = value;
+                    f = j - 1;
                 }
             }
 
