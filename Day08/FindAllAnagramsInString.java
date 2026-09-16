@@ -8,6 +8,13 @@ class Solution {
             return arr;
         }
 
+        for (int i = 0; i < p.length(); i++) {
+            originalMap.put(
+                p.charAt(i),
+                originalMap.getOrDefault(p.charAt(i), 0) + 1
+            );
+        }
+
         return arr;
     }
 }
