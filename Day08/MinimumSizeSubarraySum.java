@@ -1,5 +1,9 @@
 class Solution {
     public int minSubArrayLen(int target, int[] nums) {
+        int minLen = Integer.MAX_VALUE;
+        int left = 0;
+        int curSum = 0;
+
         return 0;
     }
 }
