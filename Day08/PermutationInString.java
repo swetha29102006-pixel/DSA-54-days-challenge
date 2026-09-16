@@ -18,6 +18,10 @@ class Solution {
                 if (Arrays.equals(p, w)) {
                     return true;
                 }
+
+                char chl = s2.charAt(l);
+                w[chl - 'a']--;
+                l++;
             }
         }
 
