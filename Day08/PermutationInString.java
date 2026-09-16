@@ -9,5 +9,12 @@ class Solution {
             char ch = s1.charAt(i);
             p[ch - 'a']++;
         }
+
+        for (int r = 0; r < s2.length(); r++) {
+            char chr = s2.charAt(r);
+            w[chr - 'a']++;
+        }
+
+        return false;
     }
 }
