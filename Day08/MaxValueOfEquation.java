@@ -13,6 +13,13 @@ class Solution {
                 if (points[j][0] > points[i][0] + k) {
                     break;
                 }
+
+                int value = points[i][1] + points[j][1]
+                        + points[j][0] - points[i][0];
+
+                if (value > ans) {
+                    ans = value;
+                }
             }
 
             i++;
