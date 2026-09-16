@@ -6,6 +6,10 @@ class Solution {
 
         for (int right = 0; right < nums.length; right++) {
             curSum += nums[right];
+
+            while (curSum >= target) {
+                
+            }
         }
 
         return 0;
