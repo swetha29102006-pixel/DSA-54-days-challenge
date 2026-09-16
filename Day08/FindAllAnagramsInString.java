@@ -15,6 +15,18 @@ class Solution {
             );
         }
 
+        int i = 0;
+        int j = p.length() - 1;
+
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        for (int x = i; x <= j; x++) {
+            map.put(
+                s.charAt(x),
+                map.getOrDefault(s.charAt(x), 0) + 1
+            );
+        }
+
         return arr;
     }
 }
