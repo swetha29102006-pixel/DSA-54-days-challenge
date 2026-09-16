@@ -9,6 +9,10 @@ class Solution {
         int cnt = 0;
         HashMap<Integer, Integer> h = new HashMap<>();
 
+        for (r = 0; r < nums.length; r++) {
+            h.put(nums[r], h.getOrDefault(nums[r], 0) + 1);
+        }
+
         return cnt;
     }
 }
