@@ -13,6 +13,10 @@ class Solution {
         for (int r = 0; r < s2.length(); r++) {
             char chr = s2.charAt(r);
             w[chr - 'a']++;
+
+            if (r - l + 1 == k) {
+                // Window has reached the required size
+            }
         }
 
         return false;
