@@ -33,6 +33,23 @@ class Solution {
             arr.add(i);
         }
 
+        while (j < s.length() - 1) {
+
+            map.put(s.charAt(i), map.get(s.charAt(i)) - 1);
+
+            if (map.get(s.charAt(i)) == 0) {
+                map.remove(s.charAt(i));
+            }
+
+            i++;
+            j++;
+
+            map.put(
+                s.charAt(j),
+                map.getOrDefault(s.charAt(j), 0) + 1
+            );
+        }
+
         return arr;
     }
 }
