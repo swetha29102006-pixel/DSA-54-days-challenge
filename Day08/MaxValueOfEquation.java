@@ -1,5 +1,9 @@
 class Solution {
     public int findMaxValueOfEquation(int[][] points, int k) {
-        return 0;
+        int ans = Integer.MIN_VALUE;
+        int i = 0;
+        int f = 1;
+
+        return ans;
     }
 }
