@@ -15,7 +15,9 @@ class Solution {
             w[chr - 'a']++;
 
             if (r - l + 1 == k) {
-                // Window has reached the required size
+                if (Arrays.equals(p, w)) {
+                    return true;
+                }
             }
         }
 
