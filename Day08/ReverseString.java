@@ -11,9 +11,5 @@ class Solution {
             left++;
             right--;
         }
-
-        if (s.length == 0) {
-            return;
-        }
     }
 }
