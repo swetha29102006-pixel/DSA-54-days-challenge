@@ -18,6 +18,7 @@ class Solution {
                 l++;
             }
 
+            maxLen = Math.max((r - l + 1), maxLen);
             r++;
         }
 
