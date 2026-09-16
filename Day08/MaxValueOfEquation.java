@@ -9,6 +9,12 @@ class Solution {
                 f = i + 1;
             }
 
+            for (int j = f; j <= points.length - 1; j++) {
+                if (points[j][0] > points[i][0] + k) {
+                    break;
+                }
+            }
+
             i++;
         }
 
