@@ -11,6 +11,16 @@ class Solution {
 
         for (r = 0; r < nums.length; r++) {
             h.put(nums[r], h.getOrDefault(nums[r], 0) + 1);
+
+            while (h.size() > k) {
+                h.put(nums[l], h.getOrDefault(nums[l], 0) - 1);
+
+                if (h.get(nums[l]) == 0) {
+                    h.remove(nums[l]);
+                }
+
+                l++;
+            }
         }
 
         return cnt;
