@@ -5,6 +5,10 @@ class Solution {
         int f = 1;
 
         while (i < points.length) {
+            if (f < i + 1) {
+                f = i + 1;
+            }
+
             i++;
         }
 
