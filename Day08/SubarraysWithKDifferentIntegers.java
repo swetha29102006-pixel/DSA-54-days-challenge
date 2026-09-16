@@ -21,6 +21,8 @@ class Solution {
 
                 l++;
             }
+
+            cnt += r - l + 1;
         }
 
         return cnt;
