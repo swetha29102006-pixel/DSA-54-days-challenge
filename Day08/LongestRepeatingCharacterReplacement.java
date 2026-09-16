@@ -3,11 +3,14 @@ class Solution {
         int l = 0;
         int r = 0;
         HashMap<Character, Integer> m = new HashMap<>();
+        int maxFreq = 0;
         int maxLen = 0;
 
         while (r < s.length()) {
             char ch = s.charAt(r);
+
             m.put(ch, m.getOrDefault(ch, 0) + 1);
+            maxFreq = Math.max(m.get(ch), maxFreq);
 
             r++;
         }
