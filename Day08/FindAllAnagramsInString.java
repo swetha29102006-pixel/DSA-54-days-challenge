@@ -27,6 +27,12 @@ class Solution {
             );
         }
 
+        boolean isEqual = originalMap.equals(map);
+
+        if (isEqual) {
+            arr.add(i);
+        }
+
         return arr;
     }
 }
