@@ -17,6 +17,6 @@ class Solution {
             }
         }
 
-        return 0;
+        return minLen != Integer.MAX_VALUE ? minLen : 0;
     }
 }
