@@ -12,6 +12,12 @@ class Solution {
             m.put(ch, m.getOrDefault(ch, 0) + 1);
             maxFreq = Math.max(m.get(ch), maxFreq);
 
+            while ((r - l + 1) - maxFreq > k) {
+                ch = s.charAt(l);
+                m.put(ch, m.getOrDefault(ch, 0) - 1);
+                l++;
+            }
+
             r++;
         }
 
