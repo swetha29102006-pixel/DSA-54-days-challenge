@@ -4,5 +4,10 @@ class Solution {
         int w[] = new int[26];
         int l = 0;
         int k = s1.length();
+
+        for (int i = 0; i < k; i++) {
+            char ch = s1.charAt(i);
+            p[ch - 'a']++;
+        }
     }
 }
