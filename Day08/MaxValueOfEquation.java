@@ -4,6 +4,10 @@ class Solution {
         int i = 0;
         int f = 1;
 
+        while (i < points.length) {
+            i++;
+        }
+
         return ans;
     }
 }
