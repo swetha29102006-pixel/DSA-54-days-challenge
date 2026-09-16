@@ -11,6 +11,9 @@ class Solution {
                 if (right - left + 1 < minLen) {
                     minLen = right - left + 1;
                 }
+
+                curSum -= nums[left];
+                left++;
             }
         }
 
