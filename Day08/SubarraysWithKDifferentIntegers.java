@@ -1,6 +1,9 @@
 class Solution {
     public int subarraysWithKDistinct(int[] nums, int k) {
-        return check(nums, k);
+        int atMostK = check(nums, k);
+        int atMostKMinusOne = check(nums, k - 1);
+
+        return atMostK - atMostKMinusOne;
     }
 
     public int check(int[] nums, int k) {
