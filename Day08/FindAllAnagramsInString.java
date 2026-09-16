@@ -2,6 +2,7 @@ class Solution {
     public List<Integer> findAnagrams(String s, String p) {
 
         HashMap<Character, Integer> originalMap = new HashMap<>();
+
         ArrayList<Integer> arr = new ArrayList<>();
 
         if (p.length() > s.length()) {
@@ -48,6 +49,12 @@ class Solution {
                 s.charAt(j),
                 map.getOrDefault(s.charAt(j), 0) + 1
             );
+
+            boolean isEqual2 = originalMap.equals(map);
+
+            if (isEqual2) {
+                arr.add(i);
+            }
         }
 
         return arr;
