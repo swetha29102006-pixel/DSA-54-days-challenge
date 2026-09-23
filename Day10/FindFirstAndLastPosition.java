@@ -6,11 +6,20 @@ class Solution {
         }
 
         result[0] = findBound(nums, target, true);
+        result[1] = findBound(nums, target, false);
 
         return result;
     }
 
     private int findBound(int[] nums, int target, boolean isFirst) {
-        return -1;
+        int left = 0;
+        int right = nums.length - 1;
+        int bound = -1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+        }
+
+        return bound;
     }
 }
