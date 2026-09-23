@@ -11,6 +11,10 @@ class Solution {
 
             if (midVal == target) {
                 return true;
+            } else if (midVal < target) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
             }
         }
 
