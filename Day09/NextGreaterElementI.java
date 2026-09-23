@@ -7,6 +7,10 @@ class Solution {
         Map<Integer, Integer> map = new HashMap<>();
         Stack<Integer> stack = new Stack<>();
 
+        for (int num : nums2) {
+            
+        }
+
         return new int[0];
     }
 }
