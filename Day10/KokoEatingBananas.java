@@ -1,5 +1,9 @@
 class Solution {
     public int minEatingSpeed(int[] piles, int h) {
+        if (piles == null || piles.length == 0) {
+            return 0;
+        }
+
         int left = 1;
         int right = 0;
         for (int pile : piles) {
