@@ -4,7 +4,7 @@ import java.util.Stack;
 
 class Solution {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
-        if (nums1 == null || nums2 == null) {
+        if (nums1 == null || nums2 == null || nums1.length == 0) {
             return new int[0];
         }
 
