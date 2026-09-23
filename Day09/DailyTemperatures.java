@@ -11,6 +11,7 @@ class Solution {
                 int prevIndex = stack.pop();
                 result[prevIndex] = i - prevIndex;
             }
+            stack.push(i);
         }
 
         return result;
