@@ -8,6 +8,9 @@ class Solution {
 
         for (int i = 0; i <= n; i++) {
             int h = (i == n) ? 0 : heights[i];
+            while (!stack.isEmpty() && heights[stack.peek()] >= h) {
+                int height = heights[stack.pop()];
+            }
         }
 
         return maxArea;
