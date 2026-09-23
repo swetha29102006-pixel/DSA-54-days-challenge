@@ -3,6 +3,10 @@ class Solution {
         int left = 0;
         int right = nums.length - 1;
 
-        return nums[0];
+        while (left < right) {
+            
+        }
+
+        return nums[left];
     }
 }
