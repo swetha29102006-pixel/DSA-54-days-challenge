@@ -16,6 +16,10 @@ class Solution {
                 exploded = true;
                 break;
             }
+
+            if (!exploded) {
+                stack.push(ast);
+            }
         }
 
         return new int[0];
