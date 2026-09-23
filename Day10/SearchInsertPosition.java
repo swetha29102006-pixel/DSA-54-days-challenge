@@ -3,6 +3,7 @@ class Solution {
         int left = 0;
         int right = nums.length - 1;
 
+        // Binary search to find target or insertion point
         while (left <= right) {
             int mid = left + (right - left) / 2;
 
@@ -15,6 +16,7 @@ class Solution {
             }
         }
 
+        // Left pointer points to the correct insert position
         return left;
     }
 }
