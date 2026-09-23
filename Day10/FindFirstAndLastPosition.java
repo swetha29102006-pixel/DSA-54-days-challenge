@@ -5,6 +5,12 @@ class Solution {
             return result;
         }
 
+        result[0] = findBound(nums, target, true);
+
         return result;
+    }
+
+    private int findBound(int[] nums, int target, boolean isFirst) {
+        return -1;
     }
 }
