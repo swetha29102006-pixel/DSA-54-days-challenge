@@ -8,6 +8,10 @@ class Solution {
             if (mid % 2 == 1) {
                 mid--;
             }
+
+            if (nums[mid] == nums[mid + 1]) {
+                left = mid + 2;
+            }
         }
 
         return nums[left];
