@@ -1,5 +1,9 @@
 class Solution {
     public int singleNonDuplicate(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+
         int left = 0;
         int right = nums.length - 1;
 
