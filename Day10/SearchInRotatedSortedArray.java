@@ -7,6 +7,7 @@ class Solution {
         int left = 0;
         int right = nums.length - 1;
 
+        // Perform modified binary search in O(log n)
         while (left <= right) {
             int mid = left + (right - left) / 2;
 
@@ -14,14 +15,14 @@ class Solution {
                 return mid;
             }
 
-            // Left half is sorted
+            // Check if left half is normally sorted
             if (nums[left] <= nums[mid]) {
                 if (nums[left] <= target && target < nums[mid]) {
                     right = mid - 1;
                 } else {
                     left = mid + 1;
                 }
-            } else { // Right half is sorted
+            } else { // Right half is normally sorted
                 if (nums[mid] < target && target <= nums[right]) {
                     left = mid + 1;
                 } else {
