@@ -5,8 +5,10 @@ class Solution {
             return result;
         }
 
+        // Find lower bound (first occurrence)
         result[0] = findBound(nums, target, true);
         if (result[0] != -1) {
+            // Find upper bound (last occurrence)
             result[1] = findBound(nums, target, false);
         }
 
@@ -24,9 +26,9 @@ class Solution {
             if (nums[mid] == target) {
                 bound = mid;
                 if (isFirst) {
-                    right = mid - 1;
+                    right = mid - 1; // Search left for first occurrence
                 } else {
-                    left = mid + 1;
+                    left = mid + 1;  // Search right for last occurrence
                 }
             } else if (nums[mid] < target) {
                 left = mid + 1;
