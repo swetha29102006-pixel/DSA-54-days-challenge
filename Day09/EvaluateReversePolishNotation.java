@@ -5,7 +5,12 @@ class Solution {
         Stack<Integer> stack = new Stack<>();
 
         for (String token : tokens) {
-            
+            if (token.equals("+") || token.equals("-") || token.equals("*") || token.equals("/")) {
+                int b = stack.pop();
+                int a = stack.pop();
+            } else {
+                stack.push(Integer.parseInt(token));
+            }
         }
 
         return 0;
