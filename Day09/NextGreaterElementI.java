@@ -4,6 +4,10 @@ import java.util.Stack;
 
 class Solution {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+        if (nums1 == null || nums2 == null) {
+            return new int[0];
+        }
+
         Map<Integer, Integer> map = new HashMap<>();
         Stack<Integer> stack = new Stack<>();
 
