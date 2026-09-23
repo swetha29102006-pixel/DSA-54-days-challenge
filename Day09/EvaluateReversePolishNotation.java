@@ -2,6 +2,10 @@ import java.util.Stack;
 
 class Solution {
     public int evalRPN(String[] tokens) {
+        if (tokens == null || tokens.length == 0) {
+            return 0;
+        }
+
         Stack<Integer> stack = new Stack<>();
 
         for (String token : tokens) {
