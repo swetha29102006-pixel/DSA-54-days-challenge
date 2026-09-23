@@ -12,6 +12,8 @@ class Solution {
 
             if (hoursNeeded <= h) {
                 right = mid;
+            } else {
+                left = mid + 1;
             }
         }
 
