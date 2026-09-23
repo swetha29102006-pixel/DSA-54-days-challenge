@@ -6,7 +6,9 @@ class Solution {
         }
 
         result[0] = findBound(nums, target, true);
-        result[1] = findBound(nums, target, false);
+        if (result[0] != -1) {
+            result[1] = findBound(nums, target, false);
+        }
 
         return result;
     }
