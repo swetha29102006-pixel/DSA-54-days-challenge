@@ -6,6 +6,10 @@ class Solution {
             right = Math.max(right, pile);
         }
 
-        return right;
+        while (left < right) {
+            
+        }
+
+        return left;
     }
 }
