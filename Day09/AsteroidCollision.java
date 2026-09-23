@@ -2,6 +2,10 @@ import java.util.Stack;
 
 class Solution {
     public int[] asteroidCollision(int[] asteroids) {
+        if (asteroids == null || asteroids.length == 0) {
+            return new int[0];
+        }
+
         Stack<Integer> stack = new Stack<>();
 
         for (int ast : asteroids) {
