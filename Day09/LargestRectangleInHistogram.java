@@ -2,6 +2,10 @@ import java.util.Stack;
 
 class Solution {
     public int largestRectangleArea(int[] heights) {
+        if (heights == null || heights.length == 0) {
+            return 0;
+        }
+
         int n = heights.length;
         int maxArea = 0;
         Stack<Integer> stack = new Stack<>();
