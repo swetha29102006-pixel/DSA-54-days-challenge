@@ -10,12 +10,14 @@ class Solution {
 
         for (int ast : asteroids) {
             boolean exploded = false;
+
+            // Collision only occurs if top asteroid moves right (+) and current moves left (-)
             while (!stack.isEmpty() && ast < 0 && stack.peek() > 0) {
                 if (stack.peek() < -ast) {
                     stack.pop();
-                    continue;
+                    continue; // Re-check collision with previous asteroid
                 } else if (stack.peek() == -ast) {
-                    stack.pop();
+                    stack.pop(); // Both destroy each other
                 }
                 exploded = true;
                 break;
@@ -26,6 +28,7 @@ class Solution {
             }
         }
 
+        // Convert stack to array in proper order
         int[] result = new int[stack.size()];
         for (int i = stack.size() - 1; i >= 0; i--) {
             result[i] = stack.pop();
