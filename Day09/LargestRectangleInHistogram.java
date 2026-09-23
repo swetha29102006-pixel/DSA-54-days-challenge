@@ -1,5 +1,10 @@
+import java.util.Stack;
+
 class Solution {
     public int largestRectangleArea(int[] heights) {
-        return 0;
+        int maxArea = 0;
+        Stack<Integer> stack = new Stack<>();
+
+        return maxArea;
     }
 }
