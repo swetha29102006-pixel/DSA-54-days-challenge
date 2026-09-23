@@ -9,6 +9,7 @@ class Solution {
         int left = 0;
         int right = m * n - 1;
 
+        // Treat 2D matrix as virtual 1D sorted array in O(log(m * n))
         while (left <= right) {
             int mid = left + (right - left) / 2;
             int midVal = matrix[mid / n][mid % n];
