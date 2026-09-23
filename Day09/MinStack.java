@@ -17,7 +17,12 @@ class MinStack {
     }
     
     public void pop() {
-        stack.pop();
+        if (!stack.isEmpty()) {
+            int removed = stack.pop();
+            if (removed == minStack.peek()) {
+                minStack.pop();
+            }
+        }
     }
     
     public int top() {
