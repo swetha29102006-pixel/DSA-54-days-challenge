@@ -13,6 +13,7 @@ class Solution {
                 int width = stack.isEmpty() ? i : i - stack.peek() - 1;
                 maxArea = Math.max(maxArea, height * width);
             }
+            stack.push(i);
         }
 
         return maxArea;
