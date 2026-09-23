@@ -9,6 +9,10 @@ class Solution {
         while (left < right) {
             int mid = left + (right - left) / 2;
             long hoursNeeded = getHours(piles, mid);
+
+            if (hoursNeeded <= h) {
+                right = mid;
+            }
         }
 
         return left;
