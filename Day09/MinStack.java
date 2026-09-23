@@ -10,15 +10,15 @@ class MinStack {
     }
     
     public void push(int val) {
-        
+        stack.push(val);
     }
     
     public void pop() {
-        
+        stack.pop();
     }
     
     public int top() {
-        return 0;
+        return stack.peek();
     }
     
     public int getMin() {
