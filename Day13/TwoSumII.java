@@ -1,5 +1,9 @@
 class Solution {
     public int[] twoSum(int[] numbers, int target) {
+        if (numbers == null || numbers.length < 2) {
+            return new int[0];
+        }
+
         int left = 0;
         int right = numbers.length - 1;
 
