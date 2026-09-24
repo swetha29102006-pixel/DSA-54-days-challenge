@@ -17,6 +17,9 @@ class Solution {
         Map<Character, Integer> windowCounts = new HashMap<>();
 
         int left = 0;
+        int minLen = Integer.MAX_VALUE;
+        int minStart = 0;
+
         for (int right = 0; right < s.length(); right++) {
             char c = s.charAt(right);
             windowCounts.put(c, windowCounts.getOrDefault(c, 0) + 1);
@@ -24,8 +27,22 @@ class Solution {
             if (targetMap.containsKey(c) && windowCounts.get(c).intValue() == targetMap.get(c).intValue()) {
                 formed++;
             }
+
+            while (left <= right && formed == required) {
+                if (right - left + 1 < minLen) {
+                    minLen = right - left + 1;
+                    minStart = left;
+                }
+
+                char leftChar = s.charAt(left);
+                windowCounts.put(leftChar, windowCounts.get(leftChar) - 1);
+                if (targetMap.containsKey(leftChar) && windowCounts.get(leftChar) < targetMap.get(leftChar)) {
+                    formed--;
+                }
+                left++;
+            }
         }
 
-        return "";
+        return minLen == Integer.MAX_VALUE ? "" : s.substring(minStart, minStart + minLen);
     }
 }
