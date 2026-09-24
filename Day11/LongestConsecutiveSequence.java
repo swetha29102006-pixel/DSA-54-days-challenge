@@ -10,7 +10,10 @@ class Solution {
 
         int longest = 0;
         for (int num : set) {
-            
+            if (!set.contains(num - 1)) {
+                int currentNum = num;
+                int currentStreak = 1;
+            }
         }
 
         return longest;
