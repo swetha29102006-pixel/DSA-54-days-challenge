@@ -15,6 +15,11 @@ class Solution {
             buckets[i] = new ArrayList<>();
         }
 
+        for (int key : countMap.keySet()) {
+            int freq = countMap.get(key);
+            buckets[freq].add(key);
+        }
+
         return new int[0];
     }
 }
