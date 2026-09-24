@@ -28,5 +28,14 @@ class Solution {
                 temp[k++] = nums[j++];
             }
         }
+
+        while (i <= mid) {
+            temp[k++] = nums[i++];
+        }
+        while (j <= right) {
+            temp[k++] = nums[j++];
+        }
+
+        System.arraycopy(temp, 0, nums, left, temp.length);
     }
 }
