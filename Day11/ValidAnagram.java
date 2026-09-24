@@ -11,6 +11,12 @@ class Solution {
             count[t.charAt(i) - 'a']--;
         }
 
-        return false;
+        for (int c : count) {
+            if (c != 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
