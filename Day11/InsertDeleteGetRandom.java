@@ -25,7 +25,11 @@ class RandomizedSet {
     }
     
     public boolean remove(int val) {
-        return false;
+        if (!map.containsKey(val)) {
+            return false;
+        }
+        int index = map.get(val);
+        return true;
     }
     
     public int getRandom() {
