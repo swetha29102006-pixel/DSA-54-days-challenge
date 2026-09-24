@@ -1,5 +1,9 @@
 class Solution {
     public void sortColors(int[] nums) {
+        if (nums == null || nums.length <= 1) {
+            return;
+        }
+
         int low = 0;
         int mid = 0;
         int high = nums.length - 1;
