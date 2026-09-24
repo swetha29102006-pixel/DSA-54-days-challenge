@@ -36,6 +36,8 @@ class Solution {
             temp[k++] = nums[j++];
         }
 
-        System.arraycopy(temp, 0, nums, left, temp.length);
+        for (int p = 0; p < temp.length; p++) {
+            nums[left + p] = temp[p];
+        }
     }
 }
