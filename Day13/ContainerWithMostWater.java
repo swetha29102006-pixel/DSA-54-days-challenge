@@ -1,4 +1,9 @@
 class Solution {
+    /**
+     * Finds maximum container water using two-pointer technique.
+     * Time Complexity: O(n)
+     * Space Complexity: O(1)
+     */
     public int maxArea(int[] height) {
         if (height == null || height.length < 2) {
             return 0;
@@ -8,13 +13,12 @@ class Solution {
         int right = height.length - 1;
         int maxWater = 0;
 
-        // Converging two pointers from both ends
+        // Converge two pointers inward from both ends
         while (left < right) {
-            int width = right - left;
-            int currentArea = Math.min(height[left], height[right]) * width;
+            int currentArea = Math.min(height[left], height[right]) * (right - left);
             maxWater = Math.max(maxWater, currentArea);
 
-            // Move the pointer with the smaller height to explore potentially larger area
+            // Move the pointer pointing to the shorter line
             if (height[left] < height[right]) {
                 left++;
             } else {
