@@ -9,11 +9,13 @@ class Solution {
 
         int maxLen = 0;
         int left = 0;
+        // Map character to its most recent index
         Map<Character, Integer> lastSeen = new HashMap<>();
 
         for (int right = 0; right < s.length(); right++) {
             char c = s.charAt(right);
 
+            // If duplicate found, slide left boundary past the previous occurrence
             if (lastSeen.containsKey(c)) {
                 left = Math.max(left, lastSeen.get(c) + 1);
             }
