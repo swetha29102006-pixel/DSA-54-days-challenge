@@ -10,6 +10,7 @@ class Solution {
                 nums[j + 1] = nums[j];
                 j--;
             }
+            nums[j + 1] = key;
         }
 
         return nums;
