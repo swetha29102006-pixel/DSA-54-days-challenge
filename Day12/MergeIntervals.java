@@ -14,6 +14,13 @@ class Solution {
         int[] current = intervals[0];
         merged.add(current);
 
+        for (int i = 1; i < intervals.length; i++) {
+            int[] next = intervals[i];
+            if (current[1] >= next[0]) {
+                current[1] = Math.max(current[1], next[1]);
+            }
+        }
+
         return merged.toArray(new int[merged.size()][]);
     }
 }
