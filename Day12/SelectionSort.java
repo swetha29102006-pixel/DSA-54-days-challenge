@@ -1,5 +1,9 @@
 class Solution {
     public int[] selectionSort(int[] nums) {
+        if (nums == null || nums.length <= 1) {
+            return nums;
+        }
+
         int n = nums.length;
 
         for (int i = 0; i < n - 1; i++) {
