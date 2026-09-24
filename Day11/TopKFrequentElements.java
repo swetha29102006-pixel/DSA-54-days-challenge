@@ -20,6 +20,15 @@ class Solution {
             buckets[freq].add(key);
         }
 
-        return new int[0];
+        int[] result = new int[k];
+        int index = 0;
+        for (int i = buckets.length - 1; i >= 0 && index < k; i--) {
+            for (int num : buckets[i]) {
+                result[index++] = num;
+                if (index == k) break;
+            }
+        }
+
+        return result;
     }
 }
