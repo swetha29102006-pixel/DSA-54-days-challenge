@@ -5,6 +5,10 @@ import java.util.Map;
 
 class Solution {
     public int[] topKFrequent(int[] nums, int k) {
+        if (nums == null || nums.length == 0 || k <= 0) {
+            return new int[0];
+        }
+
         Map<Integer, Integer> countMap = new HashMap<>();
         for (int num : nums) {
             countMap.put(num, countMap.getOrDefault(num, 0) + 1);
@@ -15,9 +19,8 @@ class Solution {
             buckets[i] = new ArrayList<>();
         }
 
-        for (int key : countMap.keySet()) {
-            int freq = countMap.get(key);
-            buckets[freq].add(key);
+        for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
+            buckets[entry.getValue()].add(entry.getKey());
         }
 
         int[] result = new int[k];
