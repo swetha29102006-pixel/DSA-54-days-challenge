@@ -3,6 +3,10 @@ import java.util.Set;
 
 class Solution {
     public int longestConsecutive(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+
         Set<Integer> set = new HashSet<>();
         for (int num : nums) {
             set.add(num);
