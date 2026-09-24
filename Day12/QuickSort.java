@@ -27,6 +27,11 @@ class Solution {
                 nums[j] = temp;
             }
         }
-        return high;
+
+        int temp = nums[i + 1];
+        nums[i + 1] = nums[high];
+        nums[high] = temp;
+
+        return i + 1;
     }
 }
