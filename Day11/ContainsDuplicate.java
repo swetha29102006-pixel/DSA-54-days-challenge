@@ -7,10 +7,11 @@ class Solution {
             return false;
         }
 
+        // HashSet enables O(1) average lookup and insertion
         Set<Integer> seen = new HashSet<>();
 
         for (int num : nums) {
-            // seen.add returns false if element was already present
+            // Set.add() returns false if the item is already present
             if (!seen.add(num)) {
                 return true;
             }
