@@ -7,7 +7,8 @@ class Solution {
             int j = i - 1;
 
             while (j >= 0 && nums[j] > key) {
-                
+                nums[j + 1] = nums[j];
+                j--;
             }
         }
 
