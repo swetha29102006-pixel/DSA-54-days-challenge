@@ -10,6 +10,7 @@ class Solution {
             return new ArrayList<>();
         }
 
+        // Map sorted canonical representation to list of anagrams
         Map<String, List<String>> anagramGroups = new HashMap<>();
 
         for (String s : strs) {
@@ -17,6 +18,7 @@ class Solution {
             Arrays.sort(chars);
             String key = new String(chars);
 
+            // Group string into its corresponding anagram bucket
             anagramGroups.computeIfAbsent(key, k -> new ArrayList<>()).add(s);
         }
 
