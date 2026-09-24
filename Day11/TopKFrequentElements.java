@@ -28,7 +28,9 @@ class Solution {
         for (int i = buckets.length - 1; i >= 0 && index < k; i--) {
             for (int num : buckets[i]) {
                 result[index++] = num;
-                if (index == k) break;
+                if (index == k) {
+                    return result;
+                }
             }
         }
 
