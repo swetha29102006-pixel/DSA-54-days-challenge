@@ -8,5 +8,9 @@ class Solution {
                 insertPos++;
             }
         }
+
+        while (insertPos < nums.length) {
+            nums[insertPos++] = 0;
+        }
     }
 }
