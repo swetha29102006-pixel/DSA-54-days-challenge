@@ -14,5 +14,10 @@ class Solution {
         int mid = left + (right - left) / 2;
         sort(nums, left, mid);
         sort(nums, mid + 1, right);
+        merge(nums, left, mid, right);
+    }
+
+    private void merge(int[] nums, int left, int mid, int right) {
+        int[] temp = new int[right - left + 1];
     }
 }
