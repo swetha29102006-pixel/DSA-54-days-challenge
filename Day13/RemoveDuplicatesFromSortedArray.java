@@ -4,6 +4,7 @@ class Solution {
             return 0;
         }
 
+        // Slow pointer tracks the position of unique elements
         int slow = 0;
 
         for (int fast = 1; fast < nums.length; fast++) {
