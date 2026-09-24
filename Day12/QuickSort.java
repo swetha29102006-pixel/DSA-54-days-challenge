@@ -8,6 +8,14 @@ class Solution {
     }
 
     private void sort(int[] nums, int low, int high) {
-        
+        if (low < high) {
+            int pIndex = partition(nums, low, high);
+        }
+    }
+
+    private int partition(int[] nums, int low, int high) {
+        int pivot = nums[high];
+        int i = low - 1;
+        return high;
     }
 }
