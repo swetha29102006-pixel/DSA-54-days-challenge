@@ -1,10 +1,16 @@
 class Solution {
+    /**
+     * Finds minimum window substring of s containing all characters of t.
+     * Uses sliding window with ASCII character frequency counters.
+     * Time Complexity: O(|s| + |t|)
+     * Space Complexity: O(1) fixed 128-element array space.
+     */
     public String minWindow(String s, String t) {
         if (s == null || t == null || s.length() < t.length()) {
             return "";
         }
 
-        // ASCII frequency count for target string
+        // Frequency table for target string t
         int[] targetCounts = new int[128];
         for (char c : t.toCharArray()) {
             targetCounts[c]++;
@@ -29,7 +35,7 @@ class Solution {
                 formed++;
             }
 
-            // Shrink window from the left while all characters are satisfied
+            // Contract sliding window from left as long as window remains valid
             while (left <= right && formed == required) {
                 if (right - left + 1 < minLen) {
                     minLen = right - left + 1;
