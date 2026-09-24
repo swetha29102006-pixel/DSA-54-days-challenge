@@ -1,4 +1,9 @@
 class Solution {
+    /**
+     * Merge Sort implementation using divide-and-conquer.
+     * Time Complexity: O(n log n) in all cases.
+     * Space Complexity: O(n) auxiliary space for merging.
+     */
     public int[] mergeSort(int[] nums) {
         if (nums == null || nums.length <= 1) {
             return nums;
@@ -21,6 +26,7 @@ class Solution {
         int[] temp = new int[right - left + 1];
         int i = left, j = mid + 1, k = 0;
 
+        // Merge two sorted halves into temporary buffer
         while (i <= mid && j <= right) {
             if (nums[i] <= nums[j]) {
                 temp[k++] = nums[i++];
@@ -36,6 +42,7 @@ class Solution {
             temp[k++] = nums[j++];
         }
 
+        // Copy merged elements back to original array
         for (int p = 0; p < temp.length; p++) {
             nums[left + p] = temp[p];
         }
