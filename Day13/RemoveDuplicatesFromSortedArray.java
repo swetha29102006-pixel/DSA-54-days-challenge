@@ -4,16 +4,16 @@ class Solution {
             return 0;
         }
 
-        // Slow pointer tracks the position of unique elements
-        int slow = 0;
+        // Two-pointer read-write technique
+        int writeIndex = 0;
 
-        for (int fast = 1; fast < nums.length; fast++) {
-            if (nums[fast] != nums[slow]) {
-                slow++;
-                nums[slow] = nums[fast];
+        for (int readIndex = 1; readIndex < nums.length; readIndex++) {
+            if (nums[readIndex] != nums[writeIndex]) {
+                writeIndex++;
+                nums[writeIndex] = nums[readIndex];
             }
         }
 
-        return slow + 1;
+        return writeIndex + 1;
     }
 }
