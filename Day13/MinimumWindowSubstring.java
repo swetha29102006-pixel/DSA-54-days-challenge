@@ -12,6 +12,10 @@ class Solution {
             targetMap.put(c, targetMap.getOrDefault(c, 0) + 1);
         }
 
+        int required = targetMap.size();
+        int formed = 0;
+        Map<Character, Integer> windowCounts = new HashMap<>();
+
         return "";
     }
 }
