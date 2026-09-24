@@ -4,6 +4,7 @@ class Solution {
             return false;
         }
 
+        // Fixed-size frequency hash bucket for 26 lowercase English letters
         int[] freq = new int[26];
 
         for (int i = 0; i < s.length(); i++) {
@@ -11,6 +12,7 @@ class Solution {
             freq[t.charAt(i) - 'a']--;
         }
 
+        // If all character frequencies balance out, strings are anagrams
         for (int f : freq) {
             if (f != 0) {
                 return false;
