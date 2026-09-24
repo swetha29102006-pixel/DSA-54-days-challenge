@@ -9,6 +9,10 @@ class Solution {
         }
 
         int longest = 0;
+        for (int num : set) {
+            
+        }
+
         return longest;
     }
 }
