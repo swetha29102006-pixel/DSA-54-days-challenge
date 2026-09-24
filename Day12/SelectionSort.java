@@ -9,6 +9,11 @@ class Solution {
                     minIdx = j;
                 }
             }
+            if (minIdx != i) {
+                int temp = nums[minIdx];
+                nums[minIdx] = nums[i];
+                nums[i] = temp;
+            }
         }
 
         return nums;
