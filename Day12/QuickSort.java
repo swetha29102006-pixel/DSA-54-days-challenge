@@ -1,4 +1,9 @@
 class Solution {
+    /**
+     * Quick Sort implementation using Lomuto partition scheme.
+     * Time Complexity: O(n log n) average, O(n^2) worst case.
+     * Space Complexity: O(log n) recursion stack space.
+     */
     public int[] quickSort(int[] nums) {
         if (nums == null || nums.length <= 1) {
             return nums;
@@ -9,8 +14,10 @@ class Solution {
 
     private void sort(int[] nums, int low, int high) {
         if (low < high) {
-            // Partition array around pivot
+            // Find pivot element such that elements smaller than pivot are on left
             int pIndex = partition(nums, low, high);
+
+            // Recursively sort left and right partitions
             sort(nums, low, pIndex - 1);
             sort(nums, pIndex + 1, high);
         }
