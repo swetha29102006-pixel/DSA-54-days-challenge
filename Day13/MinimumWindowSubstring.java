@@ -4,6 +4,7 @@ class Solution {
             return "";
         }
 
+        // ASCII frequency count for target string
         int[] targetCounts = new int[128];
         for (char c : t.toCharArray()) {
             targetCounts[c]++;
@@ -28,6 +29,7 @@ class Solution {
                 formed++;
             }
 
+            // Shrink window from the left while all characters are satisfied
             while (left <= right && formed == required) {
                 if (right - left + 1 < minLen) {
                     minLen = right - left + 1;
