@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+/**
+ * RandomizedSet implementation supporting O(1) insert, remove, and getRandom.
+ */
 class RandomizedSet {
     private List<Integer> list;
     private Map<Integer, Integer> map;
