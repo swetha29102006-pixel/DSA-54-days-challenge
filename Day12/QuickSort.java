@@ -9,6 +9,7 @@ class Solution {
 
     private void sort(int[] nums, int low, int high) {
         if (low < high) {
+            // Partition array around pivot
             int pIndex = partition(nums, low, high);
             sort(nums, low, pIndex - 1);
             sort(nums, pIndex + 1, high);
