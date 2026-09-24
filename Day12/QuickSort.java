@@ -22,16 +22,17 @@ class Solution {
         for (int j = low; j < high; j++) {
             if (nums[j] <= pivot) {
                 i++;
-                int temp = nums[i];
-                nums[i] = nums[j];
-                nums[j] = temp;
+                swap(nums, i, j);
             }
         }
 
-        int temp = nums[i + 1];
-        nums[i + 1] = nums[high];
-        nums[high] = temp;
-
+        swap(nums, i + 1, high);
         return i + 1;
+    }
+
+    private void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
     }
 }
