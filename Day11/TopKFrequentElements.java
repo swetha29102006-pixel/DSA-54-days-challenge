@@ -9,11 +9,13 @@ class Solution {
             return new int[0];
         }
 
+        // Count frequency of each number using HashMap
         Map<Integer, Integer> countMap = new HashMap<>();
         for (int num : nums) {
             countMap.put(num, countMap.getOrDefault(num, 0) + 1);
         }
 
+        // Bucket sort: index represents frequency
         List<Integer>[] buckets = new List[nums.length + 1];
         for (int i = 0; i <= nums.length; i++) {
             buckets[i] = new ArrayList<>();
@@ -23,6 +25,7 @@ class Solution {
             buckets[entry.getValue()].add(entry.getKey());
         }
 
+        // Collect top k frequent elements starting from highest frequency bucket
         int[] result = new int[k];
         int index = 0;
         for (int i = buckets.length - 1; i >= 0 && index < k; i--) {
