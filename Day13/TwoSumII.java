@@ -7,10 +7,12 @@ class Solution {
         int left = 0;
         int right = numbers.length - 1;
 
+        // Two pointers on 1-indexed sorted array
         while (left < right) {
             int sum = numbers[left] + numbers[right];
 
             if (sum == target) {
+                // Return 1-based indices
                 return new int[]{left + 1, right + 1};
             } else if (sum < target) {
                 left++;
