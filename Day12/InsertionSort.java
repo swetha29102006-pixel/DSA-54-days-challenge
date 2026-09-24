@@ -5,6 +5,10 @@ class Solution {
         for (int i = 1; i < n; i++) {
             int key = nums[i];
             int j = i - 1;
+
+            while (j >= 0 && nums[j] > key) {
+                
+            }
         }
 
         return nums;
