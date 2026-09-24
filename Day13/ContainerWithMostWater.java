@@ -4,6 +4,10 @@ class Solution {
         int right = height.length - 1;
         int max = 0;
 
+        while (left < right) {
+            
+        }
+
         return max;
     }
 }
