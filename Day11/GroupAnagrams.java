@@ -10,17 +10,16 @@ class Solution {
             return new ArrayList<>();
         }
 
-        Map<String, List<String>> map = new HashMap<>();
+        Map<String, List<String>> anagramGroups = new HashMap<>();
 
         for (String s : strs) {
             char[] chars = s.toCharArray();
             Arrays.sort(chars);
-            String key = String.valueOf(chars);
+            String key = new String(chars);
 
-            map.putIfAbsent(key, new ArrayList<>());
-            map.get(key).add(s);
+            anagramGroups.computeIfAbsent(key, k -> new ArrayList<>()).add(s);
         }
 
-        return new ArrayList<>(map.values());
+        return new ArrayList<>(anagramGroups.values());
     }
 }
