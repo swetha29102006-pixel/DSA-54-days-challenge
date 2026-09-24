@@ -19,5 +19,14 @@ class Solution {
 
     private void merge(int[] nums, int left, int mid, int right) {
         int[] temp = new int[right - left + 1];
+        int i = left, j = mid + 1, k = 0;
+
+        while (i <= mid && j <= right) {
+            if (nums[i] <= nums[j]) {
+                temp[k++] = nums[i++];
+            } else {
+                temp[k++] = nums[j++];
+            }
+        }
     }
 }
