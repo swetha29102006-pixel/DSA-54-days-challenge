@@ -13,6 +13,13 @@ class Solution {
             if (!set.contains(num - 1)) {
                 int currentNum = num;
                 int currentStreak = 1;
+
+                while (set.contains(currentNum + 1)) {
+                    currentNum++;
+                    currentStreak++;
+                }
+
+                longest = Math.max(longest, currentStreak);
             }
         }
 
