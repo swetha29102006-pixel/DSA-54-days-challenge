@@ -40,6 +40,6 @@ class RandomizedSet {
     }
     
     public int getRandom() {
-        return 0;
+        return list.get(rand.nextInt(list.size()));
     }
 }
