@@ -20,6 +20,13 @@ public class KthSmallestElementInABST {
     public int kthSmallest(TreeNode root, int k) {
         this.count = 0;
         this.result = 0;
+        inorder(root, k);
         return result;
+    }
+
+    private void inorder(TreeNode node, int k) {
+        if (node == null) {
+            return;
+        }
     }
 }
