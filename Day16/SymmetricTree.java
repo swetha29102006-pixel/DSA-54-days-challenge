@@ -14,6 +14,11 @@ class TreeNode {
 }
 
 public class SymmetricTree {
+    /**
+     * Checks if a binary tree is symmetric around its center.
+     * Time Complexity: O(N) - visits each node pair once.
+     * Space Complexity: O(H) - recursion stack bound by tree height H.
+     */
     public boolean isSymmetric(TreeNode root) {
         if (root == null) {
             return true;
@@ -34,11 +39,12 @@ public class SymmetricTree {
     }
 
     public static void main(String[] args) {
+        // Symmetric tree test: [1, 2, 2, 3, 4, 4, 3]
         TreeNode root = new TreeNode(1,
             new TreeNode(2, new TreeNode(3), new TreeNode(4)),
             new TreeNode(2, new TreeNode(4), new TreeNode(3))
         );
         SymmetricTree solution = new SymmetricTree();
-        System.out.println("Is Symmetric: " + solution.isSymmetric(root)); // true
+        System.out.println("Is Symmetric: " + solution.isSymmetric(root)); // Expected: true
     }
 }
