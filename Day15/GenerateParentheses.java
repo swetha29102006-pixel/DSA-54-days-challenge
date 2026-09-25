@@ -13,5 +13,11 @@ class Solution {
             result.add(current.toString());
             return;
         }
+
+        if (open < max) {
+            current.append('(');
+            backtrack(result, current, open + 1, close, max);
+            current.deleteCharAt(current.length() - 1);
+        }
     }
 }
