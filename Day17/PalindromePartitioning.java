@@ -14,6 +14,9 @@ public class PalindromePartitioning {
             result.add(new ArrayList<>(current));
             return;
         }
+
+        for (int i = start; i < s.length(); i++) {
+        }
     }
 
     private boolean isPalindrome(String s, int low, int high) {
