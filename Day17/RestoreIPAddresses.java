@@ -10,5 +10,10 @@ public class RestoreIPAddresses {
     }
 
     private void backtrack(String s, int index, int dots, String current, List<String> result) {
+        if (dots == 4 && index == s.length()) {
+            result.add(current.substring(0, current.length() - 1));
+            return;
+        }
+        if (dots > 4) return;
     }
 }
