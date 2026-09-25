@@ -19,6 +19,14 @@ class Solution {
     }
 
     private boolean dfs(char[][] board, String word, int r, int c, int index) {
+        if (index == word.length()) {
+            return true;
+        }
+
+        if (r < 0 || r >= board.length || c < 0 || c >= board[0].length || board[r][c] != word.charAt(index)) {
+            return false;
+        }
+
         return false;
     }
 }
