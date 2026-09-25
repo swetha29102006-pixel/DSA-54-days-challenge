@@ -17,5 +17,9 @@ public class PermutationsII {
             result.add(new ArrayList<>(current));
             return;
         }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (used[i]) continue;
+        }
     }
 }
