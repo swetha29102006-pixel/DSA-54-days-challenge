@@ -28,6 +28,13 @@ class Solution {
                 }
                 bottom--;
             }
+
+            if (left <= right) {
+                for (int row = bottom; row >= top; row--) {
+                    result.add(matrix[row][left]);
+                }
+                left++;
+            }
         }
 
         return result;
