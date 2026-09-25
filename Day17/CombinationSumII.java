@@ -26,4 +26,10 @@ public class CombinationSumII {
             current.remove(current.size() - 1);
         }
     }
+
+    public static void main(String[] args) {
+        CombinationSumII solver = new CombinationSumII();
+        int[] candidates = {10, 1, 2, 7, 6, 1, 5};
+        System.out.println("Combinations: " + solver.combinationSum2(candidates, 8));
+    }
 }
