@@ -28,6 +28,9 @@ public class SymmetricTree {
         if (t1 == null || t2 == null) {
             return false;
         }
+        if (t1.val != t2.val) {
+            return false;
+        }
         return false;
     }
 }
