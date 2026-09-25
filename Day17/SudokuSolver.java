@@ -11,6 +11,11 @@ public class SudokuSolver {
                 if (board[i][j] == '.') {
                     for (char c = '1'; c <= '9'; c++) {
                         if (isValid(board, i, j, c)) {
+                            board[i][j] = c;
+                            if (solve(board)) {
+                                return true;
+                            }
+                            board[i][j] = '.';
                         }
                     }
                     return false;
