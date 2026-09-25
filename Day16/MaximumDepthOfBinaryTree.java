@@ -14,7 +14,11 @@ class TreeNode {
 }
 
 public class MaximumDepthOfBinaryTree {
-    // DFS Recursive approach - O(N) Time, O(H) Space
+    /**
+     * Calculates the maximum depth of a binary tree using recursive DFS.
+     * Time Complexity: O(N) - visits each node exactly once.
+     * Space Complexity: O(H) - call stack proportional to tree height H.
+     */
     public int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;
@@ -27,8 +31,9 @@ public class MaximumDepthOfBinaryTree {
     }
 
     public static void main(String[] args) {
+        // Constructing sample tree: [3, 9, 20, null, null, 15, 7]
         TreeNode root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
         MaximumDepthOfBinaryTree solution = new MaximumDepthOfBinaryTree();
-        System.out.println("Max Depth: " + solution.maxDepth(root)); // Output: 3
+        System.out.println("Max Depth: " + solution.maxDepth(root)); // Expected output: 3
     }
 }
