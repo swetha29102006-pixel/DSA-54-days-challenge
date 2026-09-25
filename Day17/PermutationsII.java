@@ -8,6 +8,14 @@ public class PermutationsII {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums);
         boolean[] used = new boolean[nums.length];
+        backtrack(nums, used, new ArrayList<>(), result);
         return result;
+    }
+
+    private void backtrack(int[] nums, boolean[] used, List<Integer> current, List<List<Integer>> result) {
+        if (current.size() == nums.length) {
+            result.add(new ArrayList<>(current));
+            return;
+        }
     }
 }
