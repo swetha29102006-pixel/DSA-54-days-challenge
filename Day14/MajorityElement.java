@@ -3,6 +3,10 @@ class Solution {
         int count = 0;
         Integer candidate = null;
 
-        return 0;
+        for (int num : nums) {
+            
+        }
+
+        return candidate != null ? candidate : 0;
     }
 }
