@@ -20,6 +20,7 @@ public class MaximumDepthOfBinaryTree {
         }
         
         int leftDepth = maxDepth(root.left);
+        int rightDepth = maxDepth(root.right);
         return leftDepth;
     }
 }
