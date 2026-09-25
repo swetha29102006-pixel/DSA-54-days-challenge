@@ -9,24 +9,25 @@ class Solution {
         }
 
         List<List<Integer>> result = new ArrayList<>();
+        // Sort candidates to allow early pruning
         Arrays.sort(candidates);
         backtrack(result, new ArrayList<>(), candidates, target, 0);
         return result;
     }
 
     private void backtrack(List<List<Integer>> result, List<Integer> current, int[] candidates, int remain, int start) {
-        if (remain < 0) {
-            return;
-        } else if (remain == 0) {
+        if (remain == 0) {
             result.add(new ArrayList<>(current));
             return;
         }
 
         for (int i = start; i < candidates.length; i++) {
+            // Prune search tree if candidate exceeds remaining target
             if (candidates[i] > remain) {
                 break;
             }
             current.add(candidates[i]);
+            // Pass i (not i + 1) to allow repeated choice of same candidate
             backtrack(result, current, candidates, remain - candidates[i], i);
             current.remove(current.size() - 1);
         }
