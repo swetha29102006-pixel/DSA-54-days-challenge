@@ -17,6 +17,13 @@ class Solution {
             index++;
         }
 
-        return 0;
+        int result = 0;
+        while (index < n && Character.isDigit(s.charAt(index))) {
+            int digit = s.charAt(index) - '0';
+            result = result * 10 + digit;
+            index++;
+        }
+
+        return result * sign;
     }
 }
