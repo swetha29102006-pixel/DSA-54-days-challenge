@@ -11,6 +11,12 @@ class Solution {
             index++;
         }
 
+        int sign = 1;
+        if (index < n && (s.charAt(index) == '+' || s.charAt(index) == '-')) {
+            sign = (s.charAt(index) == '-') ? -1 : 1;
+            index++;
+        }
+
         return 0;
     }
 }
