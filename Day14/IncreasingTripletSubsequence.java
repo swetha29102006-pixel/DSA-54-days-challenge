@@ -4,6 +4,7 @@ class Solution {
             return false;
         }
 
+        // Track first and second minimum values in linear scan
         int first = Integer.MAX_VALUE;
         int second = Integer.MAX_VALUE;
 
