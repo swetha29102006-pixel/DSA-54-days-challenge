@@ -32,4 +32,13 @@ public class SymmetricTree {
             && isMirror(t1.left, t2.right) 
             && isMirror(t1.right, t2.left);
     }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(1,
+            new TreeNode(2, new TreeNode(3), new TreeNode(4)),
+            new TreeNode(2, new TreeNode(4), new TreeNode(3))
+        );
+        SymmetricTree solution = new SymmetricTree();
+        System.out.println("Is Symmetric: " + solution.isSymmetric(root)); // true
+    }
 }
