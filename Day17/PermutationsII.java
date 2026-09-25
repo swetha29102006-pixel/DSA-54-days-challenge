@@ -29,4 +29,10 @@ public class PermutationsII {
             used[i] = false;
         }
     }
+
+    public static void main(String[] args) {
+        PermutationsII solver = new PermutationsII();
+        int[] nums = {1, 1, 2};
+        System.out.println("Unique Permutations: " + solver.permuteUnique(nums)); // [[1,1,2],[1,2,1],[2,1,1]]
+    }
 }
