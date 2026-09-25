@@ -1,7 +1,11 @@
 class Solution {
     public int majorityElement(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+
         int count = 0;
-        Integer candidate = null;
+        int candidate = nums[0];
 
         for (int num : nums) {
             if (count == 0) {
@@ -10,6 +14,6 @@ class Solution {
             count += (num == candidate) ? 1 : -1;
         }
 
-        return candidate != null ? candidate : 0;
+        return candidate;
     }
 }
