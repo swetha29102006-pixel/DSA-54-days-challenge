@@ -10,6 +10,10 @@ class Solution {
     private Set<Integer> diag2 = new HashSet<>();
 
     public List<List<String>> solveNQueens(int n) {
+        if (n <= 0) {
+            return new ArrayList<>();
+        }
+
         List<List<String>> result = new ArrayList<>();
         int[] queens = new int[n];
         backtrack(result, queens, 0, n);
