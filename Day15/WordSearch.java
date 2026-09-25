@@ -1,4 +1,9 @@
 class Solution {
+    /**
+     * 2D Grid DFS backtracking word search.
+     * Time Complexity: O(M * N * 3^L) where L is length of word.
+     * Space Complexity: O(L) recursion stack.
+     */
     public boolean exist(char[][] board, String word) {
         if (board == null || board.length == 0 || word == null || word.length() == 0) {
             return false;
@@ -23,7 +28,6 @@ class Solution {
             return true;
         }
 
-        // Boundary & character match check
         if (r < 0 || r >= board.length || c < 0 || c >= board[0].length || board[r][c] != word.charAt(index)) {
             return false;
         }
@@ -32,13 +36,13 @@ class Solution {
         char temp = board[r][c];
         board[r][c] = '#';
 
-        // Explore 4-directional adjacent cells
+        // Recurse in 4 directions
         boolean found = dfs(board, word, r + 1, c, index + 1) ||
                         dfs(board, word, r - 1, c, index + 1) ||
                         dfs(board, word, r, c + 1, index + 1) ||
                         dfs(board, word, r, c - 1, index + 1);
 
-        // Restore cell state (backtrack)
+        // Restore cell state
         board[r][c] = temp;
         return found;
     }
