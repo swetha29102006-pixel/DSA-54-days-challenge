@@ -19,5 +19,11 @@ class Solution {
             backtrack(result, current, open + 1, close, max);
             current.deleteCharAt(current.length() - 1);
         }
+
+        if (close < open) {
+            current.append(')');
+            backtrack(result, current, open, close + 1, max);
+            current.deleteCharAt(current.length() - 1);
+        }
     }
 }
