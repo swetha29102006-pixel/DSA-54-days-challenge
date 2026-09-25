@@ -20,6 +20,10 @@ public class CombinationSumII {
         for (int i = start; i < candidates.length; i++) {
             if (candidates[i] > target) break;
             if (i > start && candidates[i] == candidates[i - 1]) continue;
+
+            current.add(candidates[i]);
+            backtrack(candidates, target - candidates[i], i + 1, current, result);
+            current.remove(current.size() - 1);
         }
     }
 }
