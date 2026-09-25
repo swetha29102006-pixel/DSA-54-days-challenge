@@ -15,5 +15,9 @@ class Solution {
             result.add(new ArrayList<>(current));
             return;
         }
+
+        for (int i = start; i < candidates.length; i++) {
+            current.add(candidates[i]);
+        }
     }
 }
