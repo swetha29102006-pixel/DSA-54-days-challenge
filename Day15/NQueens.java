@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -16,6 +17,20 @@ class Solution {
     }
 
     private void backtrack(List<List<String>> result, int[] queens, int row, int n) {
+        if (row == n) {
+            result.add(buildBoard(queens, n));
+            return;
+        }
+    }
 
+    private List<String> buildBoard(int[] queens, int n) {
+        List<String> board = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            char[] r = new char[n];
+            Arrays.fill(r, '.');
+            r[queens[i]] = 'Q';
+            board.add(new String(r));
+        }
+        return board;
     }
 }
