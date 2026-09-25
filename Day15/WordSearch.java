@@ -27,6 +27,15 @@ class Solution {
             return false;
         }
 
-        return false;
+        char temp = board[r][c];
+        board[r][c] = '#';
+
+        boolean found = dfs(board, word, r + 1, c, index + 1) ||
+                        dfs(board, word, r - 1, c, index + 1) ||
+                        dfs(board, word, r, c + 1, index + 1) ||
+                        dfs(board, word, r, c - 1, index + 1);
+
+        board[r][c] = temp;
+        return found;
     }
 }
