@@ -18,6 +18,7 @@ public class LowestCommonAncestor {
         if (root == null || root == p || root == q) {
             return root;
         }
-        return root;
+        TreeNode left = lowestCommonAncestor(root.left, p, q);
+        return left;
     }
 }
