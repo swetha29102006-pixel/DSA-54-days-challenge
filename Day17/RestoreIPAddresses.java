@@ -22,6 +22,7 @@ public class RestoreIPAddresses {
             if ((segment.startsWith("0") && segment.length() > 1) || Integer.parseInt(segment) > 255) {
                 continue;
             }
+            backtrack(s, index + i, dots + 1, current + segment + ".", result);
         }
     }
 }
