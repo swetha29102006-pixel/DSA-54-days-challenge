@@ -16,6 +16,11 @@ class TreeNode {
 }
 
 public class InorderTraversal {
+    /**
+     * Performs an inorder traversal (Left -> Root -> Right) of a binary tree.
+     * Time Complexity: O(N) - visits every node once.
+     * Space Complexity: O(H) - call stack proportional to tree height H.
+     */
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) {
@@ -35,8 +40,9 @@ public class InorderTraversal {
     }
 
     public static void main(String[] args) {
+        // Tree: 1 -> right: 2 -> left: 3
         TreeNode root = new TreeNode(1, null, new TreeNode(2, new TreeNode(3), null));
         InorderTraversal solution = new InorderTraversal();
-        System.out.println("Inorder Traversal: " + solution.inorderTraversal(root)); // [1, 3, 2]
+        System.out.println("Inorder Traversal: " + solution.inorderTraversal(root)); // Output: [1, 3, 2]
     }
 }
