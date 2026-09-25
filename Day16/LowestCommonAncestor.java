@@ -15,6 +15,9 @@ class TreeNode {
 
 public class LowestCommonAncestor {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null) {
+            return null;
+        }
         return root;
     }
 }
