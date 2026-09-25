@@ -13,6 +13,8 @@ class Solution {
 
         for (int i = start; i < nums.length; i++) {
             current.add(nums[i]);
+            backtrack(result, current, nums, i + 1);
+            current.remove(current.size() - 1);
         }
     }
 }
