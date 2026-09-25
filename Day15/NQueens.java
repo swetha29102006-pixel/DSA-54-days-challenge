@@ -1,8 +1,15 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 class Solution {
+    private Set<Integer> cols = new HashSet<>();
+    private Set<Integer> diag1 = new HashSet<>();
+    private Set<Integer> diag2 = new HashSet<>();
+
     public List<List<String>> solveNQueens(int n) {
-        return new ArrayList<>();
+        List<List<String>> result = new ArrayList<>();
+        return result;
     }
 }
