@@ -36,4 +36,13 @@ public class KthSmallestElementInABST {
         }
         inorder(node.right, k);
     }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(3,
+            new TreeNode(1, null, new TreeNode(2)),
+            new TreeNode(4)
+        );
+        KthSmallestElementInABST solution = new KthSmallestElementInABST();
+        System.out.println("1st Smallest: " + solution.kthSmallest(root, 1)); // 1
+    }
 }
