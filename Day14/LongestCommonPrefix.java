@@ -1,13 +1,19 @@
 class Solution {
+    /**
+     * Horizontal scanning for longest common prefix.
+     * Time Complexity: O(S) where S is sum of all characters in strings.
+     * Space Complexity: O(1) auxiliary space.
+     */
     public String longestCommonPrefix(String[] strs) {
         if (strs == null || strs.length == 0) {
             return "";
         }
 
-        // Horizontal scanning algorithm
+        // Initialize prefix as first string
         String prefix = strs[0];
 
         for (int i = 1; i < strs.length; i++) {
+            // Trim prefix until current string starts with it
             while (strs[i].indexOf(prefix) != 0) {
                 prefix = prefix.substring(0, prefix.length() - 1);
                 if (prefix.isEmpty()) {
