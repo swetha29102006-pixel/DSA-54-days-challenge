@@ -18,6 +18,8 @@ public class MaximumDepthOfBinaryTree {
         if (root == null) {
             return 0;
         }
-        return 0;
+        
+        int leftDepth = maxDepth(root.left);
+        return leftDepth;
     }
 }
