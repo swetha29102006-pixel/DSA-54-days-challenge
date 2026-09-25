@@ -3,6 +3,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PalindromePartitioning {
+    /**
+     * Partitions string s into all possible palindromic substrings.
+     * Time Complexity: O(N * 2^N)
+     * Space Complexity: O(N) for recursion stack.
+     */
     public List<List<String>> partition(String s) {
         List<List<String>> result = new ArrayList<>();
         backtrack(s, 0, new ArrayList<>(), result);
@@ -33,6 +38,6 @@ public class PalindromePartitioning {
 
     public static void main(String[] args) {
         PalindromePartitioning solver = new PalindromePartitioning();
-        System.out.println("Partitions of 'aab': " + solver.partition("aab")); // [["a","a","b"],["aa","b"]]
+        System.out.println("Partitions of 'aab': " + solver.partition("aab")); // Output: [["a","a","b"], ["aa","b"]]
     }
 }
