@@ -25,7 +25,7 @@ public class KthSmallestElementInABST {
     }
 
     private void inorder(TreeNode node, int k) {
-        if (node == null) {
+        if (node == null || count >= k) {
             return;
         }
         inorder(node.left, k);
@@ -34,5 +34,6 @@ public class KthSmallestElementInABST {
             result = node.val;
             return;
         }
+        inorder(node.right, k);
     }
 }
