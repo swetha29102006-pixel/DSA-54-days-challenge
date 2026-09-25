@@ -7,6 +7,18 @@ class Solution {
         int m = board.length;
         int n = board[0].length;
 
+        for (int r = 0; r < m; r++) {
+            for (int c = 0; c < n; c++) {
+                if (dfs(board, word, r, c, 0)) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    private boolean dfs(char[][] board, String word, int r, int c, int index) {
         return false;
     }
 }
