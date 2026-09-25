@@ -30,4 +30,10 @@ public class ValidateBinarySearchTree {
         }
         return validate(node.left, min, node.val) && validate(node.right, node.val, max);
     }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(2, new TreeNode(1), new TreeNode(3));
+        ValidateBinarySearchTree solution = new ValidateBinarySearchTree();
+        System.out.println("Is Valid BST: " + solution.isValidBST(root)); // true
+    }
 }
