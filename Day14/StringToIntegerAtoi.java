@@ -7,16 +7,19 @@ class Solution {
         int index = 0;
         int n = s.length();
 
+        // 1. Skip leading whitespaces
         while (index < n && s.charAt(index) == ' ') {
             index++;
         }
 
+        // 2. Check sign
         int sign = 1;
         if (index < n && (s.charAt(index) == '+' || s.charAt(index) == '-')) {
             sign = (s.charAt(index) == '-') ? -1 : 1;
             index++;
         }
 
+        // 3. Convert digits and handle overflow
         int result = 0;
         while (index < n && Character.isDigit(s.charAt(index))) {
             int digit = s.charAt(index) - '0';
