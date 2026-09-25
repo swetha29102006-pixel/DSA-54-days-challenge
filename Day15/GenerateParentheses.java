@@ -8,6 +8,7 @@ class Solution {
         }
 
         List<String> result = new ArrayList<>();
+        // Backtrack with open and close bracket counters
         backtrack(result, new StringBuilder(), 0, 0, n);
         return result;
     }
@@ -18,12 +19,14 @@ class Solution {
             return;
         }
 
+        // Add open bracket if under max limit
         if (open < max) {
             current.append('(');
             backtrack(result, current, open + 1, close, max);
             current.deleteCharAt(current.length() - 1);
         }
 
+        // Add close bracket if it won't exceed open count
         if (close < open) {
             current.append(')');
             backtrack(result, current, open, close + 1, max);
