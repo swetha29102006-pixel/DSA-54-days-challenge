@@ -3,6 +3,10 @@ import java.util.List;
 
 class Solution {
     public List<String> generateParenthesis(int n) {
+        if (n <= 0) {
+            return new ArrayList<>();
+        }
+
         List<String> result = new ArrayList<>();
         backtrack(result, new StringBuilder(), 0, 0, n);
         return result;
