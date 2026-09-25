@@ -15,6 +15,13 @@ class TreeNode {
 
 public class SymmetricTree {
     public boolean isSymmetric(TreeNode root) {
-        return true;
+        if (root == null) {
+            return true;
+        }
+        return isMirror(root.left, root.right);
+    }
+
+    private boolean isMirror(TreeNode t1, TreeNode t2) {
+        return false;
     }
 }
