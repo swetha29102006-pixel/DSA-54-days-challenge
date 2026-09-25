@@ -32,7 +32,14 @@ public class BinaryTreeLevelOrderTraversal {
             for (int i = 0; i < levelSize; i++) {
                 TreeNode node = queue.poll();
                 currentLevel.add(node.val);
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
             }
+            result.add(currentLevel);
         }
         return result;
     }
