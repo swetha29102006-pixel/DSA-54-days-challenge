@@ -25,4 +25,9 @@ public class RestoreIPAddresses {
             backtrack(s, index + i, dots + 1, current + segment + ".", result);
         }
     }
+
+    public static void main(String[] args) {
+        RestoreIPAddresses solver = new RestoreIPAddresses();
+        System.out.println("Valid IPs for '25525511135': " + solver.restoreIpAddresses("25525511135"));
+    }
 }
