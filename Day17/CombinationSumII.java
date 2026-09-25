@@ -19,6 +19,7 @@ public class CombinationSumII {
 
         for (int i = start; i < candidates.length; i++) {
             if (candidates[i] > target) break;
+            if (i > start && candidates[i] == candidates[i - 1]) continue;
         }
     }
 }
