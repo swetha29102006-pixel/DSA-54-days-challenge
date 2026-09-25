@@ -16,5 +16,9 @@ public class CombinationSumII {
             result.add(new ArrayList<>(current));
             return;
         }
+
+        for (int i = start; i < candidates.length; i++) {
+            if (candidates[i] > target) break;
+        }
     }
 }
