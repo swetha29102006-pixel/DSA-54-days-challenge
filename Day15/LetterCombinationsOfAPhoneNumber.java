@@ -12,11 +12,13 @@ class Solution {
         }
 
         List<String> result = new ArrayList<>();
+        // Recursive phone keypad mapping
         backtrack(result, new StringBuilder(), digits, 0);
         return result;
     }
 
     private void backtrack(List<String> result, StringBuilder current, String digits, int index) {
+        // Base case: full string formed for digit sequence
         if (index == digits.length()) {
             result.add(current.toString());
             return;
@@ -26,7 +28,7 @@ class Solution {
         for (int i = 0; i < letters.length(); i++) {
             current.append(letters.charAt(i));
             backtrack(result, current, digits, index + 1);
-            current.deleteCharAt(current.length() - 1);
+            current.deleteCharAt(current.length() - 1); // Undo character choice
         }
     }
 }
