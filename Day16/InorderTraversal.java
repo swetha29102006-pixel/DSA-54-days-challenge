@@ -29,5 +29,6 @@ public class InorderTraversal {
         if (node == null) {
             return;
         }
+        helper(node.left, result);
     }
 }
