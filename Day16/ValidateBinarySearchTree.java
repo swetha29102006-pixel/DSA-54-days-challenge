@@ -19,6 +19,9 @@ public class ValidateBinarySearchTree {
     }
 
     private boolean validate(TreeNode node, Integer min, Integer max) {
+        if (node == null) {
+            return true;
+        }
         return true;
     }
 }
