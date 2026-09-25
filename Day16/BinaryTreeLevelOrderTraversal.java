@@ -18,6 +18,11 @@ class TreeNode {
 }
 
 public class BinaryTreeLevelOrderTraversal {
+    /**
+     * Traverses binary tree level by level using Queue BFS.
+     * Time Complexity: O(N) - visits each node once.
+     * Space Complexity: O(W) - max width of the tree stored in queue.
+     */
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         if (root == null) {
@@ -47,6 +52,6 @@ public class BinaryTreeLevelOrderTraversal {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
         BinaryTreeLevelOrderTraversal solution = new BinaryTreeLevelOrderTraversal();
-        System.out.println("Level Order: " + solution.levelOrder(root)); // [[3], [9, 20], [15, 7]]
+        System.out.println("Level Order: " + solution.levelOrder(root)); // Output: [[3], [9, 20], [15, 7]]
     }
 }
