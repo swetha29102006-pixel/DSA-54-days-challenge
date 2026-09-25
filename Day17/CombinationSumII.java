@@ -6,6 +6,7 @@ import java.util.List;
 public class CombinationSumII {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> result = new ArrayList<>();
+        Arrays.sort(candidates);
         return result;
     }
 }
