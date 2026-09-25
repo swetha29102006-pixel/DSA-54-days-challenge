@@ -26,5 +26,8 @@ public class InorderTraversal {
     }
 
     private void helper(TreeNode node, List<Integer> result) {
+        if (node == null) {
+            return;
+        }
     }
 }
