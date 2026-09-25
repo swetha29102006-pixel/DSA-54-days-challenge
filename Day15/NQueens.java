@@ -9,6 +9,11 @@ class Solution {
     private Set<Integer> diag1 = new HashSet<>(); // row - col
     private Set<Integer> diag2 = new HashSet<>(); // row + col
 
+    /**
+     * N-Queens problem solver using backtracking with diagonal safety sets.
+     * Time Complexity: O(N!)
+     * Space Complexity: O(N)
+     */
     public List<List<String>> solveNQueens(int n) {
         if (n <= 0) {
             return new ArrayList<>();
@@ -16,19 +21,19 @@ class Solution {
 
         List<List<String>> result = new ArrayList<>();
         int[] queens = new int[n];
-        // Solve N-Queens via row-by-row backtracking
         backtrack(result, queens, 0, n);
         return result;
     }
 
     private void backtrack(List<List<String>> result, int[] queens, int row, int n) {
+        // Base case: all N queens successfully placed
         if (row == n) {
             result.add(buildBoard(queens, n));
             return;
         }
 
         for (int col = 0; col < n; col++) {
-            // Prune invalid queen placements
+            // Prune branches where column or diagonal conflict exists
             if (cols.contains(col) || diag1.contains(row - col) || diag2.contains(row + col)) {
                 continue;
             }
@@ -40,7 +45,6 @@ class Solution {
 
             backtrack(result, queens, row + 1, n);
 
-            // Undo placement (backtrack)
             cols.remove(col);
             diag1.remove(row - col);
             diag2.remove(row + col);
