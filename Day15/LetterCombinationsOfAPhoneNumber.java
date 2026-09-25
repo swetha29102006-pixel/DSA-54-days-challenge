@@ -7,10 +7,11 @@ class Solution {
     };
 
     public List<String> letterCombinations(String digits) {
-        List<String> result = new ArrayList<>();
         if (digits == null || digits.length() == 0) {
-            return result;
+            return new ArrayList<>();
         }
+
+        List<String> result = new ArrayList<>();
         backtrack(result, new StringBuilder(), digits, 0);
         return result;
     }
@@ -22,8 +23,8 @@ class Solution {
         }
 
         String letters = KEYPAD[digits.charAt(index) - '0'];
-        for (char c : letters.toCharArray()) {
-            current.append(c);
+        for (int i = 0; i < letters.length(); i++) {
+            current.append(letters.charAt(i));
             backtrack(result, current, digits, index + 1);
             current.deleteCharAt(current.length() - 1);
         }
