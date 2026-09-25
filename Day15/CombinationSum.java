@@ -18,6 +18,8 @@ class Solution {
 
         for (int i = start; i < candidates.length; i++) {
             current.add(candidates[i]);
+            backtrack(result, current, candidates, remain - candidates[i], i);
+            current.remove(current.size() - 1);
         }
     }
 }
