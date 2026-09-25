@@ -14,6 +14,7 @@ class TreeNode {
 }
 
 public class MaximumDepthOfBinaryTree {
+    // DFS Recursive approach - O(N) Time, O(H) Space
     public int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;
