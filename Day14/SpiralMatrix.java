@@ -21,6 +21,13 @@ class Solution {
                 result.add(matrix[row][right]);
             }
             right--;
+
+            if (top <= bottom) {
+                for (int col = right; col >= left; col--) {
+                    result.add(matrix[bottom][col]);
+                }
+                bottom--;
+            }
         }
 
         return result;
