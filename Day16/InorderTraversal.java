@@ -30,5 +30,6 @@ public class InorderTraversal {
             return;
         }
         helper(node.left, result);
+        result.add(node.val);
     }
 }
