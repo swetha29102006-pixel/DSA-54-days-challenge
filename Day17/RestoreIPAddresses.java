@@ -15,5 +15,9 @@ public class RestoreIPAddresses {
             return;
         }
         if (dots > 4) return;
+
+        for (int i = 1; i <= 3; i++) {
+            if (index + i > s.length()) break;
+        }
     }
 }
