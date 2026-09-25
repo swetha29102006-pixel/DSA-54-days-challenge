@@ -13,5 +13,12 @@ class Solution {
             result.add(new ArrayList<>(current));
             return;
         }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (current.contains(nums[i])) {
+                continue;
+            }
+            current.add(nums[i]);
+        }
     }
 }
