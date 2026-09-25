@@ -18,6 +18,10 @@ public class RestoreIPAddresses {
 
         for (int i = 1; i <= 3; i++) {
             if (index + i > s.length()) break;
+            String segment = s.substring(index, index + i);
+            if ((segment.startsWith("0") && segment.length() > 1) || Integer.parseInt(segment) > 255) {
+                continue;
+            }
         }
     }
 }
