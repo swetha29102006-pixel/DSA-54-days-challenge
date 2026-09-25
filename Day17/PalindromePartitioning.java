@@ -16,6 +16,8 @@ public class PalindromePartitioning {
         }
 
         for (int i = start; i < s.length(); i++) {
+            if (isPalindrome(s, start, i)) {
+            }
         }
     }
 
