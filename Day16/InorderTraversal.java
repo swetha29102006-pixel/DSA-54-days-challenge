@@ -18,6 +18,13 @@ class TreeNode {
 public class InorderTraversal {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
+        helper(root, result);
         return result;
+    }
+
+    private void helper(TreeNode node, List<Integer> result) {
     }
 }
