@@ -25,6 +25,9 @@ public class ValidateBinarySearchTree {
         if (min != null && node.val <= min) {
             return false;
         }
+        if (max != null && node.val >= max) {
+            return false;
+        }
         return true;
     }
 }
