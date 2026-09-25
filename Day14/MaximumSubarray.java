@@ -5,6 +5,7 @@ class Solution {
 
         for (int i = 1; i < nums.length; i++) {
             currentMax = Math.max(nums[i], currentMax + nums[i]);
+            maxSoFar = Math.max(maxSoFar, currentMax);
         }
 
         return maxSoFar;
