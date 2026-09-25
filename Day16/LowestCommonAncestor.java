@@ -14,6 +14,11 @@ class TreeNode {
 }
 
 public class LowestCommonAncestor {
+    /**
+     * Finds the lowest common ancestor of nodes p and q using postorder DFS.
+     * Time Complexity: O(N) - visits each node at most once.
+     * Space Complexity: O(H) - call stack depth bounded by height H.
+     */
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || root == p || root == q) {
             return root;
@@ -33,6 +38,6 @@ public class LowestCommonAncestor {
         TreeNode root = new TreeNode(3, p, q);
         LowestCommonAncestor solution = new LowestCommonAncestor();
         TreeNode lca = solution.lowestCommonAncestor(root, p, q);
-        System.out.println("LCA: " + (lca != null ? lca.val : "null")); // 3
+        System.out.println("LCA: " + (lca != null ? lca.val : "null")); // Output: 3
     }
 }
