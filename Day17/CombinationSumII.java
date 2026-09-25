@@ -4,6 +4,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CombinationSumII {
+    /**
+     * Finds unique combinations that sum to target using candidates at most once.
+     * Time Complexity: O(2^N)
+     * Space Complexity: O(N) for recursion stack.
+     */
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(candidates);
@@ -30,6 +35,6 @@ public class CombinationSumII {
     public static void main(String[] args) {
         CombinationSumII solver = new CombinationSumII();
         int[] candidates = {10, 1, 2, 7, 6, 1, 5};
-        System.out.println("Combinations: " + solver.combinationSum2(candidates, 8));
+        System.out.println("Combinations: " + solver.combinationSum2(candidates, 8)); // Output: [[1,1,6], [1,2,5], [1,7], [2,6]]
     }
 }
