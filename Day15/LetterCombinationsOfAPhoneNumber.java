@@ -11,6 +11,11 @@ class Solution {
         if (digits == null || digits.length() == 0) {
             return result;
         }
+        backtrack(result, new StringBuilder(), digits, 0);
         return result;
+    }
+
+    private void backtrack(List<String> result, StringBuilder current, String digits, int index) {
+
     }
 }
