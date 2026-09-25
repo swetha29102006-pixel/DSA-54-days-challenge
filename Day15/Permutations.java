@@ -19,6 +19,8 @@ class Solution {
                 continue;
             }
             current.add(nums[i]);
+            backtrack(result, current, nums);
+            current.remove(current.size() - 1);
         }
     }
 }
