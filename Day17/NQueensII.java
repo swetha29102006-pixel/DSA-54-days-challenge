@@ -35,4 +35,9 @@ public class NQueensII {
             diag2[d2] = false;
         }
     }
+
+    public static void main(String[] args) {
+        NQueensII solver = new NQueensII();
+        System.out.println("Total 4-Queens Solutions: " + solver.totalNQueens(4)); // 2
+    }
 }
