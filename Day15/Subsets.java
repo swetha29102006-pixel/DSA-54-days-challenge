@@ -3,6 +3,10 @@ import java.util.List;
 
 class Solution {
     public List<List<Integer>> subsets(int[] nums) {
+        if (nums == null) {
+            return new ArrayList<>();
+        }
+
         List<List<Integer>> result = new ArrayList<>();
         backtrack(result, new ArrayList<>(), nums, 0);
         return result;
