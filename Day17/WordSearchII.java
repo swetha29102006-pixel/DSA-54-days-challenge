@@ -8,6 +8,11 @@ class TrieNode {
 }
 
 public class WordSearchII {
+    /**
+     * Searches grid for dictionary words using Trie + 2D Grid DFS Backtracking.
+     * Time Complexity: O(M * N * 4^L) where L is max word length.
+     * Space Complexity: O(W * L) for Trie storage.
+     */
     public List<String> findWords(char[][] board, String[] words) {
         List<String> result = new ArrayList<>();
         TrieNode root = buildTrie(words);
@@ -64,6 +69,6 @@ public class WordSearchII {
         };
         String[] words = {"oath","pea","eat","rain"};
         WordSearchII solver = new WordSearchII();
-        System.out.println("Found Words: " + solver.findWords(board, words)); // ["oath", "eat"]
+        System.out.println("Found Words: " + solver.findWords(board, words)); // Output: ["oath", "eat"]
     }
 }
