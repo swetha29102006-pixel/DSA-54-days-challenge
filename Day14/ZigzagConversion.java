@@ -17,6 +17,10 @@ class Solution {
 
         for (char c : s.toCharArray()) {
             rows.get(curRow).append(c);
+            if (curRow == 0 || curRow == numRows - 1) {
+                goingDown = !goingDown;
+            }
+            curRow += goingDown ? 1 : -1;
         }
 
         return s;
