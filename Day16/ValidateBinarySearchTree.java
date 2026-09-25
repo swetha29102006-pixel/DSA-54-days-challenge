@@ -14,6 +14,11 @@ class TreeNode {
 }
 
 public class ValidateBinarySearchTree {
+    /**
+     * Validates if a binary tree satisfies the BST property using range-bounded DFS.
+     * Time Complexity: O(N) - visits each node once.
+     * Space Complexity: O(H) - recursion stack bounded by height H.
+     */
     public boolean isValidBST(TreeNode root) {
         return validate(root, null, null);
     }
@@ -34,6 +39,6 @@ public class ValidateBinarySearchTree {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(2, new TreeNode(1), new TreeNode(3));
         ValidateBinarySearchTree solution = new ValidateBinarySearchTree();
-        System.out.println("Is Valid BST: " + solution.isValidBST(root)); // true
+        System.out.println("Is Valid BST: " + solution.isValidBST(root)); // Output: true
     }
 }
