@@ -28,6 +28,6 @@ public class ValidateBinarySearchTree {
         if (max != null && node.val >= max) {
             return false;
         }
-        return true;
+        return validate(node.left, min, node.val) && validate(node.right, node.val, max);
     }
 }
