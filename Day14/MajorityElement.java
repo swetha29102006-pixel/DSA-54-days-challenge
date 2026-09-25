@@ -1,10 +1,15 @@
 class Solution {
+    /**
+     * Boyer-Moore Majority Vote Algorithm.
+     * Finds element appearing more than n/2 times.
+     * Time Complexity: O(n)
+     * Space Complexity: O(1)
+     */
     public int majorityElement(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
         }
 
-        // Boyer-Moore Majority Vote Algorithm
         int count = 0;
         int candidate = 0;
 
