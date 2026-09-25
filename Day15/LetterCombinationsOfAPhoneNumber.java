@@ -16,6 +16,9 @@ class Solution {
     }
 
     private void backtrack(List<String> result, StringBuilder current, String digits, int index) {
-
+        if (index == digits.length()) {
+            result.add(current.toString());
+            return;
+        }
     }
 }
