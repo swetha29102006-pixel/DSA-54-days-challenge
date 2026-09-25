@@ -1,6 +1,6 @@
 class Solution {
     public boolean exist(char[][] board, String word) {
-        if (board == null || board.length == 0 || word == null) {
+        if (board == null || board.length == 0 || word == null || word.length() == 0) {
             return false;
         }
 
@@ -9,7 +9,7 @@ class Solution {
 
         for (int r = 0; r < m; r++) {
             for (int c = 0; c < n; c++) {
-                if (dfs(board, word, r, c, 0)) {
+                if (board[r][c] == word.charAt(0) && dfs(board, word, r, c, 0)) {
                     return true;
                 }
             }
