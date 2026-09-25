@@ -6,6 +6,13 @@ public class SudokuSolver {
     }
 
     private boolean solve(char[][] board) {
-        return false;
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (board[i][j] == '.') {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
