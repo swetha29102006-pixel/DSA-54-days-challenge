@@ -4,6 +4,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class PermutationsII {
+    /**
+     * Generates all unique permutations of an array containing duplicates.
+     * Time Complexity: O(N! * N)
+     * Space Complexity: O(N) for call stack and used array.
+     */
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums);
@@ -33,6 +38,6 @@ public class PermutationsII {
     public static void main(String[] args) {
         PermutationsII solver = new PermutationsII();
         int[] nums = {1, 1, 2};
-        System.out.println("Unique Permutations: " + solver.permuteUnique(nums)); // [[1,1,2],[1,2,1],[2,1,1]]
+        System.out.println("Unique Permutations: " + solver.permuteUnique(nums)); // Output: [[1,1,2], [1,2,1], [2,1,1]]
     }
 }
