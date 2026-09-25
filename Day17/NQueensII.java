@@ -3,6 +3,11 @@
 public class NQueensII {
     private int count = 0;
 
+    /**
+     * Calculates total distinct solutions for N-Queens using boolean collision tracking.
+     * Time Complexity: O(N!)
+     * Space Complexity: O(N)
+     */
     public int totalNQueens(int n) {
         count = 0;
         boolean[] cols = new boolean[n];
@@ -38,6 +43,6 @@ public class NQueensII {
 
     public static void main(String[] args) {
         NQueensII solver = new NQueensII();
-        System.out.println("Total 4-Queens Solutions: " + solver.totalNQueens(4)); // 2
+        System.out.println("Total 4-Queens Solutions: " + solver.totalNQueens(4)); // Expected: 2
     }
 }
