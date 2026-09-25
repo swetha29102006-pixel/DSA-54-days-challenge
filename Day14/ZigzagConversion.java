@@ -7,6 +7,7 @@ class Solution {
             return s;
         }
 
+        // Create StringBuilders for each row
         List<StringBuilder> rows = new ArrayList<>();
         for (int i = 0; i < numRows; i++) {
             rows.add(new StringBuilder());
@@ -17,17 +18,18 @@ class Solution {
 
         for (char c : s.toCharArray()) {
             rows.get(curRow).append(c);
+            // Toggle direction at top and bottom rows
             if (curRow == 0 || curRow == numRows - 1) {
                 goingDown = !goingDown;
             }
             curRow += goingDown ? 1 : -1;
         }
 
-        StringBuilder ret = new StringBuilder();
+        StringBuilder result = new StringBuilder();
         for (StringBuilder row : rows) {
-            ret.append(row);
+            result.append(row);
         }
 
-        return ret.toString();
+        return result.toString();
     }
 }
