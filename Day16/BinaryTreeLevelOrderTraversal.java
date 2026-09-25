@@ -23,6 +23,8 @@ public class BinaryTreeLevelOrderTraversal {
         if (root == null) {
             return result;
         }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
         return result;
     }
 }
