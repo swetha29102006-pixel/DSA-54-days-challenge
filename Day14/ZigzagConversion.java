@@ -12,6 +12,13 @@ class Solution {
             rows.add(new StringBuilder());
         }
 
+        int curRow = 0;
+        boolean goingDown = false;
+
+        for (char c : s.toCharArray()) {
+            rows.get(curRow).append(c);
+        }
+
         return s;
     }
 }
