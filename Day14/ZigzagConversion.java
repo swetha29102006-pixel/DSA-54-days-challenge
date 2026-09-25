@@ -23,6 +23,11 @@ class Solution {
             curRow += goingDown ? 1 : -1;
         }
 
-        return s;
+        StringBuilder ret = new StringBuilder();
+        for (StringBuilder row : rows) {
+            ret.append(row);
+        }
+
+        return ret.toString();
     }
 }
