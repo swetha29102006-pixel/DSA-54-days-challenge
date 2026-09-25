@@ -14,7 +14,12 @@ class TreeNode {
 }
 
 public class KthSmallestElementInABST {
+    private int count = 0;
+    private int result = 0;
+
     public int kthSmallest(TreeNode root, int k) {
-        return 0;
+        this.count = 0;
+        this.result = 0;
+        return result;
     }
 }
