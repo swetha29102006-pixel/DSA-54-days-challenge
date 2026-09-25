@@ -30,4 +30,9 @@ public class PalindromePartitioning {
         }
         return true;
     }
+
+    public static void main(String[] args) {
+        PalindromePartitioning solver = new PalindromePartitioning();
+        System.out.println("Partitions of 'aab': " + solver.partition("aab")); // [["a","a","b"],["aa","b"]]
+    }
 }
