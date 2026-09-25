@@ -4,6 +4,7 @@ class Solution {
             return 0;
         }
 
+        // Kadane's Algorithm for Maximum Subarray Sum
         int maxSoFar = nums[0];
         int currentMax = nums[0];
 
