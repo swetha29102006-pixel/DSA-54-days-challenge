@@ -43,4 +43,10 @@ public class BinaryTreeLevelOrderTraversal {
         }
         return result;
     }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
+        BinaryTreeLevelOrderTraversal solution = new BinaryTreeLevelOrderTraversal();
+        System.out.println("Level Order: " + solution.levelOrder(root)); // [[3], [9, 20], [15, 7]]
+    }
 }
