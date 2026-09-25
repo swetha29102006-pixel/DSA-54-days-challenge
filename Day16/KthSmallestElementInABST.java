@@ -28,5 +28,6 @@ public class KthSmallestElementInABST {
         if (node == null) {
             return;
         }
+        inorder(node.left, k);
     }
 }
