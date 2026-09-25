@@ -6,8 +6,8 @@ import java.util.Set;
 
 class Solution {
     private Set<Integer> cols = new HashSet<>();
-    private Set<Integer> diag1 = new HashSet<>();
-    private Set<Integer> diag2 = new HashSet<>();
+    private Set<Integer> diag1 = new HashSet<>(); // row - col
+    private Set<Integer> diag2 = new HashSet<>(); // row + col
 
     public List<List<String>> solveNQueens(int n) {
         if (n <= 0) {
@@ -16,6 +16,7 @@ class Solution {
 
         List<List<String>> result = new ArrayList<>();
         int[] queens = new int[n];
+        // Solve N-Queens via row-by-row backtracking
         backtrack(result, queens, 0, n);
         return result;
     }
@@ -27,9 +28,11 @@ class Solution {
         }
 
         for (int col = 0; col < n; col++) {
+            // Prune invalid queen placements
             if (cols.contains(col) || diag1.contains(row - col) || diag2.contains(row + col)) {
                 continue;
             }
+
             queens[row] = col;
             cols.add(col);
             diag1.add(row - col);
@@ -37,6 +40,7 @@ class Solution {
 
             backtrack(result, queens, row + 1, n);
 
+            // Undo placement (backtrack)
             cols.remove(col);
             diag1.remove(row - col);
             diag2.remove(row + col);
