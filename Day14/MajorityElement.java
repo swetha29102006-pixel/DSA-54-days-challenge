@@ -4,7 +4,9 @@ class Solution {
         Integer candidate = null;
 
         for (int num : nums) {
-            
+            if (count == 0) {
+                candidate = num;
+            }
         }
 
         return candidate != null ? candidate : 0;
