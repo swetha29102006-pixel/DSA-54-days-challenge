@@ -1,5 +1,9 @@
 class Solution {
     public int maxSubArray(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+
         int maxSoFar = nums[0];
         int currentMax = nums[0];
 
