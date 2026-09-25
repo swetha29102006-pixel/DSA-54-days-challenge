@@ -1,6 +1,11 @@
 // LeetCode 37: Sudoku Solver
 
 public class SudokuSolver {
+    /**
+     * Solves a 9x9 Sudoku puzzle in-place using 2D Grid DFS Backtracking.
+     * Time Complexity: O(9^(N)) where N is number of empty cells.
+     * Space Complexity: O(N) for recursion stack.
+     */
     public void solveSudoku(char[][] board) {
         solve(board);
     }
@@ -48,6 +53,6 @@ public class SudokuSolver {
         };
         SudokuSolver solver = new SudokuSolver();
         solver.solveSudoku(board);
-        System.out.println("Sudoku solved. Top-left cell: " + board[0][0]);
+        System.out.println("Sudoku solved. Top-left cell: " + board[0][0]); // Expected: '5'
     }
 }
