@@ -25,4 +25,10 @@ public class MaximumDepthOfBinaryTree {
         
         return Math.max(leftDepth, rightDepth) + 1;
     }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
+        MaximumDepthOfBinaryTree solution = new MaximumDepthOfBinaryTree();
+        System.out.println("Max Depth: " + solution.maxDepth(root)); // Output: 3
+    }
 }
