@@ -31,6 +31,6 @@ public class SymmetricTree {
         if (t1.val != t2.val) {
             return false;
         }
-        return false;
+        return isMirror(t1.left, t2.right);
     }
 }
