@@ -21,6 +21,9 @@ public class WordSearchII {
     }
 
     private void dfs(char[][] board, int i, int j, TrieNode node, List<String> result) {
+        if (i < 0 || i >= board.length || j < 0 || j >= board[0].length) return;
+        char c = board[i][j];
+        if (c == '#' || node.children[c - 'a'] == null) return;
     }
 
     private TrieNode buildTrie(String[] words) {
