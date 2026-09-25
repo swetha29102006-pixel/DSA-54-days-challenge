@@ -5,7 +5,15 @@ import java.util.List;
 public class PalindromePartitioning {
     public List<List<String>> partition(String s) {
         List<List<String>> result = new ArrayList<>();
+        backtrack(s, 0, new ArrayList<>(), result);
         return result;
+    }
+
+    private void backtrack(String s, int start, List<String> current, List<List<String>> result) {
+        if (start == s.length()) {
+            result.add(new ArrayList<>(current));
+            return;
+        }
     }
 
     private boolean isPalindrome(String s, int low, int high) {
