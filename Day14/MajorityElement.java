@@ -7,6 +7,7 @@ class Solution {
             if (count == 0) {
                 candidate = num;
             }
+            count += (num == candidate) ? 1 : -1;
         }
 
         return candidate != null ? candidate : 0;
