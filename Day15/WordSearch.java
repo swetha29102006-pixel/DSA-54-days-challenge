@@ -23,18 +23,22 @@ class Solution {
             return true;
         }
 
+        // Boundary & character match check
         if (r < 0 || r >= board.length || c < 0 || c >= board[0].length || board[r][c] != word.charAt(index)) {
             return false;
         }
 
+        // Mark cell visited
         char temp = board[r][c];
         board[r][c] = '#';
 
+        // Explore 4-directional adjacent cells
         boolean found = dfs(board, word, r + 1, c, index + 1) ||
                         dfs(board, word, r - 1, c, index + 1) ||
                         dfs(board, word, r, c + 1, index + 1) ||
                         dfs(board, word, r, c - 1, index + 1);
 
+        // Restore cell state (backtrack)
         board[r][c] = temp;
         return found;
     }
