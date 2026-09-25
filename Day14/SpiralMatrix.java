@@ -11,6 +11,10 @@ class Solution {
         int top = 0, bottom = matrix.length - 1;
         int left = 0, right = matrix[0].length - 1;
 
+        while (top <= bottom && left <= right) {
+            
+        }
+
         return result;
     }
 }
