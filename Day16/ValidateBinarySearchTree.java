@@ -15,6 +15,10 @@ class TreeNode {
 
 public class ValidateBinarySearchTree {
     public boolean isValidBST(TreeNode root) {
+        return validate(root, null, null);
+    }
+
+    private boolean validate(TreeNode node, Integer min, Integer max) {
         return true;
     }
 }
