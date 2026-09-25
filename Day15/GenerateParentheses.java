@@ -9,6 +9,9 @@ class Solution {
     }
 
     private void backtrack(List<String> result, StringBuilder current, int open, int close, int max) {
-
+        if (current.length() == max * 2) {
+            result.add(current.toString());
+            return;
+        }
     }
 }
