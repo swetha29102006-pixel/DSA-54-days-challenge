@@ -10,6 +10,9 @@ class ListNode {
 
 public class MiddleOfTheLinkedList {
     public ListNode middleNode(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
         return head;
     }
 }
