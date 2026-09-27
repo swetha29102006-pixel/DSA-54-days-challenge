@@ -14,6 +14,10 @@ public class RemoveNthNodeFromEndOfList {
         dummy.next = head;
         ListNode fast = dummy;
         ListNode slow = dummy;
+
+        for (int i = 0; i <= n; i++) {
+            fast = fast.next;
+        }
         return dummy.next;
     }
 }
