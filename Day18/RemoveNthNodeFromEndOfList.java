@@ -10,6 +10,8 @@ class ListNode {
 
 public class RemoveNthNodeFromEndOfList {
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        return head;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        return dummy.next;
     }
 }
