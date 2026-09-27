@@ -27,4 +27,11 @@ public class RemoveNthNodeFromEndOfList {
         slow.next = slow.next.next;
         return dummy.next;
     }
+
+    public static void main(String[] args) {
+        ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+        RemoveNthNodeFromEndOfList solution = new RemoveNthNodeFromEndOfList();
+        ListNode res = solution.removeNthFromEnd(head, 2);
+        System.out.println("Modified head val: " + (res != null ? res.val : "null"));
+    }
 }
