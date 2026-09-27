@@ -23,6 +23,12 @@ public class PalindromeLinkedList {
 
         ListNode prev = null;
         ListNode curr = slow;
+        while (curr != null) {
+            ListNode nextTemp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = nextTemp;
+        }
         return true;
     }
 }
