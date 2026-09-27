@@ -10,5 +10,8 @@ class ListNode {
 
 public class ReorderList {
     public void reorderList(ListNode head) {
+        if (head == null || head.next == null || head.next.next == null) {
+            return;
+        }
     }
 }
