@@ -20,5 +20,9 @@ public class ReorderList {
             slow = slow.next;
             fast = fast.next.next;
         }
+
+        ListNode prev = null;
+        ListNode curr = slow.next;
+        slow.next = null;
     }
 }
