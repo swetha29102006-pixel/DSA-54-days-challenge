@@ -41,4 +41,10 @@ public class PalindromeLinkedList {
         }
         return true;
     }
+
+    public static void main(String[] args) {
+        ListNode head = new ListNode(1, new ListNode(2, new ListNode(2, new ListNode(1))));
+        PalindromeLinkedList solution = new PalindromeLinkedList();
+        System.out.println("Is Palindrome: " + solution.isPalindrome(head)); // true
+    }
 }
