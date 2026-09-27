@@ -31,5 +31,18 @@ public class ReorderList {
             prev = curr;
             curr = nextTemp;
         }
+
+        ListNode first = head;
+        ListNode second = prev;
+        while (second != null) {
+            ListNode tmp1 = first.next;
+            ListNode tmp2 = second.next;
+
+            first.next = second;
+            second.next = tmp1;
+
+            first = tmp1;
+            second = tmp2;
+        }
     }
 }
