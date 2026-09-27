@@ -24,5 +24,12 @@ public class ReorderList {
         ListNode prev = null;
         ListNode curr = slow.next;
         slow.next = null;
+
+        while (curr != null) {
+            ListNode nextTemp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = nextTemp;
+        }
     }
 }
