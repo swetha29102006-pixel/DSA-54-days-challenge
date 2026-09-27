@@ -30,4 +30,12 @@ public class MergeTwoSortedLists {
         curr.next = (list1 != null) ? list1 : list2;
         return dummy.next;
     }
+
+    public static void main(String[] args) {
+        ListNode l1 = new ListNode(1, new ListNode(2, new ListNode(4)));
+        ListNode l2 = new ListNode(1, new ListNode(3, new ListNode(4)));
+        MergeTwoSortedLists solution = new MergeTwoSortedLists();
+        ListNode merged = solution.mergeTwoLists(l1, l2);
+        System.out.println("Merged head val: " + (merged != null ? merged.val : "null")); // 1
+    }
 }
