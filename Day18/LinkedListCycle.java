@@ -9,6 +9,11 @@ class ListNode {
 }
 
 public class LinkedListCycle {
+    /**
+     * Detects cycle in a linked list using Floyd's Tortoise and Hare algorithm.
+     * Time Complexity: O(N)
+     * Space Complexity: O(1)
+     */
     public boolean hasCycle(ListNode head) {
         if (head == null || head.next == null) {
             return false;
@@ -37,6 +42,6 @@ public class LinkedListCycle {
         n4.next = n2; // Creates cycle
 
         LinkedListCycle solution = new LinkedListCycle();
-        System.out.println("Has Cycle: " + solution.hasCycle(head)); // true
+        System.out.println("Has Cycle: " + solution.hasCycle(head)); // Output: true
     }
 }
