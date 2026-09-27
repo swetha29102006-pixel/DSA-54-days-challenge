@@ -9,6 +9,11 @@ class ListNode {
 }
 
 public class MergeTwoSortedLists {
+    /**
+     * Merges two sorted linked lists iteratively using a dummy head.
+     * Time Complexity: O(N + M)
+     * Space Complexity: O(1)
+     */
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if (list1 == null) return list2;
         if (list2 == null) return list1;
@@ -36,6 +41,6 @@ public class MergeTwoSortedLists {
         ListNode l2 = new ListNode(1, new ListNode(3, new ListNode(4)));
         MergeTwoSortedLists solution = new MergeTwoSortedLists();
         ListNode merged = solution.mergeTwoLists(l1, l2);
-        System.out.println("Merged head val: " + (merged != null ? merged.val : "null")); // 1
+        System.out.println("Merged head val: " + (merged != null ? merged.val : "null")); // Output: 1
     }
 }
