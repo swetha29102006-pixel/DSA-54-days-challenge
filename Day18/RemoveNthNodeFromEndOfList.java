@@ -9,6 +9,11 @@ class ListNode {
 }
 
 public class RemoveNthNodeFromEndOfList {
+    /**
+     * Removes the nth node from the end of a linked list in a single pass.
+     * Time Complexity: O(N)
+     * Space Complexity: O(1)
+     */
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
@@ -32,6 +37,6 @@ public class RemoveNthNodeFromEndOfList {
         ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
         RemoveNthNodeFromEndOfList solution = new RemoveNthNodeFromEndOfList();
         ListNode res = solution.removeNthFromEnd(head, 2);
-        System.out.println("Modified head val: " + (res != null ? res.val : "null"));
+        System.out.println("Modified head val: " + (res != null ? res.val : "null")); // Output: 1
     }
 }
