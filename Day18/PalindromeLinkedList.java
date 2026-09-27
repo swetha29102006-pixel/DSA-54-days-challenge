@@ -9,6 +9,11 @@ class ListNode {
 }
 
 public class PalindromeLinkedList {
+    /**
+     * Checks if a linked list is a palindrome by reversing the second half in-place.
+     * Time Complexity: O(N)
+     * Space Complexity: O(1)
+     */
     public boolean isPalindrome(ListNode head) {
         if (head == null || head.next == null) {
             return true;
@@ -45,6 +50,6 @@ public class PalindromeLinkedList {
     public static void main(String[] args) {
         ListNode head = new ListNode(1, new ListNode(2, new ListNode(2, new ListNode(1))));
         PalindromeLinkedList solution = new PalindromeLinkedList();
-        System.out.println("Is Palindrome: " + solution.isPalindrome(head)); // true
+        System.out.println("Is Palindrome: " + solution.isPalindrome(head)); // Output: true
     }
 }
