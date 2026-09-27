@@ -15,6 +15,9 @@ public class MergeTwoSortedLists {
 
         ListNode dummy = new ListNode(0);
         ListNode curr = dummy;
+
+        while (list1 != null && list2 != null) {
+        }
         return dummy.next;
     }
 }
