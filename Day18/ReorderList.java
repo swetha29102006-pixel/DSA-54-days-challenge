@@ -9,6 +9,11 @@ class ListNode {
 }
 
 public class ReorderList {
+    /**
+     * Reorders list in-place to L0 -> Ln -> L1 -> Ln-1...
+     * Time Complexity: O(N)
+     * Space Complexity: O(1)
+     */
     public void reorderList(ListNode head) {
         if (head == null || head.next == null || head.next.next == null) {
             return;
@@ -50,6 +55,6 @@ public class ReorderList {
         ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
         ReorderList solution = new ReorderList();
         solution.reorderList(head);
-        System.out.println("Reordered list head: " + head.val + " -> " + head.next.val); // 1 -> 4
+        System.out.println("Reordered list head: " + head.val + " -> " + head.next.val); // Output: 1 -> 4
     }
 }
