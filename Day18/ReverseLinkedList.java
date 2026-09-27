@@ -15,6 +15,10 @@ public class ReverseLinkedList {
         }
         ListNode prev = null;
         ListNode curr = head;
+
+        while (curr != null) {
+            ListNode nextTemp = curr.next;
+        }
         return prev;
     }
 }
