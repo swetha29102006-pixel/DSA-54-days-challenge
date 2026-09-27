@@ -26,6 +26,8 @@ public class MergeTwoSortedLists {
             }
             curr = curr.next;
         }
+
+        curr.next = (list1 != null) ? list1 : list2;
         return dummy.next;
     }
 }
