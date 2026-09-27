@@ -9,6 +9,11 @@ class ListNode {
 }
 
 public class ReverseLinkedList {
+    /**
+     * Reverses a singly linked list in-place using 3 pointers.
+     * Time Complexity: O(N) - single pass over N nodes.
+     * Space Complexity: O(1) - auxiliary space constant.
+     */
     public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
@@ -29,6 +34,6 @@ public class ReverseLinkedList {
         ListNode head = new ListNode(1, new ListNode(2, new ListNode(3)));
         ReverseLinkedList solution = new ReverseLinkedList();
         ListNode reversed = solution.reverseList(head);
-        System.out.println("Reversed head val: " + (reversed != null ? reversed.val : "null")); // 3
+        System.out.println("Reversed head val: " + (reversed != null ? reversed.val : "null")); // Output: 3
     }
 }
