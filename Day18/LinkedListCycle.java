@@ -25,4 +25,18 @@ public class LinkedListCycle {
         }
         return false;
     }
+
+    public static void main(String[] args) {
+        ListNode head = new ListNode(3);
+        ListNode n2 = new ListNode(2);
+        ListNode n3 = new ListNode(0);
+        ListNode n4 = new ListNode(-4);
+        head.next = n2;
+        n2.next = n3;
+        n3.next = n4;
+        n4.next = n2; // Creates cycle
+
+        LinkedListCycle solution = new LinkedListCycle();
+        System.out.println("Has Cycle: " + solution.hasCycle(head)); // true
+    }
 }
