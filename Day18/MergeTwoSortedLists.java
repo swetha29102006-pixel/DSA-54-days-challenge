@@ -12,6 +12,9 @@ public class MergeTwoSortedLists {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if (list1 == null) return list2;
         if (list2 == null) return list1;
-        return null;
+
+        ListNode dummy = new ListNode(0);
+        ListNode curr = dummy;
+        return dummy.next;
     }
 }
