@@ -13,6 +13,8 @@ public class MiddleOfTheLinkedList {
         if (head == null || head.next == null) {
             return head;
         }
-        return head;
+        ListNode slow = head;
+        ListNode fast = head;
+        return slow;
     }
 }
