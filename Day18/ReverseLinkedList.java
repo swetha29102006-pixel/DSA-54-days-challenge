@@ -19,6 +19,8 @@ public class ReverseLinkedList {
         while (curr != null) {
             ListNode nextTemp = curr.next;
             curr.next = prev;
+            prev = curr;
+            curr = nextTemp;
         }
         return prev;
     }
