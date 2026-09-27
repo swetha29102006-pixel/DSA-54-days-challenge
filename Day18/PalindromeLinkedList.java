@@ -20,6 +20,9 @@ public class PalindromeLinkedList {
             slow = slow.next;
             fast = fast.next.next;
         }
+
+        ListNode prev = null;
+        ListNode curr = slow;
         return true;
     }
 }
