@@ -34,6 +34,10 @@ public class ReverseNodesInKGroup {
                 prev = curr;
                 curr = tmp;
             }
+
+            ListNode tmp = prevGroup.next;
+            prevGroup.next = kth;
+            prevGroup = tmp;
         }
         return dummy.next;
     }
