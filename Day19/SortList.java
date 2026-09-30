@@ -45,4 +45,11 @@ public class SortList {
         if (l2 != null) p.next = l2;
         return dummy.next;
     }
+
+    public static void main(String[] args) {
+        ListNode head = new ListNode(4, new ListNode(2, new ListNode(1, new ListNode(3))));
+        SortList solution = new SortList();
+        ListNode sorted = solution.sortList(head);
+        System.out.println("Sorted list head val: " + (sorted != null ? sorted.val : "null")); // 1
+    }
 }
