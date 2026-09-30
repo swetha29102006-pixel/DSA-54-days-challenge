@@ -21,6 +21,9 @@ public class MergeKSortedLists {
                 pq.offer(node);
             }
         }
-        return null;
+
+        ListNode dummy = new ListNode(0);
+        ListNode curr = dummy;
+        return dummy.next;
     }
 }
