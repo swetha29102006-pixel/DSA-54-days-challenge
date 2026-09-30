@@ -9,7 +9,11 @@ class ListNode {
 }
 
 public class DeleteNodeInALinkedList {
-    // In-place node value copying and link bypassing
+    /**
+     * Deletes a given node in a singly linked list without head access.
+     * Time Complexity: O(1)
+     * Space Complexity: O(1)
+     */
     public void deleteNode(ListNode node) {
         if (node == null || node.next == null) {
             return;
@@ -27,6 +31,6 @@ public class DeleteNodeInALinkedList {
 
         DeleteNodeInALinkedList solution = new DeleteNodeInALinkedList();
         solution.deleteNode(n2); // Deletes node with value 5
-        System.out.println("Head next val after deletion: " + head.next.val); // 1
+        System.out.println("Head next val after deletion: " + head.next.val); // Output: 1
     }
 }
