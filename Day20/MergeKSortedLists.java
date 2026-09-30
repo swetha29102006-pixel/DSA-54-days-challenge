@@ -10,6 +10,11 @@ class ListNode {
 }
 
 public class MergeKSortedLists {
+    /**
+     * Merges k sorted linked lists using a Min-Heap PriorityQueue.
+     * Time Complexity: O(N log k) where N is total number of nodes.
+     * Space Complexity: O(k) for PriorityQueue.
+     */
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists == null || lists.length == 0) {
             return null;
@@ -44,6 +49,6 @@ public class MergeKSortedLists {
 
         MergeKSortedLists solution = new MergeKSortedLists();
         ListNode merged = solution.mergeKLists(lists);
-        System.out.println("Merged head val: " + (merged != null ? merged.val : "null")); // 1
+        System.out.println("Merged head val: " + (merged != null ? merged.val : "null")); // Output: 1
     }
 }
