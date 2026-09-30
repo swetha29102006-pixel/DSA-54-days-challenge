@@ -13,5 +13,8 @@ public class DeleteNodeInALinkedList {
         if (node == null || node.next == null) {
             return;
         }
+
+        // Copy value of next node
+        node.val = node.next.val;
     }
 }
