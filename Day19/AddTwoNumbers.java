@@ -9,6 +9,11 @@ class ListNode {
 }
 
 public class AddTwoNumbers {
+    /**
+     * Adds two numbers represented as linked lists in reverse order.
+     * Time Complexity: O(max(M, N))
+     * Space Complexity: O(1) auxiliary space (excluding result list).
+     */
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
         ListNode curr = dummyHead;
@@ -34,6 +39,6 @@ public class AddTwoNumbers {
         ListNode l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
         AddTwoNumbers solution = new AddTwoNumbers();
         ListNode res = solution.addTwoNumbers(l1, l2);
-        System.out.println("Sum head val: " + (res != null ? res.val : "null")); // 7
+        System.out.println("Sum head val: " + (res != null ? res.val : "null")); // Output: 7
     }
 }
