@@ -10,6 +10,9 @@ class ListNode {
 
 public class ReverseNodesInKGroup {
     public ListNode reverseKGroup(ListNode head, int k) {
+        if (head == null || k == 1) {
+            return head;
+        }
         return head;
     }
 }
