@@ -24,6 +24,12 @@ public class SortList {
 
         ListNode l1 = sortList(head);
         ListNode l2 = sortList(slow);
-        return l1;
+
+        return merge(l1, l2);
+    }
+
+    private ListNode merge(ListNode l1, ListNode l2) {
+        ListNode dummy = new ListNode(0);
+        return dummy.next;
     }
 }
