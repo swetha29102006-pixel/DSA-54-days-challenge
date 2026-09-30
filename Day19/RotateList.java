@@ -21,7 +21,13 @@ public class RotateList {
             length++;
         }
 
-        oldTail.next = head; // Close list into a ring
+        oldTail.next = head;
+
+        ListNode newTail = head;
+        int stepsToNewTail = length - (k % length) - 1;
+        for (int i = 0; i < stepsToNewTail; i++) {
+            newTail = newTail.next;
+        }
         return head;
     }
 }
