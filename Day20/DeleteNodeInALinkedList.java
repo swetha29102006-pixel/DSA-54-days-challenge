@@ -10,5 +10,8 @@ class ListNode {
 
 public class DeleteNodeInALinkedList {
     public void deleteNode(ListNode node) {
+        if (node == null || node.next == null) {
+            return;
+        }
     }
 }
