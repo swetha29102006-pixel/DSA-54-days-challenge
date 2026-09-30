@@ -9,14 +9,13 @@ class ListNode {
 }
 
 public class DeleteNodeInALinkedList {
+    // In-place node deletion without head access
     public void deleteNode(ListNode node) {
         if (node == null || node.next == null) {
             return;
         }
 
-        // Copy value of next node
         node.val = node.next.val;
-        // Unlink next node
         node.next = node.next.next;
     }
 }
