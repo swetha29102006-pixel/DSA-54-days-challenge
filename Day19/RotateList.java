@@ -13,6 +13,13 @@ public class RotateList {
         if (head == null || head.next == null || k == 0) {
             return head;
         }
+
+        ListNode oldTail = head;
+        int length = 1;
+        while (oldTail.next != null) {
+            oldTail = oldTail.next;
+            length++;
+        }
         return head;
     }
 }
