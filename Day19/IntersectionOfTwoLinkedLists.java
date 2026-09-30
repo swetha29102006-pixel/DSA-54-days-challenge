@@ -9,7 +9,11 @@ class ListNode {
 }
 
 public class IntersectionOfTwoLinkedLists {
-    // Two-pointer redirection approach
+    /**
+     * Finds intersection node of two linked lists using two-pointer redirection.
+     * Time Complexity: O(M + N)
+     * Space Complexity: O(1)
+     */
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if (headA == null || headB == null) {
             return null;
@@ -32,6 +36,6 @@ public class IntersectionOfTwoLinkedLists {
 
         IntersectionOfTwoLinkedLists solution = new IntersectionOfTwoLinkedLists();
         ListNode intersection = solution.getIntersectionNode(headA, headB);
-        System.out.println("Intersection Node val: " + (intersection != null ? intersection.val : "null")); // 8
+        System.out.println("Intersection Node val: " + (intersection != null ? intersection.val : "null")); // Output: 8
     }
 }
