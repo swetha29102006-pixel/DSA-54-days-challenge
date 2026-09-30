@@ -13,6 +13,10 @@ public class SwapNodesInPairs {
         if (head == null || head.next == null) {
             return head;
         }
-        return head;
+
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode point = dummy;
+        return dummy.next;
     }
 }
