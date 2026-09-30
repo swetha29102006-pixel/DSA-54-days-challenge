@@ -23,6 +23,17 @@ public class ReverseNodesInKGroup {
             if (kth == null) {
                 break;
             }
+
+            ListNode nextGroup = kth.next;
+            ListNode prev = nextGroup;
+            ListNode curr = prevGroup.next;
+
+            while (curr != nextGroup) {
+                ListNode tmp = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = tmp;
+            }
         }
         return dummy.next;
     }
