@@ -10,6 +10,9 @@ class ListNode {
 
 public class SwapNodesInPairs {
     public ListNode swapPairs(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
         return head;
     }
 }
