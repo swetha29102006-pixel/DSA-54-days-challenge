@@ -9,6 +9,11 @@ class ListNode {
 }
 
 public class SortList {
+    /**
+     * Sorts a linked list in O(N log N) time using divide-and-conquer Merge Sort.
+     * Time Complexity: O(N log N)
+     * Space Complexity: O(log N) recursion stack depth.
+     */
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
@@ -50,6 +55,6 @@ public class SortList {
         ListNode head = new ListNode(4, new ListNode(2, new ListNode(1, new ListNode(3))));
         SortList solution = new SortList();
         ListNode sorted = solution.sortList(head);
-        System.out.println("Sorted list head val: " + (sorted != null ? sorted.val : "null")); // 1
+        System.out.println("Sorted list head val: " + (sorted != null ? sorted.val : "null")); // Output: 1
     }
 }
