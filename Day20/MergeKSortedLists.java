@@ -14,6 +14,8 @@ public class MergeKSortedLists {
         if (lists == null || lists.length == 0) {
             return null;
         }
+
+        PriorityQueue<ListNode> pq = new PriorityQueue<>((a, b) -> a.val - b.val);
         return null;
     }
 }
