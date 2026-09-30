@@ -19,6 +19,9 @@ public class AddTwoNumbers {
             int y = (l2 != null) ? l2.val : 0;
             int sum = carry + x + y;
             carry = sum / 10;
+
+            curr.next = new ListNode(sum % 10);
+            curr = curr.next;
         }
         return dummyHead.next;
     }
