@@ -13,6 +13,14 @@ public class ReverseLinkedListII {
         if (head == null || left == right) {
             return head;
         }
-        return head;
+
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode prev = dummy;
+
+        for (int i = 0; i < left - 1; i++) {
+            prev = prev.next;
+        }
+        return dummy.next;
     }
 }
