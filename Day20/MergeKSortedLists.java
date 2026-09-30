@@ -35,4 +35,15 @@ public class MergeKSortedLists {
         }
         return dummy.next;
     }
+
+    public static void main(String[] args) {
+        ListNode l1 = new ListNode(1, new ListNode(4, new ListNode(5)));
+        ListNode l2 = new ListNode(1, new ListNode(3, new ListNode(4)));
+        ListNode l3 = new ListNode(2, new ListNode(6));
+        ListNode[] lists = {l1, l2, l3};
+
+        MergeKSortedLists solution = new MergeKSortedLists();
+        ListNode merged = solution.mergeKLists(lists);
+        System.out.println("Merged head val: " + (merged != null ? merged.val : "null")); // 1
+    }
 }
