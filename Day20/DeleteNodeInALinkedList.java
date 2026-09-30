@@ -18,4 +18,15 @@ public class DeleteNodeInALinkedList {
         node.val = node.next.val;
         node.next = node.next.next;
     }
+
+    public static void main(String[] args) {
+        ListNode n4 = new ListNode(9);
+        ListNode n3 = new ListNode(1, n4);
+        ListNode n2 = new ListNode(5, n3);
+        ListNode head = new ListNode(4, n2);
+
+        DeleteNodeInALinkedList solution = new DeleteNodeInALinkedList();
+        solution.deleteNode(n2); // Deletes node with value 5
+        System.out.println("Head next val after deletion: " + head.next.val); // 1
+    }
 }
