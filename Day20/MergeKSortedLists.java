@@ -24,6 +24,15 @@ public class MergeKSortedLists {
 
         ListNode dummy = new ListNode(0);
         ListNode curr = dummy;
+
+        while (!pq.isEmpty()) {
+            ListNode minNode = pq.poll();
+            curr.next = minNode;
+            curr = curr.next;
+            if (minNode.next != null) {
+                pq.offer(minNode.next);
+            }
+        }
         return dummy.next;
     }
 }
