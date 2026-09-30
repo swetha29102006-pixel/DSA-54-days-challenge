@@ -9,6 +9,11 @@ class ListNode {
 }
 
 public class LinkedListCycleII {
+    /**
+     * Finds the node where cycle begins using Floyd's Tortoise and Hare algorithm.
+     * Time Complexity: O(N)
+     * Space Complexity: O(1)
+     */
     public ListNode detectCycle(ListNode head) {
         if (head == null || head.next == null) {
             return null;
@@ -43,6 +48,6 @@ public class LinkedListCycleII {
 
         LinkedListCycleII solution = new LinkedListCycleII();
         ListNode cycleStart = solution.detectCycle(head);
-        System.out.println("Cycle start val: " + (cycleStart != null ? cycleStart.val : "null")); // 2
+        System.out.println("Cycle start val: " + (cycleStart != null ? cycleStart.val : "null")); // Output: 2
     }
 }
