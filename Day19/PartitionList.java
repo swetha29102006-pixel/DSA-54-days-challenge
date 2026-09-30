@@ -13,6 +13,11 @@ public class PartitionList {
         if (head == null || head.next == null) {
             return head;
         }
+
+        ListNode beforeHead = new ListNode(0);
+        ListNode before = beforeHead;
+        ListNode afterHead = new ListNode(0);
+        ListNode after = afterHead;
         return head;
     }
 }
