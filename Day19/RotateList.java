@@ -33,4 +33,11 @@ public class RotateList {
         newTail.next = null;
         return newHead;
     }
+
+    public static void main(String[] args) {
+        ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+        RotateList solution = new RotateList();
+        ListNode rotated = solution.rotateRight(head, 2);
+        System.out.println("Rotated head val: " + (rotated != null ? rotated.val : "null")); // 4
+    }
 }
