@@ -20,6 +20,10 @@ public class SortList {
             slow = slow.next;
             fast = fast.next.next;
         }
-        return head;
+        prev.next = null;
+
+        ListNode l1 = sortList(head);
+        ListNode l2 = sortList(slow);
+        return l1;
     }
 }
