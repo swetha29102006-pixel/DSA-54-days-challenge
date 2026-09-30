@@ -9,6 +9,11 @@ class ListNode {
 }
 
 public class SwapNodesInPairs {
+    /**
+     * Swaps adjacent nodes in pairs iteratively using a dummy head pointer.
+     * Time Complexity: O(N)
+     * Space Complexity: O(1)
+     */
     public ListNode swapPairs(ListNode head) {
         if (head == null || head.next == null) {
             return head;
@@ -34,6 +39,6 @@ public class SwapNodesInPairs {
         ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4))));
         SwapNodesInPairs solution = new SwapNodesInPairs();
         ListNode swapped = solution.swapPairs(head);
-        System.out.println("Swapped head val: " + (swapped != null ? swapped.val : "null")); // 2
+        System.out.println("Swapped head val: " + (swapped != null ? swapped.val : "null")); // Output: 2
     }
 }
