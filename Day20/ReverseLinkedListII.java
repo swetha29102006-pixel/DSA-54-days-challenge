@@ -9,7 +9,11 @@ class ListNode {
 }
 
 public class ReverseLinkedListII {
-    // In-place sublist reversal from position left to right
+    /**
+     * Reverses nodes of a linked list from position left to position right.
+     * Time Complexity: O(N)
+     * Space Complexity: O(1)
+     */
     public ListNode reverseBetween(ListNode head, int left, int right) {
         if (head == null || left == right) {
             return head;
@@ -37,6 +41,6 @@ public class ReverseLinkedListII {
         ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
         ReverseLinkedListII solution = new ReverseLinkedListII();
         ListNode res = solution.reverseBetween(head, 2, 4);
-        System.out.println("Modified list head next val: " + (res != null && res.next != null ? res.next.val : "null")); // 4 (1->4->3->2->5)
+        System.out.println("Modified list head next val: " + (res != null && res.next != null ? res.next.val : "null")); // Output: 4
     }
 }
