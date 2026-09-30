@@ -13,6 +13,10 @@ public class OddEvenLinkedList {
         if (head == null || head.next == null) {
             return head;
         }
+
+        ListNode odd = head;
+        ListNode even = head.next;
+        ListNode evenHead = even;
         return head;
     }
 }
