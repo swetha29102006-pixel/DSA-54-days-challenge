@@ -28,6 +28,9 @@ public class RotateList {
         for (int i = 0; i < stepsToNewTail; i++) {
             newTail = newTail.next;
         }
-        return head;
+
+        ListNode newHead = newTail.next;
+        newTail.next = null;
+        return newHead;
     }
 }
