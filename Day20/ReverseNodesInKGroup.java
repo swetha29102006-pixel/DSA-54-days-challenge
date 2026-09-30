@@ -13,6 +13,10 @@ public class ReverseNodesInKGroup {
         if (head == null || k == 1) {
             return head;
         }
-        return head;
+
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode prevGroup = dummy;
+        return dummy.next;
     }
 }
