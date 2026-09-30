@@ -16,6 +16,9 @@ public class RemoveDuplicatesFromSortedList {
 
         ListNode curr = head;
         while (curr != null && curr.next != null) {
+            if (curr.val == curr.next.val) {
+                curr.next = curr.next.next;
+            }
         }
         return head;
     }
