@@ -32,4 +32,11 @@ public class ReverseLinkedListII {
         }
         return dummy.next;
     }
+
+    public static void main(String[] args) {
+        ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+        ReverseLinkedListII solution = new ReverseLinkedListII();
+        ListNode res = solution.reverseBetween(head, 2, 4);
+        System.out.println("Modified list head next val: " + (res != null && res.next != null ? res.next.val : "null")); // 4 (1->4->3->2->5)
+    }
 }
