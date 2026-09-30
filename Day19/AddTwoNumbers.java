@@ -28,4 +28,12 @@ public class AddTwoNumbers {
         }
         return dummyHead.next;
     }
+
+    public static void main(String[] args) {
+        ListNode l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
+        ListNode l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
+        AddTwoNumbers solution = new AddTwoNumbers();
+        ListNode res = solution.addTwoNumbers(l1, l2);
+        System.out.println("Sum head val: " + (res != null ? res.val : "null")); // 7
+    }
 }
