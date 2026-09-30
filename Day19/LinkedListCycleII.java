@@ -10,6 +10,9 @@ class ListNode {
 
 public class LinkedListCycleII {
     public ListNode detectCycle(ListNode head) {
+        if (head == null || head.next == null) {
+            return null;
+        }
         return null;
     }
 }
