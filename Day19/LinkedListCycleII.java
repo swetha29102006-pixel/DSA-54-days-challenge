@@ -20,7 +20,12 @@ public class LinkedListCycleII {
             slow = slow.next;
             fast = fast.next.next;
             if (slow == fast) {
-                break;
+                ListNode entry = head;
+                while (entry != slow) {
+                    entry = entry.next;
+                    slow = slow.next;
+                }
+                return entry;
             }
         }
         return null;
