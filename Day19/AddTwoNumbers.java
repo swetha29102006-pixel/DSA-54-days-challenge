@@ -17,6 +17,8 @@ public class AddTwoNumbers {
         while (l1 != null || l2 != null || carry != 0) {
             int x = (l1 != null) ? l1.val : 0;
             int y = (l2 != null) ? l2.val : 0;
+            int sum = carry + x + y;
+            carry = sum / 10;
         }
         return dummyHead.next;
     }
