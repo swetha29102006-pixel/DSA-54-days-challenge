@@ -34,4 +34,11 @@ public class PartitionList {
         before.next = afterHead.next;
         return beforeHead.next;
     }
+
+    public static void main(String[] args) {
+        ListNode head = new ListNode(1, new ListNode(4, new ListNode(3, new ListNode(2, new ListNode(5, new ListNode(2))))));
+        PartitionList solution = new PartitionList();
+        ListNode res = solution.partition(head, 3);
+        System.out.println("Partitioned head val: " + (res != null ? res.val : "null")); // 1
+    }
 }
