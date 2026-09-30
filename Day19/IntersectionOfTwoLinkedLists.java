@@ -16,6 +16,10 @@ public class IntersectionOfTwoLinkedLists {
 
         ListNode pA = headA;
         ListNode pB = headB;
-        return null;
+
+        while (pA != pB) {
+            pA = (pA == null) ? headB : pA.next;
+        }
+        return pA;
     }
 }
