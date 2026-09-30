@@ -20,6 +20,8 @@ public class RotateList {
             oldTail = oldTail.next;
             length++;
         }
+
+        oldTail.next = head; // Close list into a ring
         return head;
     }
 }
