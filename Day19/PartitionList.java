@@ -10,6 +10,9 @@ class ListNode {
 
 public class PartitionList {
     public ListNode partition(ListNode head, int x) {
+        if (head == null || head.next == null) {
+            return head;
+        }
         return head;
     }
 }
