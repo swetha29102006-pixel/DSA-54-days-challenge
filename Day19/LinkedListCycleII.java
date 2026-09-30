@@ -13,6 +13,8 @@ public class LinkedListCycleII {
         if (head == null || head.next == null) {
             return null;
         }
+        ListNode slow = head;
+        ListNode fast = head;
         return null;
     }
 }
