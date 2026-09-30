@@ -9,6 +9,11 @@ class ListNode {
 }
 
 public class OddEvenLinkedList {
+    /**
+     * Groups odd-indexed nodes together followed by even-indexed nodes.
+     * Time Complexity: O(N)
+     * Space Complexity: O(1)
+     */
     public ListNode oddEvenList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
@@ -33,6 +38,6 @@ public class OddEvenLinkedList {
         ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
         OddEvenLinkedList solution = new OddEvenLinkedList();
         ListNode res = solution.oddEvenList(head);
-        System.out.println("Modified list head next val: " + (res != null && res.next != null ? res.next.val : "null")); // 3
+        System.out.println("Modified list head next val: " + (res != null && res.next != null ? res.next.val : "null")); // Output: 3
     }
 }
