@@ -16,5 +16,7 @@ public class DeleteNodeInALinkedList {
 
         // Copy value of next node
         node.val = node.next.val;
+        // Unlink next node
+        node.next = node.next.next;
     }
 }
