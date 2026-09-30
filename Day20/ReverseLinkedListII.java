@@ -23,6 +23,12 @@ public class ReverseLinkedListII {
         }
 
         ListNode curr = prev.next;
+        for (int i = 0; i < right - left; i++) {
+            ListNode nextTemp = curr.next;
+            curr.next = nextTemp.next;
+            nextTemp.next = prev.next;
+            prev.next = nextTemp;
+        }
         return dummy.next;
     }
 }
