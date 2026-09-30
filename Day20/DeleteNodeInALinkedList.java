@@ -9,7 +9,7 @@ class ListNode {
 }
 
 public class DeleteNodeInALinkedList {
-    // In-place node deletion without head access
+    // In-place node value copying and link bypassing
     public void deleteNode(ListNode node) {
         if (node == null || node.next == null) {
             return;
