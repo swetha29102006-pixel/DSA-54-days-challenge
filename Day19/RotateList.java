@@ -9,6 +9,11 @@ class ListNode {
 }
 
 public class RotateList {
+    /**
+     * Rotates list to the right by k places by closing list into a ring and splitting.
+     * Time Complexity: O(N)
+     * Space Complexity: O(1)
+     */
     public ListNode rotateRight(ListNode head, int k) {
         if (head == null || head.next == null || k == 0) {
             return head;
@@ -38,6 +43,6 @@ public class RotateList {
         ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
         RotateList solution = new RotateList();
         ListNode rotated = solution.rotateRight(head, 2);
-        System.out.println("Rotated head val: " + (rotated != null ? rotated.val : "null")); // 4
+        System.out.println("Rotated head val: " + (rotated != null ? rotated.val : "null")); // Output: 4
     }
 }
