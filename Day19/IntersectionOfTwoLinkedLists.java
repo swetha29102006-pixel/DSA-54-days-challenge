@@ -13,6 +13,9 @@ public class IntersectionOfTwoLinkedLists {
         if (headA == null || headB == null) {
             return null;
         }
+
+        ListNode pA = headA;
+        ListNode pB = headB;
         return null;
     }
 }
