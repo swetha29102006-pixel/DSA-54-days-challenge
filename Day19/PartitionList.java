@@ -20,6 +20,13 @@ public class PartitionList {
         ListNode after = afterHead;
 
         while (head != null) {
+            if (head.val < x) {
+                before.next = head;
+                before = before.next;
+            } else {
+                after.next = head;
+                after = after.next;
+            }
             head = head.next;
         }
         return beforeHead.next;
