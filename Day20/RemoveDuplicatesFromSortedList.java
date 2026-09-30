@@ -15,6 +15,8 @@ public class RemoveDuplicatesFromSortedList {
         }
 
         ListNode curr = head;
+        while (curr != null && curr.next != null) {
+        }
         return head;
     }
 }
