@@ -24,6 +24,8 @@ public class SwapNodesInPairs {
 
             swap1.next = swap2.next;
             swap2.next = swap1;
+            point.next = swap2;
+            point = swap1;
         }
         return dummy.next;
     }
