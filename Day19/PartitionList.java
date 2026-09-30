@@ -29,6 +29,9 @@ public class PartitionList {
             }
             head = head.next;
         }
+
+        after.next = null;
+        before.next = afterHead.next;
         return beforeHead.next;
     }
 }
