@@ -9,6 +9,7 @@ class ListNode {
 }
 
 public class IntersectionOfTwoLinkedLists {
+    // Two-pointer redirection approach
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if (headA == null || headB == null) {
             return null;
