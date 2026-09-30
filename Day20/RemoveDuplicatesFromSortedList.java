@@ -24,4 +24,11 @@ public class RemoveDuplicatesFromSortedList {
         }
         return head;
     }
+
+    public static void main(String[] args) {
+        ListNode head = new ListNode(1, new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(3)))));
+        RemoveDuplicatesFromSortedList solution = new RemoveDuplicatesFromSortedList();
+        ListNode res = solution.deleteDuplicates(head);
+        System.out.println("Modified list head next val: " + (res != null && res.next != null ? res.next.val : "null")); // 2
+    }
 }
