@@ -13,6 +13,10 @@ public class RemoveDuplicatesFromSortedListII {
         if (head == null || head.next == null) {
             return head;
         }
-        return head;
+
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode prev = dummy;
+        return dummy.next;
     }
 }
