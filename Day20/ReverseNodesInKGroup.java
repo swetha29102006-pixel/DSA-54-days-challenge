@@ -9,6 +9,11 @@ class ListNode {
 }
 
 public class ReverseNodesInKGroup {
+    /**
+     * Reverses nodes of a linked list k at a time in-place.
+     * Time Complexity: O(N)
+     * Space Complexity: O(1)
+     */
     public ListNode reverseKGroup(ListNode head, int k) {
         if (head == null || k == 1) {
             return head;
@@ -54,6 +59,6 @@ public class ReverseNodesInKGroup {
         ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
         ReverseNodesInKGroup solution = new ReverseNodesInKGroup();
         ListNode res = solution.reverseKGroup(head, 2);
-        System.out.println("Reversed head val: " + (res != null ? res.val : "null")); // 2
+        System.out.println("Reversed head val: " + (res != null ? res.val : "null")); // Output: 2
     }
 }
