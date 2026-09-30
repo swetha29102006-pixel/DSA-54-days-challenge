@@ -17,6 +17,11 @@ public class SwapNodesInPairs {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         ListNode point = dummy;
+
+        while (point.next != null && point.next.next != null) {
+            ListNode swap1 = point.next;
+            ListNode swap2 = point.next.next;
+        }
         return dummy.next;
     }
 }
