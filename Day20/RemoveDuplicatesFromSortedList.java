@@ -13,6 +13,8 @@ public class RemoveDuplicatesFromSortedList {
         if (head == null || head.next == null) {
             return head;
         }
+
+        ListNode curr = head;
         return head;
     }
 }
