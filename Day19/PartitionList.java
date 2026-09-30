@@ -9,6 +9,11 @@ class ListNode {
 }
 
 public class PartitionList {
+    /**
+     * Partitions list such that nodes < x appear before nodes >= x preserving relative order.
+     * Time Complexity: O(N)
+     * Space Complexity: O(1)
+     */
     public ListNode partition(ListNode head, int x) {
         if (head == null || head.next == null) {
             return head;
@@ -39,6 +44,6 @@ public class PartitionList {
         ListNode head = new ListNode(1, new ListNode(4, new ListNode(3, new ListNode(2, new ListNode(5, new ListNode(2))))));
         PartitionList solution = new PartitionList();
         ListNode res = solution.partition(head, 3);
-        System.out.println("Partitioned head val: " + (res != null ? res.val : "null")); // 1
+        System.out.println("Partitioned head val: " + (res != null ? res.val : "null")); // Output: 1
     }
 }
