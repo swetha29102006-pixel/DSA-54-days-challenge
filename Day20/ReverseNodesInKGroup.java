@@ -49,4 +49,11 @@ public class ReverseNodesInKGroup {
         }
         return curr;
     }
+
+    public static void main(String[] args) {
+        ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+        ReverseNodesInKGroup solution = new ReverseNodesInKGroup();
+        ListNode res = solution.reverseKGroup(head, 2);
+        System.out.println("Reversed head val: " + (res != null ? res.val : "null")); // 2
+    }
 }
