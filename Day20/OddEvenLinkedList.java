@@ -10,6 +10,9 @@ class ListNode {
 
 public class OddEvenLinkedList {
     public ListNode oddEvenList(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
         return head;
     }
 }
