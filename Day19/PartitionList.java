@@ -18,6 +18,10 @@ public class PartitionList {
         ListNode before = beforeHead;
         ListNode afterHead = new ListNode(0);
         ListNode after = afterHead;
-        return head;
+
+        while (head != null) {
+            head = head.next;
+        }
+        return beforeHead.next;
     }
 }
