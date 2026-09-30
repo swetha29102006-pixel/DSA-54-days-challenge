@@ -21,6 +21,8 @@ public class ReverseLinkedListII {
         for (int i = 0; i < left - 1; i++) {
             prev = prev.next;
         }
+
+        ListNode curr = prev.next;
         return dummy.next;
     }
 }
