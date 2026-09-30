@@ -9,6 +9,11 @@ class ListNode {
 }
 
 public class RemoveDuplicatesFromSortedList {
+    /**
+     * Removes duplicate elements from a sorted linked list in-place.
+     * Time Complexity: O(N)
+     * Space Complexity: O(1)
+     */
     public ListNode deleteDuplicates(ListNode head) {
         if (head == null || head.next == null) {
             return head;
@@ -29,6 +34,6 @@ public class RemoveDuplicatesFromSortedList {
         ListNode head = new ListNode(1, new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(3)))));
         RemoveDuplicatesFromSortedList solution = new RemoveDuplicatesFromSortedList();
         ListNode res = solution.deleteDuplicates(head);
-        System.out.println("Modified list head next val: " + (res != null && res.next != null ? res.next.val : "null")); // 2
+        System.out.println("Modified list head next val: " + (res != null && res.next != null ? res.next.val : "null")); // Output: 2
     }
 }
