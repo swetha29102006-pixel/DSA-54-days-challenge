@@ -77,4 +77,17 @@ public class DesignCircularDeque {
     public boolean isFull() {
         return size == capacity;
     }
+
+    public static void main(String[] args) {
+        DesignCircularDeque deque = new DesignCircularDeque(3);
+        System.out.println("insertLast 1: " + deque.insertLast(1)); // true
+        System.out.println("insertLast 2: " + deque.insertLast(2)); // true
+        System.out.println("insertFront 3: " + deque.insertFront(3)); // true
+        System.out.println("insertFront 4: " + deque.insertFront(4)); // false
+        System.out.println("getRear: " + deque.getRear()); // 2
+        System.out.println("isFull: " + deque.isFull()); // true
+        System.out.println("deleteLast: " + deque.deleteLast()); // true
+        System.out.println("insertFront 4: " + deque.insertFront(4)); // true
+        System.out.println("getFront: " + deque.getFront()); // 4
+    }
 }
