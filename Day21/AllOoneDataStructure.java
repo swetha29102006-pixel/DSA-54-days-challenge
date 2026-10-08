@@ -29,4 +29,19 @@ public class AllOoneDataStructure {
         keyCount = new HashMap<>();
         countBucket = new HashMap<>();
     }
+
+    private BucketNode addBucketAfter(BucketNode newBucket, BucketNode prevBucket) {
+        newBucket.next = prevBucket.next;
+        newBucket.prev = prevBucket;
+        prevBucket.next.prev = newBucket;
+        prevBucket.next = newBucket;
+        countBucket.put(newBucket.count, newBucket);
+        return newBucket;
+    }
+
+    private void removeBucket(BucketNode bucket) {
+        bucket.prev.next = bucket.next;
+        bucket.next.prev = bucket.prev;
+        countBucket.remove(bucket.count);
+    }
 }
