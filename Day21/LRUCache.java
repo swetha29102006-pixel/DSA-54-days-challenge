@@ -27,4 +27,16 @@ public class LRUCache {
         head.next = tail;
         tail.prev = head;
     }
+
+    private void remove(LRUNode node) {
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
+    }
+
+    private void insertToHead(LRUNode node) {
+        node.next = head.next;
+        node.next.prev = node;
+        head.next = node;
+        node.prev = head;
+    }
 }
