@@ -18,4 +18,13 @@ public class LRUCache {
     private final Map<Integer, LRUNode> map;
     private final LRUNode head;
     private final LRUNode tail;
+
+    public LRUCache(int capacity) {
+        this.capacity = capacity;
+        this.map = new HashMap<>();
+        this.head = new LRUNode(0, 0);
+        this.tail = new LRUNode(0, 0);
+        head.next = tail;
+        tail.prev = head;
+    }
 }
