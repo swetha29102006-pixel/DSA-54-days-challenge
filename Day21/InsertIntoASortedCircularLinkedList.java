@@ -19,6 +19,9 @@ public class InsertIntoASortedCircularLinkedList {
             newNode.next = newNode;
             return newNode;
         }
+
+        CircularNode prev = head;
+        CircularNode curr = head.next;
         return head;
     }
 }
