@@ -7,4 +7,13 @@ class QueueNode {
 }
 
 public class DesignCircularQueue {
+    private QueueNode head;
+    private QueueNode tail;
+    private final int capacity;
+    private int size;
+
+    public DesignCircularQueue(int k) {
+        this.capacity = k;
+        this.size = 0;
+    }
 }
