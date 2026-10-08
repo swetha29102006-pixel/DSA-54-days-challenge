@@ -42,4 +42,26 @@ public class FlattenAMultilevelDoublyLinkedList {
         }
         return last;
     }
+
+    public static void main(String[] args) {
+        MultiNode n1 = new MultiNode(1);
+        MultiNode n2 = new MultiNode(2);
+        MultiNode n3 = new MultiNode(3);
+        MultiNode n4 = new MultiNode(4);
+
+        n1.next = n2; n2.prev = n1;
+        n2.next = n3; n3.prev = n2;
+        n2.child = n4;
+
+        FlattenAMultilevelDoublyLinkedList solver = new FlattenAMultilevelDoublyLinkedList();
+        MultiNode head = solver.flatten(n1);
+
+        System.out.print("Flattened List: ");
+        MultiNode curr = head;
+        while (curr != null) {
+            System.out.print(curr.val + (curr.next != null ? " <-> " : ""));
+            curr = curr.next;
+        }
+        System.out.println();
+    }
 }
