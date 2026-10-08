@@ -25,4 +25,12 @@ public class MinStack {
             }
         }
     }
+
+    public int top() {
+        return stack.isEmpty() ? -1 : stack.peek();
+    }
+
+    public int getMin() {
+        return minStack.isEmpty() ? -1 : minStack.peek();
+    }
 }
