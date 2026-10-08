@@ -3,6 +3,12 @@ import java.util.Deque;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * LeetCode 496: Next Greater Element I
+ * Find the next greater element for each value of nums1 in nums2 using a monotonic stack.
+ * Time Complexity: O(N + M) where N = nums1.length, M = nums2.length.
+ * Space Complexity: O(M) for hash map and stack.
+ */
 public class NextGreaterElementI {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         Map<Integer, Integer> map = new HashMap<>();
