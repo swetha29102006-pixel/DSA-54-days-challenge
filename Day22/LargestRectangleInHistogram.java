@@ -19,4 +19,10 @@ public class LargestRectangleInHistogram {
         }
         return maxArea;
     }
+
+    public static void main(String[] args) {
+        LargestRectangleInHistogram solver = new LargestRectangleInHistogram();
+        int[] heights = {2, 1, 5, 6, 2, 3};
+        System.out.println("Max Rectangle Area: " + solver.largestRectangleArea(heights)); // 10
+    }
 }
