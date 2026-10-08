@@ -1,3 +1,9 @@
+/**
+ * LeetCode 708: Insert into a Sorted Circular Linked List
+ * Insert a node into a sorted circular linked list such that the list remains sorted.
+ * Time Complexity: O(N) single loop traversal.
+ * Space Complexity: O(1) auxiliary memory.
+ */
 class CircularNode {
     public int val;
     public CircularNode next;
