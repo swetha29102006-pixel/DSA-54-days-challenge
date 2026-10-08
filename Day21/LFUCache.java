@@ -1,6 +1,12 @@
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * LeetCode 460: LFU Cache
+ * Design and implement a data structure for a Least Frequently Used (LFU) cache.
+ * Time Complexity: O(1) for both get and put.
+ * Space Complexity: O(capacity) for key and frequency hash maps.
+ */
 class LFUNode {
     int key, val, freq;
     LFUNode prev, next;
