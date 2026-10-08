@@ -13,4 +13,12 @@ class CircularNode {
 }
 
 public class InsertIntoASortedCircularLinkedList {
+    public CircularNode insert(CircularNode head, int insertVal) {
+        if (head == null) {
+            CircularNode newNode = new CircularNode(insertVal);
+            newNode.next = newNode;
+            return newNode;
+        }
+        return head;
+    }
 }
