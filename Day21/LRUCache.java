@@ -49,4 +49,22 @@ public class LRUCache {
         insertToHead(node);
         return node.val;
     }
+
+    public void put(int key, int value) {
+        if (map.containsKey(key)) {
+            LRUNode node = map.get(key);
+            node.val = value;
+            remove(node);
+            insertToHead(node);
+        } else {
+            if (map.size() == capacity) {
+                LRUNode lru = tail.prev;
+                map.remove(lru.key);
+                remove(lru);
+            }
+            LRUNode newNode = new LRUNode(key, value);
+            map.put(key, newNode);
+            insertToHead(newNode);
+        }
+    }
 }
