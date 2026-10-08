@@ -2,6 +2,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class EvaluateReversePolishNotation {
+    // Evaluates arithmetic expressions in Reverse Polish Notation using stack
     public int evalRPN(String[] tokens) {
         Deque<Integer> stack = new ArrayDeque<>();
         for (String token : tokens) {
