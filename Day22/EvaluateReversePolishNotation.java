@@ -24,4 +24,10 @@ public class EvaluateReversePolishNotation {
         }
         return stack.pop();
     }
+
+    public static void main(String[] args) {
+        EvaluateReversePolishNotation solver = new EvaluateReversePolishNotation();
+        String[] tokens = {"2", "1", "+", "3", "*"};
+        System.out.println("RPN Result: " + solver.evalRPN(tokens)); // 9
+    }
 }
