@@ -17,6 +17,22 @@ public class DesignCircularQueue {
         this.size = 0;
     }
 
+    public boolean enQueue(int value) {
+        if (isFull()) return false;
+        QueueNode newNode = new QueueNode(value);
+        if (isEmpty()) {
+            head = newNode;
+            tail = newNode;
+            tail.next = head;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+            tail.next = head;
+        }
+        size++;
+        return true;
+    }
+
     public boolean isEmpty() {
         return size == 0;
     }
