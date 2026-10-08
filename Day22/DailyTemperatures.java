@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 739: Daily Temperatures
+ * Return an array such that answer[i] is the number of days you have to wait after the i-th day to get a warmer temperature.
+ * Time Complexity: O(N) where N is number of days.
+ * Space Complexity: O(N) for monotonic index stack.
+ */
 public class DailyTemperatures {
     // Computes distance to next warmer temperature for each day
     public int[] dailyTemperatures(int[] temperatures) {
