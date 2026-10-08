@@ -2,6 +2,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class DailyTemperatures {
+    // Computes distance to next warmer temperature for each day
     public int[] dailyTemperatures(int[] temperatures) {
         int n = temperatures.length;
         int[] res = new int[n];
