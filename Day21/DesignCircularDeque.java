@@ -1,3 +1,9 @@
+/**
+ * LeetCode 641: Design Circular Deque
+ * Design your implementation of the circular double-ended queue (deque) using a doubly linked list.
+ * Time Complexity: O(1) for all operations.
+ * Space Complexity: O(k) capacity.
+ */
 class DequeNode {
     int val;
     DequeNode prev;
