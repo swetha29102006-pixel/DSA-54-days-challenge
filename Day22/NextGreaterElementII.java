@@ -19,4 +19,12 @@ public class NextGreaterElementII {
         }
         return res;
     }
+
+    public static void main(String[] args) {
+        NextGreaterElementII solver = new NextGreaterElementII();
+        int[] res = solver.nextGreaterElements(new int[]{1, 2, 1});
+        System.out.print("Circular Next Greater: ");
+        for (int x : res) System.out.print(x + " ");
+        System.out.println();
+    }
 }
