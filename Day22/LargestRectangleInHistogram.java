@@ -2,6 +2,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class LargestRectangleInHistogram {
+    // Calculates largest rectangle area in histogram using monotonic stack
     public int largestRectangleArea(int[] heights) {
         int n = heights.length;
         Deque<Integer> stack = new ArrayDeque<>();
