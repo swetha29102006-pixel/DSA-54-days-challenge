@@ -95,4 +95,15 @@ public class AllOoneDataStructure {
     public String getMinKey() {
         return head.next == tail ? "" : head.next.keys.iterator().next();
     }
+
+    public static void main(String[] args) {
+        AllOoneDataStructure allOne = new AllOoneDataStructure();
+        allOne.inc("hello");
+        allOne.inc("hello");
+        System.out.println("Max Key: " + allOne.getMaxKey()); // hello
+        System.out.println("Min Key: " + allOne.getMinKey()); // hello
+        allOne.inc("leet");
+        System.out.println("Max Key: " + allOne.getMaxKey()); // hello
+        System.out.println("Min Key: " + allOne.getMinKey()); // leet
+    }
 }
