@@ -9,6 +9,9 @@ public class NextGreaterElementI {
         Deque<Integer> stack = new ArrayDeque<>();
 
         for (int num : nums2) {
+            while (!stack.isEmpty() && stack.peek() < num) {
+                map.put(stack.pop(), num);
+            }
             stack.push(num);
         }
         return new int[0];
