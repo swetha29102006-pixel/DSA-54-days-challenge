@@ -10,7 +10,9 @@ public class NextGreaterElementII {
         Deque<Integer> stack = new ArrayDeque<>();
 
         for (int i = 0; i < 2 * n; i++) {
-            // Circular array simulation loop
+            while (!stack.isEmpty() && nums[stack.peek()] < nums[i % n]) {
+                res[stack.pop()] = nums[i % n];
+            }
         }
         return res;
     }
