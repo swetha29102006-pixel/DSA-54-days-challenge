@@ -13,4 +13,10 @@ public class ValidParentheses {
         }
         return stack.isEmpty();
     }
+
+    public static void main(String[] args) {
+        ValidParentheses solver = new ValidParentheses();
+        System.out.println("()[]{}: " + solver.isValid("()[]{}")); // true
+        System.out.println("(]: " + solver.isValid("(]"));         // false
+    }
 }
