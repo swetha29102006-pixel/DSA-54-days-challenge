@@ -46,6 +46,14 @@ public class DesignCircularQueue {
         return true;
     }
 
+    public int Front() {
+        return isEmpty() ? -1 : head.val;
+    }
+
+    public int Rear() {
+        return isEmpty() ? -1 : tail.val;
+    }
+
     public boolean isEmpty() {
         return size == 0;
     }
