@@ -3,6 +3,12 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * LeetCode 432: All Oone Data Structure
+ * Design a data structure to store key counts with O(1) Inc, Dec, GetMaxKey, and GetMinKey.
+ * Time Complexity: O(1) for all operations using Doubly Linked List of Frequency Buckets.
+ * Space Complexity: O(K) where K is number of unique keys.
+ */
 class BucketNode {
     int count;
     Set<String> keys;
