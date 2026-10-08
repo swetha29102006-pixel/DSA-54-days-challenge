@@ -11,4 +11,8 @@ class MultiNode {
 }
 
 public class FlattenAMultilevelDoublyLinkedList {
+    public MultiNode flatten(MultiNode head) {
+        if (head == null) return null;
+        return head;
+    }
 }
