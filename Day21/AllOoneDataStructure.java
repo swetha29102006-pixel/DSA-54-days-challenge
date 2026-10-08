@@ -64,4 +64,27 @@ public class AllOoneDataStructure {
             }
         }
     }
+
+    public void dec(String key) {
+        if (!keyCount.containsKey(key)) return;
+        int count = keyCount.get(key);
+
+        BucketNode curBucket = countBucket.get(count);
+        curBucket.keys.remove(key);
+
+        if (count == 1) {
+            keyCount.remove(key);
+        } else {
+            keyCount.put(key, count - 1);
+            BucketNode prevBucket = countBucket.get(count - 1);
+            if (prevBucket == null) {
+                prevBucket = addBucketAfter(new BucketNode(count - 1), curBucket.prev);
+            }
+            prevBucket.keys.add(key);
+        }
+
+        if (curBucket.keys.isEmpty()) {
+            removeBucket(curBucket);
+        }
+    }
 }
