@@ -1,4 +1,6 @@
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 class BucketNode {
@@ -14,4 +16,17 @@ class BucketNode {
 }
 
 public class AllOoneDataStructure {
+    private final BucketNode head;
+    private final BucketNode tail;
+    private final Map<String, Integer> keyCount;
+    private final Map<Integer, BucketNode> countBucket;
+
+    public AllOoneDataStructure() {
+        head = new BucketNode(0);
+        tail = new BucketNode(0);
+        head.next = tail;
+        tail.prev = head;
+        keyCount = new HashMap<>();
+        countBucket = new HashMap<>();
+    }
 }
