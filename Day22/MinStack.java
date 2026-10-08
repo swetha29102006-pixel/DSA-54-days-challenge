@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 155: Min Stack
+ * Design a stack that supports push, pop, top, and retrieving the minimum element in O(1) time.
+ * Time Complexity: O(1) for push, pop, top, getMin.
+ * Space Complexity: O(N) for primary and auxiliary min stacks.
+ */
 public class MinStack {
     private Deque<Integer> stack;
     private Deque<Integer> minStack;
