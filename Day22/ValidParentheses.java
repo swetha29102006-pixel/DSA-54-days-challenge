@@ -4,6 +4,7 @@ import java.util.Deque;
 public class ValidParentheses {
     public boolean isValid(String s) {
         if (s == null || s.length() % 2 != 0) return false;
+        Deque<Character> stack = new ArrayDeque<>();
         return false;
     }
 }
