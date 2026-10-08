@@ -17,4 +17,13 @@ public class DailyTemperatures {
         }
         return res;
     }
+
+    public static void main(String[] args) {
+        DailyTemperatures solver = new DailyTemperatures();
+        int[] temps = {73, 74, 75, 71, 69, 72, 76, 73};
+        int[] res = solver.dailyTemperatures(temps);
+        System.out.print("Days to warmer temp: ");
+        for (int d : res) System.out.print(d + " ");
+        System.out.println();
+    }
 }
