@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 20: Valid Parentheses
+ * Determine if an input string containing '(', ')', '{', '}', '[' and ']' is valid.
+ * Time Complexity: O(N) single scan of string.
+ * Space Complexity: O(N) for character stack.
+ */
 public class ValidParentheses {
     public boolean isValid(String s) {
         if (s == null || s.length() % 2 != 0) return false;
