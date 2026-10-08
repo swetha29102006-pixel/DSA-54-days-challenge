@@ -21,4 +21,12 @@ public class NextGreaterElementI {
         }
         return res;
     }
+
+    public static void main(String[] args) {
+        NextGreaterElementI solver = new NextGreaterElementI();
+        int[] res = solver.nextGreaterElement(new int[]{4, 1, 2}, new int[]{1, 3, 4, 2});
+        System.out.print("Result: ");
+        for (int n : res) System.out.print(n + " ");
+        System.out.println();
+    }
 }
