@@ -62,6 +62,14 @@ public class DesignCircularDeque {
         return true;
     }
 
+    public int getFront() {
+        return isEmpty() ? -1 : head.next.val;
+    }
+
+    public int getRear() {
+        return isEmpty() ? -1 : tail.prev.val;
+    }
+
     public boolean isEmpty() {
         return size == 0;
     }
