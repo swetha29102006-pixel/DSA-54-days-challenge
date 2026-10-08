@@ -55,4 +55,15 @@ public class LFUCache {
         this.keyMap = new HashMap<>();
         this.freqMap = new HashMap<>();
     }
+
+    private void updateFreq(LFUNode node) {
+        int oldFreq = node.freq;
+        LFUList oldList = freqMap.get(oldFreq);
+        oldList.removeNode(node);
+        if (oldFreq == minFreq && oldList.size == 0) {
+            minFreq++;
+        }
+        node.freq++;
+        freqMap.computeIfAbsent(node.freq, k -> new LFUList()).addNode(node);
+    }
 }
