@@ -61,4 +61,17 @@ public class DesignCircularQueue {
     public boolean isFull() {
         return size == capacity;
     }
+
+    public static void main(String[] args) {
+        DesignCircularQueue q = new DesignCircularQueue(3);
+        System.out.println("enQueue 1: " + q.enQueue(1)); // true
+        System.out.println("enQueue 2: " + q.enQueue(2)); // true
+        System.out.println("enQueue 3: " + q.enQueue(3)); // true
+        System.out.println("enQueue 4: " + q.enQueue(4)); // false
+        System.out.println("Rear: " + q.Rear());          // 3
+        System.out.println("isFull: " + q.isFull());      // true
+        System.out.println("deQueue: " + q.deQueue());    // true
+        System.out.println("enQueue 4: " + q.enQueue(4)); // true
+        System.out.println("Rear: " + q.Rear());          // 4
+    }
 }
