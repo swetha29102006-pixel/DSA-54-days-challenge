@@ -92,4 +92,18 @@ public class LFUCache {
             minFreq = 1;
         }
     }
+
+    public static void main(String[] args) {
+        LFUCache lfu = new LFUCache(2);
+        lfu.put(1, 1);
+        lfu.put(2, 2);
+        System.out.println("Get 1: " + lfu.get(1)); // 1
+        lfu.put(3, 3); // evicts key 2
+        System.out.println("Get 2: " + lfu.get(2)); // -1
+        System.out.println("Get 3: " + lfu.get(3)); // 3
+        lfu.put(4, 4); // evicts key 1
+        System.out.println("Get 1: " + lfu.get(1)); // -1
+        System.out.println("Get 3: " + lfu.get(3)); // 3
+        System.out.println("Get 4: " + lfu.get(4)); // 4
+    }
 }
