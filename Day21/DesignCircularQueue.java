@@ -1,3 +1,9 @@
+/**
+ * LeetCode 622: Design Circular Queue
+ * Design your implementation of the circular queue using a linked list ring.
+ * Time Complexity: O(1) for all operations (enQueue, deQueue, Front, Rear, isEmpty, isFull).
+ * Space Complexity: O(k) capacity.
+ */
 class QueueNode {
     int val;
     QueueNode next;
