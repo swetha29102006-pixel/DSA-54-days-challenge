@@ -2,6 +2,12 @@ import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
 
+/**
+ * LeetCode 503: Next Greater Element II
+ * Find the next greater number for every element in a circular array.
+ * Time Complexity: O(N) where N is length of array.
+ * Space Complexity: O(N) for monotonic stack.
+ */
 public class NextGreaterElementII {
     public int[] nextGreaterElements(int[] nums) {
         int n = nums.length;
