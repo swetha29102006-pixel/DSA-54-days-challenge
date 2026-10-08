@@ -6,6 +6,11 @@ public class LargestRectangleInHistogram {
         int n = heights.length;
         Deque<Integer> stack = new ArrayDeque<>();
         int maxArea = 0;
+
+        for (int i = 0; i <= n; i++) {
+            int currentHeight = (i == n) ? 0 : heights[i];
+            stack.push(i);
+        }
         return maxArea;
     }
 }
