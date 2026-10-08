@@ -14,6 +14,11 @@ public class NextGreaterElementI {
             }
             stack.push(num);
         }
-        return new int[0];
+
+        int[] res = new int[nums1.length];
+        for (int i = 0; i < nums1.length; i++) {
+            res[i] = map.getOrDefault(nums1[i], -1);
+        }
+        return res;
     }
 }
