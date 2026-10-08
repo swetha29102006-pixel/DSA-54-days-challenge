@@ -33,4 +33,15 @@ public class MinStack {
     public int getMin() {
         return minStack.isEmpty() ? -1 : minStack.peek();
     }
+
+    public static void main(String[] args) {
+        MinStack minStack = new MinStack();
+        minStack.push(-2);
+        minStack.push(0);
+        minStack.push(-3);
+        System.out.println("Min: " + minStack.getMin()); // -3
+        minStack.pop();
+        System.out.println("Top: " + minStack.top());    // 0
+        System.out.println("Min: " + minStack.getMin()); // -2
+    }
 }
