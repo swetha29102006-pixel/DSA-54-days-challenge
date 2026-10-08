@@ -39,4 +39,14 @@ public class LRUCache {
         head.next = node;
         node.prev = head;
     }
+
+    public int get(int key) {
+        if (!map.containsKey(key)) {
+            return -1;
+        }
+        LRUNode node = map.get(key);
+        remove(node);
+        insertToHead(node);
+        return node.val;
+    }
 }
