@@ -11,8 +11,16 @@ public class EvaluateReversePolishNotation {
                 int b = stack.pop();
                 int a = stack.pop();
                 stack.push(a - b);
+            } else if (token.equals("*")) {
+                stack.push(stack.pop() * stack.pop());
+            } else if (token.equals("/")) {
+                int b = stack.pop();
+                int a = stack.pop();
+                stack.push(a / b);
+            } else {
+                stack.push(Integer.parseInt(token));
             }
         }
-        return 0;
+        return stack.pop();
     }
 }
