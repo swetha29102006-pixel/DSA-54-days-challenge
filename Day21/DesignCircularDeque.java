@@ -44,6 +44,24 @@ public class DesignCircularDeque {
         return true;
     }
 
+    public boolean deleteFront() {
+        if (isEmpty()) return false;
+        DequeNode node = head.next;
+        head.next = node.next;
+        node.next.prev = head;
+        size--;
+        return true;
+    }
+
+    public boolean deleteLast() {
+        if (isEmpty()) return false;
+        DequeNode node = tail.prev;
+        tail.prev = node.prev;
+        node.prev.next = tail;
+        size--;
+        return true;
+    }
+
     public boolean isEmpty() {
         return size == 0;
     }
