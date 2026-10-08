@@ -3,6 +3,11 @@ class MultiNode {
     public MultiNode prev;
     public MultiNode next;
     public MultiNode child;
+
+    public MultiNode() {}
+    public MultiNode(int val) {
+        this.val = val;
+    }
 }
 
 public class FlattenAMultilevelDoublyLinkedList {
