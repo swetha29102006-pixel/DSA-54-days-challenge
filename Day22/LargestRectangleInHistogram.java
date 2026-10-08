@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 84: Largest Rectangle in Histogram
+ * Given an array of integers heights representing the histogram's bar height, return the area of the largest rectangle.
+ * Time Complexity: O(N) single pass with stack.
+ * Space Complexity: O(N) for monotonic height index stack.
+ */
 public class LargestRectangleInHistogram {
     // Calculates largest rectangle area in histogram using monotonic stack
     public int largestRectangleArea(int[] heights) {
