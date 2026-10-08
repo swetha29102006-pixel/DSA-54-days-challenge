@@ -8,6 +8,10 @@ public class DailyTemperatures {
         Deque<Integer> stack = new ArrayDeque<>();
 
         for (int i = 0; i < n; i++) {
+            while (!stack.isEmpty() && temperatures[stack.peek()] < temperatures[i]) {
+                int prevIndex = stack.pop();
+                res[prevIndex] = i - prevIndex;
+            }
             stack.push(i);
         }
         return res;
