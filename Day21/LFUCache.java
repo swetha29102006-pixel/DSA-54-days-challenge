@@ -73,4 +73,23 @@ public class LFUCache {
         updateFreq(node);
         return node.val;
     }
+
+    public void put(int key, int value) {
+        if (capacity == 0) return;
+        if (keyMap.containsKey(key)) {
+            LFUNode node = keyMap.get(key);
+            node.val = value;
+            updateFreq(node);
+        } else {
+            if (keyMap.size() == capacity) {
+                LFUList minFreqList = freqMap.get(minFreq);
+                LFUNode deletedNode = minFreqList.removeTail();
+                keyMap.remove(deletedNode.key);
+            }
+            LFUNode newNode = new LFUNode(key, value);
+            keyMap.put(key, newNode);
+            freqMap.computeIfAbsent(1, k -> new LFUList()).addNode(newNode);
+            minFreq = 1;
+        }
+    }
 }
