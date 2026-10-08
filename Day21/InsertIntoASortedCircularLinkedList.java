@@ -13,6 +13,7 @@ class CircularNode {
 }
 
 public class InsertIntoASortedCircularLinkedList {
+    // Inserts a node into a sorted circular linked list maintaining sorted order
     public CircularNode insert(CircularNode head, int insertVal) {
         if (head == null) {
             CircularNode newNode = new CircularNode(insertVal);
