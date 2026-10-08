@@ -87,4 +87,12 @@ public class AllOoneDataStructure {
             removeBucket(curBucket);
         }
     }
+
+    public String getMaxKey() {
+        return tail.prev == head ? "" : tail.prev.keys.iterator().next();
+    }
+
+    public String getMinKey() {
+        return head.next == tail ? "" : head.next.keys.iterator().next();
+    }
 }
