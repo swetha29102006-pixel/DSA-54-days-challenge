@@ -46,4 +46,26 @@ public class InsertIntoASortedCircularLinkedList {
         prev.next = new CircularNode(insertVal, curr);
         return head;
     }
+
+    public static void main(String[] args) {
+        CircularNode n1 = new CircularNode(3);
+        CircularNode n2 = new CircularNode(4);
+        CircularNode n3 = new CircularNode(1);
+        n1.next = n2;
+        n2.next = n3;
+        n3.next = n1;
+
+        InsertIntoASortedCircularLinkedList solver = new InsertIntoASortedCircularLinkedList();
+        CircularNode head = solver.insert(n1, 2);
+
+        System.out.print("Circular List: ");
+        CircularNode curr = head;
+        if (curr != null) {
+            do {
+                System.out.print(curr.val + " -> ");
+                curr = curr.next;
+            } while (curr != head);
+            System.out.println("(" + curr.val + ")");
+        }
+    }
 }
