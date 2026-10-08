@@ -1,3 +1,9 @@
+/**
+ * LeetCode 430: Flatten a Multilevel Doubly Linked List
+ * Flatten a multilevel doubly linked list where nodes may have a child pointer to another doubly linked list.
+ * Time Complexity: O(N) where N is total number of nodes across all levels.
+ * Space Complexity: O(D) where D is maximum depth of child recursion.
+ */
 class MultiNode {
     public int val;
     public MultiNode prev;
