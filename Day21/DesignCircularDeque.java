@@ -21,4 +21,12 @@ public class DesignCircularDeque {
         head.next = tail;
         tail.prev = head;
     }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    public boolean isFull() {
+        return size == capacity;
+    }
 }
