@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 150: Evaluate Reverse Polish Notation
+ * Evaluate the value of an arithmetic expression in Reverse Polish Notation.
+ * Time Complexity: O(N) where N is number of tokens.
+ * Space Complexity: O(N) for operand stack.
+ */
 public class EvaluateReversePolishNotation {
     // Evaluates arithmetic expressions in Reverse Polish Notation using stack
     public int evalRPN(String[] tokens) {
