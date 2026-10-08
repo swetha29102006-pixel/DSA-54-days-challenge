@@ -67,4 +67,17 @@ public class LRUCache {
             insertToHead(newNode);
         }
     }
+
+    public static void main(String[] args) {
+        LRUCache lru = new LRUCache(2);
+        lru.put(1, 1);
+        lru.put(2, 2);
+        System.out.println("Get 1: " + lru.get(1)); // 1
+        lru.put(3, 3); // evicts key 2
+        System.out.println("Get 2: " + lru.get(2)); // -1
+        lru.put(4, 4); // evicts key 1
+        System.out.println("Get 1: " + lru.get(1)); // -1
+        System.out.println("Get 3: " + lru.get(3)); // 3
+        System.out.println("Get 4: " + lru.get(4)); // 4
+    }
 }
