@@ -17,6 +17,7 @@ public class FlattenAMultilevelDoublyLinkedList {
         return head;
     }
 
+    // DFS helper to recursively flatten child lists
     private MultiNode flattenDFS(MultiNode node) {
         MultiNode curr = node;
         MultiNode last = null;
