@@ -33,6 +33,19 @@ public class DesignCircularQueue {
         return true;
     }
 
+    public boolean deQueue() {
+        if (isEmpty()) return false;
+        if (size == 1) {
+            head = null;
+            tail = null;
+        } else {
+            head = head.next;
+            tail.next = head;
+        }
+        size--;
+        return true;
+    }
+
     public boolean isEmpty() {
         return size == 0;
     }
