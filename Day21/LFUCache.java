@@ -66,4 +66,11 @@ public class LFUCache {
         node.freq++;
         freqMap.computeIfAbsent(node.freq, k -> new LFUList()).addNode(node);
     }
+
+    public int get(int key) {
+        if (!keyMap.containsKey(key)) return -1;
+        LFUNode node = keyMap.get(key);
+        updateFreq(node);
+        return node.val;
+    }
 }
