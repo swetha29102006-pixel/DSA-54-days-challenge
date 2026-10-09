@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 901: Online Stock Span
+ * Calculate the span of a stock's price for the current day using a monotonic stack.
+ * Time Complexity: Amortized O(1) per call to next.
+ * Space Complexity: O(N) for stack storage.
+ */
 public class OnlineStockSpan {
     // Monotonic stack storing [price, span] pairs
     private Deque<int[]> stack;
