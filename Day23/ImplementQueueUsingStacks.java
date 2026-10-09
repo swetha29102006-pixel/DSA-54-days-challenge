@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 232: Implement Queue using Stacks
+ * Implement a first-in-first-out (FIFO) queue using two stacks.
+ * Time Complexity: Amortized O(1) for push, pop, peek, and empty operations.
+ * Space Complexity: O(N) for internal stack storage.
+ */
 public class ImplementQueueUsingStacks {
     private Deque<Integer> inStack;
     private Deque<Integer> outStack;
