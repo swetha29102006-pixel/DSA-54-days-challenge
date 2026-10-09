@@ -7,6 +7,9 @@ public class RevealCardsInIncreasingOrder {
         int n = deck.length;
         Arrays.sort(deck);
         Deque<Integer> indexQueue = new ArrayDeque<>();
+        for (int i = 0; i < n; i++) {
+            indexQueue.add(i);
+        }
         return new int[0];
     }
 }
