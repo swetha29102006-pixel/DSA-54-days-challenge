@@ -21,4 +21,10 @@ public class TaskScheduler {
 
         return idleSlots > 0 ? tasks.length + idleSlots : tasks.length;
     }
+
+    public static void main(String[] args) {
+        TaskScheduler scheduler = new TaskScheduler();
+        char[] tasks = {'A', 'A', 'A', 'B', 'B', 'B'};
+        System.out.println("Least intervals: " + scheduler.leastInterval(tasks, 2)); // 8
+    }
 }
