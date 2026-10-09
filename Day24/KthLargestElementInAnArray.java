@@ -9,6 +9,6 @@ public class KthLargestElementInAnArray {
                 minHeap.poll();
             }
         }
-        return 0;
+        return minHeap.peek();
     }
 }
