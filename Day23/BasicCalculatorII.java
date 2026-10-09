@@ -28,6 +28,11 @@ public class BasicCalculatorII {
                 currentNumber = 0;
             }
         }
-        return 0;
+
+        int result = 0;
+        while (!stack.isEmpty()) {
+            result += stack.pop();
+        }
+        return result;
     }
 }
