@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 735: Asteroid Collision
+ * Find out the state of the asteroids after all collisions using stack simulation.
+ * Time Complexity: O(N) where N is number of asteroids.
+ * Space Complexity: O(N) for asteroid stack.
+ */
 public class AsteroidCollision {
     public int[] asteroidCollision(int[] asteroids) {
         Deque<Integer> stack = new ArrayDeque<>();
