@@ -24,4 +24,13 @@ public class FindMedianFromDataStream {
         }
         return (maxHeap.peek() + minHeap.peek()) / 2.0;
     }
+
+    public static void main(String[] args) {
+        FindMedianFromDataStream finder = new FindMedianFromDataStream();
+        finder.addNum(1);
+        finder.addNum(2);
+        System.out.println("Median (1,2): " + finder.findMedian()); // 1.5
+        finder.addNum(3);
+        System.out.println("Median (1,2,3): " + finder.findMedian()); // 2.0
+    }
 }
