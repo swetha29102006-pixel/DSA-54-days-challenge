@@ -1,6 +1,12 @@
 import java.util.Collections;
 import java.util.PriorityQueue;
 
+/**
+ * LeetCode 295: Find Median from Data Stream
+ * Design a data structure that supports adding numbers and finding the median in O(log N) and O(1) time.
+ * Time Complexity: O(log N) for addNum, O(1) for findMedian.
+ * Space Complexity: O(N) for storing elements in dual priority queues.
+ */
 public class FindMedianFromDataStream {
     private PriorityQueue<Integer> maxHeap;
     private PriorityQueue<Integer> minHeap;
