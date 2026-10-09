@@ -18,4 +18,12 @@ public class ImplementStackUsingQueues {
     public int pop() {
         return queue.remove();
     }
+
+    public int top() {
+        return queue.peek();
+    }
+
+    public boolean empty() {
+        return queue.isEmpty();
+    }
 }
