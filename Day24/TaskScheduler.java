@@ -7,6 +7,10 @@ public class TaskScheduler {
         for (char c : tasks) {
             count[c - 'A']++;
         }
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+        for (int c : count) {
+            if (c > 0) maxHeap.add(c);
+        }
         return 0;
     }
 }
