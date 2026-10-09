@@ -21,6 +21,11 @@ public class AsteroidCollision {
                 stack.push(ast);
             }
         }
-        return new int[0];
+
+        int[] res = new int[stack.size()];
+        for (int i = res.length - 1; i >= 0; i--) {
+            res[i] = stack.pop();
+        }
+        return res;
     }
 }
