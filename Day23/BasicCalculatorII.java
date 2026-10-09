@@ -35,4 +35,10 @@ public class BasicCalculatorII {
         }
         return result;
     }
+
+    public static void main(String[] args) {
+        BasicCalculatorII calc = new BasicCalculatorII();
+        System.out.println("3+2*2 = " + calc.calculate("3+2*2")); // 7
+        System.out.println(" 3/2  = " + calc.calculate(" 3/2 ")); // 1
+    }
 }
