@@ -9,4 +9,8 @@ public class ImplementQueueUsingStacks {
         inStack = new ArrayDeque<>();
         outStack = new ArrayDeque<>();
     }
+
+    public void push(int x) {
+        inStack.push(x);
+    }
 }
