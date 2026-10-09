@@ -7,4 +7,8 @@ public class OnlineStockSpan {
     public OnlineStockSpan() {
         stack = new ArrayDeque<>();
     }
+
+    public int next(int price) {
+        return 1;
+    }
 }
