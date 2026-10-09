@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 42: Trapping Rain Water
+ * Compute how much water it can trap after raining using a monotonic stack.
+ * Time Complexity: O(N) single pass over height array.
+ * Space Complexity: O(N) for monotonic index stack.
+ */
 public class TrappingRainWater {
     // Calculates trapped rainwater volume using monotonic stack
     public int trap(int[] height) {
