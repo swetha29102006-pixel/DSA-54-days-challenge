@@ -1,4 +1,5 @@
 public class RemoveAllAdjacentDuplicatesInString {
+    // Repeatedly removes adjacent duplicate characters using string stack
     public String removeDuplicates(String s) {
         if (s == null || s.isEmpty()) return s;
         StringBuilder sb = new StringBuilder();
