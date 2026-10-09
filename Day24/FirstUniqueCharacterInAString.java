@@ -1,6 +1,12 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * LeetCode 387: First Unique Character in a String
+ * Find the first non-repeating character in a string and return its index.
+ * Time Complexity: O(N) single pass with index queue.
+ * Space Complexity: O(1) fixed size 26 alphabet count array.
+ */
 public class FirstUniqueCharacterInAString {
     public int firstUniqChar(String s) {
         int[] count = new int[26];
