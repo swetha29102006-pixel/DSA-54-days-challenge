@@ -6,6 +6,14 @@ public class Dota2Senate {
         Queue<Integer> radiant = new LinkedList<>();
         Queue<Integer> dire = new LinkedList<>();
         int n = senate.length();
+
+        for (int i = 0; i < n; i++) {
+            if (senate.charAt(i) == 'R') {
+                radiant.add(i);
+            } else {
+                dire.add(i);
+            }
+        }
         return "";
     }
 }
