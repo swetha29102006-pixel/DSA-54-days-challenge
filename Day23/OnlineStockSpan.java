@@ -2,6 +2,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class OnlineStockSpan {
+    // Monotonic stack storing [price, span] pairs
     private Deque<int[]> stack;
 
     public OnlineStockSpan() {
