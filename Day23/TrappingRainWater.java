@@ -20,4 +20,10 @@ public class TrappingRainWater {
         }
         return water;
     }
+
+    public static void main(String[] args) {
+        TrappingRainWater solver = new TrappingRainWater();
+        int[] heights = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+        System.out.println("Trapped Water: " + solver.trap(heights)); // 6
+    }
 }
