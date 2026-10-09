@@ -1,5 +1,11 @@
 import java.util.PriorityQueue;
 
+/**
+ * LeetCode 215: Kth Largest Element in an Array
+ * Find the kth largest element in an unsorted array using a Min-Heap.
+ * Time Complexity: O(N log k) where N is array length.
+ * Space Complexity: O(k) for min-heap storage.
+ */
 public class KthLargestElementInAnArray {
     public int findKthLargest(int[] nums, int k) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
