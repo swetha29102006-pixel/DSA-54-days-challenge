@@ -31,4 +31,13 @@ public class ImplementQueueUsingStacks {
     public boolean empty() {
         return inStack.isEmpty() && outStack.isEmpty();
     }
+
+    public static void main(String[] args) {
+        ImplementQueueUsingStacks queue = new ImplementQueueUsingStacks();
+        queue.push(1);
+        queue.push(2);
+        System.out.println("Peek: " + queue.peek());   // 1
+        System.out.println("Pop: " + queue.pop());     // 1
+        System.out.println("Empty: " + queue.empty()); // false
+    }
 }
