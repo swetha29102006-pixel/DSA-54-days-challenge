@@ -1,3 +1,9 @@
+/**
+ * LeetCode 1047: Remove All Adjacent Duplicates In String
+ * Repeatedly choose two adjacent and equal letters and remove them.
+ * Time Complexity: O(N) single pass across string.
+ * Space Complexity: O(N) for StringBuilder stack.
+ */
 public class RemoveAllAdjacentDuplicatesInString {
     // Repeatedly removes adjacent duplicate characters using string stack
     public String removeDuplicates(String s) {
