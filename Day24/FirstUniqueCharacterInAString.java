@@ -10,6 +10,10 @@ public class FirstUniqueCharacterInAString {
             char c = s.charAt(i);
             count[c - 'a']++;
             queue.offer(i);
+
+            while (!queue.isEmpty() && count[s.charAt(queue.peek()) - 'a'] > 1) {
+                queue.poll();
+            }
         }
         return -1;
     }
