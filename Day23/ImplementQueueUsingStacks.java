@@ -14,6 +14,11 @@ public class ImplementQueueUsingStacks {
         inStack.push(x);
     }
 
+    public int pop() {
+        peek();
+        return outStack.pop();
+    }
+
     public int peek() {
         if (outStack.isEmpty()) {
             while (!inStack.isEmpty()) {
@@ -21,5 +26,9 @@ public class ImplementQueueUsingStacks {
             }
         }
         return outStack.peek();
+    }
+
+    public boolean empty() {
+        return inStack.isEmpty() && outStack.isEmpty();
     }
 }
