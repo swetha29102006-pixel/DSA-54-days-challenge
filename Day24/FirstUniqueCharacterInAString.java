@@ -15,6 +15,6 @@ public class FirstUniqueCharacterInAString {
                 queue.poll();
             }
         }
-        return -1;
+        return queue.isEmpty() ? -1 : queue.peek();
     }
 }
