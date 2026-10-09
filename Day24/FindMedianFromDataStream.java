@@ -4,4 +4,9 @@ import java.util.PriorityQueue;
 public class FindMedianFromDataStream {
     private PriorityQueue<Integer> maxHeap;
     private PriorityQueue<Integer> minHeap;
+
+    public FindMedianFromDataStream() {
+        maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+        minHeap = new PriorityQueue<>();
+    }
 }
