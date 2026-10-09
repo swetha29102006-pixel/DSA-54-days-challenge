@@ -5,6 +5,9 @@ public class KthLargestElementInAnArray {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         for (int num : nums) {
             minHeap.add(num);
+            if (minHeap.size() > k) {
+                minHeap.poll();
+            }
         }
         return 0;
     }
