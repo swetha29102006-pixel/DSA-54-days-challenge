@@ -2,6 +2,12 @@ import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
 
+/**
+ * LeetCode 950: Reveal Cards In Increasing Order
+ * Reorder the deck so that revealing cards one by one produces cards in increasing order.
+ * Time Complexity: O(N log N) for deck sorting.
+ * Space Complexity: O(N) for index deque and result array.
+ */
 public class RevealCardsInIncreasingOrder {
     // Simulates index deque order for increasing card reveal order
     public int[] deckRevealedIncreasing(int[] deck) {
