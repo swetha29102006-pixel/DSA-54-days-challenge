@@ -21,4 +21,12 @@ public class RevealCardsInIncreasingOrder {
         }
         return result;
     }
+
+    public static void main(String[] args) {
+        RevealCardsInIncreasingOrder solver = new RevealCardsInIncreasingOrder();
+        int[] res = solver.deckRevealedIncreasing(new int[]{17, 13, 11, 2, 3, 5, 7});
+        System.out.print("Revealed Deck: ");
+        for (int x : res) System.out.print(x + " ");
+        System.out.println();
+    }
 }
