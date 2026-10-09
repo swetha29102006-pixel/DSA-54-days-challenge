@@ -28,4 +28,12 @@ public class AsteroidCollision {
         }
         return res;
     }
+
+    public static void main(String[] args) {
+        AsteroidCollision solver = new AsteroidCollision();
+        int[] res = solver.asteroidCollision(new int[]{5, 10, -5});
+        System.out.print("Remaining Asteroids: ");
+        for (int a : res) System.out.print(a + " ");
+        System.out.println();
+    }
 }
