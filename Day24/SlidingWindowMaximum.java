@@ -22,4 +22,12 @@ public class SlidingWindowMaximum {
         }
         return res;
     }
+
+    public static void main(String[] args) {
+        SlidingWindowMaximum solver = new SlidingWindowMaximum();
+        int[] res = solver.maxSlidingWindow(new int[]{1, 3, -1, -3, 5, 3, 6, 7}, 3);
+        System.out.print("Sliding Window Max: ");
+        for (int x : res) System.out.print(x + " ");
+        System.out.println();
+    }
 }
