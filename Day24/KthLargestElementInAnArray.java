@@ -11,4 +11,10 @@ public class KthLargestElementInAnArray {
         }
         return minHeap.peek();
     }
+
+    public static void main(String[] args) {
+        KthLargestElementInAnArray solver = new KthLargestElementInAnArray();
+        int[] nums = {3, 2, 1, 5, 6, 4};
+        System.out.println("2nd Largest: " + solver.findKthLargest(nums, 2)); // 5
+    }
 }
