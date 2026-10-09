@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 227: Basic Calculator II
+ * Evaluate a mathematical expression string containing non-negative integers and +, -, *, / operators.
+ * Time Complexity: O(N) single pass string parsing.
+ * Space Complexity: O(N) for stack storing operands.
+ */
 public class BasicCalculatorII {
     public int calculate(String s) {
         if (s == null || s.length() == 0) return 0;
