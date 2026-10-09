@@ -24,6 +24,7 @@ public class Dota2Senate {
                 dire.add(dIndex + n);
             }
         }
-        return "";
+
+        return radiant.isEmpty() ? "Dire" : "Radiant";
     }
 }
