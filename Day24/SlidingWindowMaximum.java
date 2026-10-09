@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 239: Sliding Window Maximum
+ * Find the max value in every sliding window of size k using a monotonic deque.
+ * Time Complexity: O(N) where N is length of nums.
+ * Space Complexity: O(k) for monotonic deque index storage.
+ */
 public class SlidingWindowMaximum {
     public int[] maxSlidingWindow(int[] nums, int k) {
         if (nums == null || nums.length == 0 || k <= 0) return new int[0];
