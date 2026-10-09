@@ -14,6 +14,16 @@ public class Dota2Senate {
                 dire.add(i);
             }
         }
+
+        while (!radiant.isEmpty() && !dire.isEmpty()) {
+            int rIndex = radiant.poll();
+            int dIndex = dire.poll();
+            if (rIndex < dIndex) {
+                radiant.add(rIndex + n);
+            } else {
+                dire.add(dIndex + n);
+            }
+        }
         return "";
     }
 }
