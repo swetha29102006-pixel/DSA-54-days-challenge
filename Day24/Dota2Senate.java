@@ -1,6 +1,12 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * LeetCode 649: Dota2 Senate
+ * Predict which party will announce victory in round-robin voting using queues.
+ * Time Complexity: O(N) where N is senate string length.
+ * Space Complexity: O(N) for radiant and dire index queues.
+ */
 public class Dota2Senate {
     public String predictPartyVictory(String senate) {
         Queue<Integer> radiant = new LinkedList<>();
