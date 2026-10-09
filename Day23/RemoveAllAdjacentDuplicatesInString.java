@@ -13,4 +13,10 @@ public class RemoveAllAdjacentDuplicatesInString {
         }
         return sb.toString();
     }
+
+    public static void main(String[] args) {
+        RemoveAllAdjacentDuplicatesInString solver = new RemoveAllAdjacentDuplicatesInString();
+        System.out.println("abbaca -> " + solver.removeDuplicates("abbaca")); // ca
+        System.out.println("azxxzy -> " + solver.removeDuplicates("azxxzy")); // ay
+    }
 }
