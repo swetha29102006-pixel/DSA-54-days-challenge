@@ -26,4 +26,13 @@ public class ImplementStackUsingQueues {
     public boolean empty() {
         return queue.isEmpty();
     }
+
+    public static void main(String[] args) {
+        ImplementStackUsingQueues stack = new ImplementStackUsingQueues();
+        stack.push(1);
+        stack.push(2);
+        System.out.println("Top: " + stack.top());   // 2
+        System.out.println("Pop: " + stack.pop());   // 2
+        System.out.println("Empty: " + stack.empty()); // false
+    }
 }
