@@ -11,6 +11,9 @@ public class TaskScheduler {
         for (int c : count) {
             if (c > 0) maxHeap.add(c);
         }
+
+        int maxFreq = maxHeap.poll();
+        int idleSlots = (maxFreq - 1) * n;
         return 0;
     }
 }
