@@ -17,4 +17,10 @@ public class FirstUniqueCharacterInAString {
         }
         return queue.isEmpty() ? -1 : queue.peek();
     }
+
+    public static void main(String[] args) {
+        FirstUniqueCharacterInAString solver = new FirstUniqueCharacterInAString();
+        System.out.println("leetcode: " + solver.firstUniqChar("leetcode")); // 0
+        System.out.println("loveleetcode: " + solver.firstUniqChar("loveleetcode")); // 2
+    }
 }
