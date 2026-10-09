@@ -27,4 +27,10 @@ public class Dota2Senate {
 
         return radiant.isEmpty() ? "Dire" : "Radiant";
     }
+
+    public static void main(String[] args) {
+        Dota2Senate solver = new Dota2Senate();
+        System.out.println("RD: " + solver.predictPartyVictory("RD"));   // Radiant
+        System.out.println("RDD: " + solver.predictPartyVictory("RDD")); // Dire
+    }
 }
