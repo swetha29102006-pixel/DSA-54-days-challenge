@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.Deque;
 
 public class RevealCardsInIncreasingOrder {
+    // Simulates index deque order for increasing card reveal order
     public int[] deckRevealedIncreasing(int[] deck) {
         int n = deck.length;
         Arrays.sort(deck);
