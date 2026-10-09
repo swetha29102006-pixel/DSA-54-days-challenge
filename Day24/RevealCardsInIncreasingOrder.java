@@ -10,6 +10,14 @@ public class RevealCardsInIncreasingOrder {
         for (int i = 0; i < n; i++) {
             indexQueue.add(i);
         }
-        return new int[0];
+
+        int[] result = new int[n];
+        for (int card : deck) {
+            result[indexQueue.poll()] = card;
+            if (!indexQueue.isEmpty()) {
+                indexQueue.add(indexQueue.poll());
+            }
+        }
+        return result;
     }
 }
