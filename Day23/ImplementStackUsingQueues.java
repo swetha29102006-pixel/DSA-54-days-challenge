@@ -14,4 +14,8 @@ public class ImplementStackUsingQueues {
             queue.add(queue.remove());
         }
     }
+
+    public int pop() {
+        return queue.remove();
+    }
 }
