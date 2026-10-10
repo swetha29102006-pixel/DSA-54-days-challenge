@@ -10,6 +10,10 @@ public class SubarraySumEqualsK {
 
         for (int num : nums) {
             sum += num;
+            if (map.containsKey(sum - k)) {
+                count += map.get(sum - k);
+            }
+            map.put(sum, map.getOrDefault(sum, 0) + 1);
         }
         return count;
     }
