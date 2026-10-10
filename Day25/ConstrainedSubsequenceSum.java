@@ -23,4 +23,10 @@ public class ConstrainedSubsequenceSum {
         }
         return maxSum;
     }
+
+    public static void main(String[] args) {
+        ConstrainedSubsequenceSum solver = new ConstrainedSubsequenceSum();
+        int[] nums = {10, 2, -10, 5, 20};
+        System.out.println("Constrained Subsequence Sum: " + solver.constrainedSubsetSum(nums, 2)); // 37
+    }
 }
