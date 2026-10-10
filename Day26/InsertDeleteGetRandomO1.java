@@ -34,4 +34,8 @@ public class InsertDeleteGetRandomO1 {
         map.remove(val);
         return true;
     }
+
+    public int getRandom() {
+        return list.get(rand.nextInt(list.size()));
+    }
 }
