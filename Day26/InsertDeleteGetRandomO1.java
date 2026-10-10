@@ -21,4 +21,17 @@ public class InsertDeleteGetRandomO1 {
         list.add(val);
         return true;
     }
+
+    public boolean remove(int val) {
+        if (!map.containsKey(val)) return false;
+        int index = map.get(val);
+        int lastElement = list.get(list.size() - 1);
+
+        list.set(index, lastElement);
+        map.put(lastElement, index);
+
+        list.remove(list.size() - 1);
+        map.remove(val);
+        return true;
+    }
 }
