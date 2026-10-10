@@ -11,4 +11,10 @@ public class MovingAverageFromDataStream {
         this.queue = new ArrayDeque<>();
         this.windowSum = 0.0;
     }
+
+    public double next(int val) {
+        queue.offer(val);
+        windowSum += val;
+        return 0.0;
+    }
 }
