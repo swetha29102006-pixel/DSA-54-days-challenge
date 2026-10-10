@@ -4,6 +4,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+/**
+ * LeetCode 380: Insert Delete GetRandom O(1)
+ * Implement the RandomizedSet class with average O(1) time for insert, remove, and getRandom.
+ * Time Complexity: O(1) average time for all operations.
+ * Space Complexity: O(N) for hash map and dynamic list storage.
+ */
 public class InsertDeleteGetRandomO1 {
     // RandomizedSet data structure supporting O(1) insert, delete, and getRandom
     private final Map<Integer, Integer> map;
