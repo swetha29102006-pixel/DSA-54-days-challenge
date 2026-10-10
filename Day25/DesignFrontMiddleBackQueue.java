@@ -2,6 +2,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class DesignFrontMiddleBackQueue {
+    // Dual deque queue supporting O(1) front, middle, and back push and pop operations
     private final Deque<Integer> left;
     private final Deque<Integer> right;
 
