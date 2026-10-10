@@ -34,6 +34,22 @@ public class DesignHashMap {
         }
     }
 
+    public int get(int key) {
+        int index = getHash(key);
+        if (buckets[index] == null) return -1;
+        HashBucketNode prev = find(buckets[index], key);
+        return prev.next == null ? -1 : prev.next.value;
+    }
+
+    public void remove(int key) {
+        int index = getHash(key);
+        if (buckets[index] == null) return;
+        HashBucketNode prev = find(buckets[index], key);
+        if (prev.next != null) {
+            prev.next = prev.next.next;
+        }
+    }
+
     private HashBucketNode find(HashBucketNode bucket, int key) {
         HashBucketNode curr = bucket, prev = null;
         while (curr != null && curr.key != key) {
