@@ -21,4 +21,10 @@ public class GroupAnagrams {
         }
         return new ArrayList<>(map.values());
     }
+
+    public static void main(String[] args) {
+        GroupAnagrams solver = new GroupAnagrams();
+        String[] strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
+        System.out.println("Grouped Anagrams: " + solver.groupAnagrams(strs));
+    }
 }
