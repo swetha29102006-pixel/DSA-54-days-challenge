@@ -13,7 +13,11 @@ public class GroupAnagrams {
             char[] ca = s.toCharArray();
             Arrays.sort(ca);
             String key = String.valueOf(ca);
+            if (!map.containsKey(key)) {
+                map.put(key, new ArrayList<>());
+            }
+            map.get(key).add(s);
         }
-        return new ArrayList<>();
+        return new ArrayList<>(map.values());
     }
 }
