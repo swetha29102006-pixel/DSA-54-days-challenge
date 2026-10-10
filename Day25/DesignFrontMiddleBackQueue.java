@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 1670: Design Front Middle Back Queue
+ * Design a queue that supports push and pop operations at the front, middle, and back.
+ * Time Complexity: O(1) for all operations.
+ * Space Complexity: O(N) for left and right deques.
+ */
 public class DesignFrontMiddleBackQueue {
     // Dual deque queue supporting O(1) front, middle, and back push and pop operations
     private final Deque<Integer> left;
