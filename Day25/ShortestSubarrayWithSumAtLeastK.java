@@ -25,4 +25,9 @@ public class ShortestSubarrayWithSumAtLeastK {
 
         return ans <= n ? ans : -1;
     }
+
+    public static void main(String[] args) {
+        ShortestSubarrayWithSumAtLeastK solver = new ShortestSubarrayWithSumAtLeastK();
+        System.out.println("Shortest subarray sum >= 3: " + solver.shortestSubarray(new int[]{2, -1, 2}, 3)); // 3
+    }
 }
