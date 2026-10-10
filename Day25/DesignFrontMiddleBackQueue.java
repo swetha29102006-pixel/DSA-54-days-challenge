@@ -57,4 +57,17 @@ public class DesignFrontMiddleBackQueue {
         rebalance();
         return val;
     }
+
+    public static void main(String[] args) {
+        DesignFrontMiddleBackQueue q = new DesignFrontMiddleBackQueue();
+        q.pushFront(1);   // [1]
+        q.pushBack(2);    // [1, 2]
+        q.pushMiddle(3);  // [1, 3, 2]
+        q.pushMiddle(4);  // [1, 4, 3, 2]
+        System.out.println("popFront: " + q.popFront());   // 1
+        System.out.println("popMiddle: " + q.popMiddle()); // 3
+        System.out.println("popMiddle: " + q.popMiddle()); // 4
+        System.out.println("popBack: " + q.popBack());     // 2
+        System.out.println("popFront: " + q.popFront());   // -1
+    }
 }
