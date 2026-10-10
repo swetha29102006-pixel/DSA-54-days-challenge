@@ -1,6 +1,12 @@
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * LeetCode 149: Max Points on a Line
+ * Return the maximum number of points that lie on the same 2D straight line.
+ * Time Complexity: O(N^2) slope pairwise hashing.
+ * Space Complexity: O(N) for slope frequency map per point.
+ */
 public class MaxPointsOnALine {
     // Computes max collinear 2D points using GCD slope fraction hashing to prevent precision collisions
     public int maxPoints(int[][] points) {
