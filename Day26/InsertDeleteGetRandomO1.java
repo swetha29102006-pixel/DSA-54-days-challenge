@@ -14,4 +14,11 @@ public class InsertDeleteGetRandomO1 {
         list = new ArrayList<>();
         rand = new Random();
     }
+
+    public boolean insert(int val) {
+        if (map.containsKey(val)) return false;
+        map.put(val, list.size());
+        list.add(val);
+        return true;
+    }
 }
