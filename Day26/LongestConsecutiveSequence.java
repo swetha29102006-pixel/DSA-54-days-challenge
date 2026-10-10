@@ -11,7 +11,15 @@ public class LongestConsecutiveSequence {
         int longestStreak = 0;
         for (int num : set) {
             if (!set.contains(num - 1)) {
-                // Discover sequence start
+                int currentNum = num;
+                int currentStreak = 1;
+
+                while (set.contains(currentNum + 1)) {
+                    currentNum += 1;
+                    currentStreak += 1;
+                }
+
+                longestStreak = Math.max(longestStreak, currentStreak);
             }
         }
         return longestStreak;
