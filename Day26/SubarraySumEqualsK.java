@@ -18,4 +18,10 @@ public class SubarraySumEqualsK {
         }
         return count;
     }
+
+    public static void main(String[] args) {
+        SubarraySumEqualsK solver = new SubarraySumEqualsK();
+        System.out.println("Subarray sum equals 2: " + solver.subarraySum(new int[]{1, 1, 1}, 2)); // 2
+        System.out.println("Subarray sum equals 3: " + solver.subarraySum(new int[]{1, 2, 3}, 3)); // 2
+    }
 }
