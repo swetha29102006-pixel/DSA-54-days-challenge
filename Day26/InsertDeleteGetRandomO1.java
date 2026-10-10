@@ -39,4 +39,15 @@ public class InsertDeleteGetRandomO1 {
     public int getRandom() {
         return list.get(rand.nextInt(list.size()));
     }
+
+    public static void main(String[] args) {
+        InsertDeleteGetRandomO1 randomizedSet = new InsertDeleteGetRandomO1();
+        System.out.println("insert 1: " + randomizedSet.insert(1)); // true
+        System.out.println("remove 2: " + randomizedSet.remove(2)); // false
+        System.out.println("insert 2: " + randomizedSet.insert(2)); // true
+        System.out.println("getRandom: " + randomizedSet.getRandom());
+        System.out.println("remove 1: " + randomizedSet.remove(1)); // true
+        System.out.println("insert 2: " + randomizedSet.insert(2)); // false
+        System.out.println("getRandom: " + randomizedSet.getRandom());
+    }
 }
