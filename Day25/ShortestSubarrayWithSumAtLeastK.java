@@ -2,6 +2,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class ShortestSubarrayWithSumAtLeastK {
+    // Finds shortest non-empty subarray with sum at least K using prefix sum + monotonic deque
     public int shortestSubarray(int[] nums, int k) {
         int n = nums.length;
         long[] P = new long[n + 1];
