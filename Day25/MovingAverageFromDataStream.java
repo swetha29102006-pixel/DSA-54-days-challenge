@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 346: Moving Average from Data Stream
+ * Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.
+ * Time Complexity: O(1) for next operation.
+ * Space Complexity: O(size) for queue storage.
+ */
 public class MovingAverageFromDataStream {
     // Computes moving average over sliding window queue of size N
     private final int size;
