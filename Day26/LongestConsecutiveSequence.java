@@ -1,6 +1,12 @@
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * LeetCode 128: Longest Consecutive Sequence
+ * Given an unsorted array of integers, return length of longest consecutive elements sequence in O(N) time.
+ * Time Complexity: O(N) single pass traversal over hash set.
+ * Space Complexity: O(N) for storing elements in hash set.
+ */
 public class LongestConsecutiveSequence {
     // Finds length of longest consecutive elements sequence in O(N) using HashSet
     public int longestConsecutive(int[] nums) {
