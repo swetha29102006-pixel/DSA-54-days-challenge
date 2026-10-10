@@ -11,6 +11,17 @@ public class ShortestSubarrayWithSumAtLeastK {
 
         int ans = n + 1;
         Deque<Integer> deque = new ArrayDeque<>();
-        return -1;
+
+        for (int i = 0; i <= n; i++) {
+            while (!deque.isEmpty() && P[i] - P[deque.peekFirst()] >= k) {
+                ans = Math.min(ans, i - deque.pollFirst());
+            }
+            while (!deque.isEmpty() && P[i] <= P[deque.peekLast()]) {
+                deque.pollLast();
+            }
+            deque.addLast(i);
+        }
+
+        return ans <= n ? ans : -1;
     }
 }
