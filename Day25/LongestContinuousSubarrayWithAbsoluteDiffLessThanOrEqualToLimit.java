@@ -2,6 +2,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class LongestContinuousSubarrayWithAbsoluteDiffLessThanOrEqualToLimit {
+    // Computes longest continuous subarray with absolute difference <= limit using dual deques
     public int longestSubarray(int[] nums, int limit) {
         Deque<Integer> maxDeque = new ArrayDeque<>();
         Deque<Integer> minDeque = new ArrayDeque<>();
