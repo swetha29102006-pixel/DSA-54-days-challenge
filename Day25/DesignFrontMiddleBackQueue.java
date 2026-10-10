@@ -35,4 +35,25 @@ public class DesignFrontMiddleBackQueue {
         right.addLast(val);
         rebalance();
     }
+
+    public int popFront() {
+        if (left.isEmpty()) return -1;
+        int val = left.removeFirst();
+        rebalance();
+        return val;
+    }
+
+    public int popMiddle() {
+        if (left.isEmpty()) return -1;
+        int val = left.removeLast();
+        rebalance();
+        return val;
+    }
+
+    public int popBack() {
+        if (left.isEmpty()) return -1;
+        int val = right.isEmpty() ? left.removeLast() : right.removeLast();
+        rebalance();
+        return val;
+    }
 }
