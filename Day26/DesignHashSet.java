@@ -1,3 +1,9 @@
+/**
+ * LeetCode 705: Design HashSet
+ * Design a HashSet without using any built-in hash table libraries.
+ * Time Complexity: Amortized O(1) for add, remove, contains.
+ * Space Complexity: O(SIZE + N) for bucket array and chained nodes.
+ */
 class SetBucketNode {
     int key;
     SetBucketNode next;
