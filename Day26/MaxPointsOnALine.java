@@ -41,4 +41,10 @@ public class MaxPointsOnALine {
         if (b == 0) return a;
         return gcd(b, a % b);
     }
+
+    public static void main(String[] args) {
+        MaxPointsOnALine solver = new MaxPointsOnALine();
+        int[][] points = {{1, 1}, {2, 2}, {3, 3}};
+        System.out.println("Max points on a line: " + solver.maxPoints(points)); // 3
+    }
 }
