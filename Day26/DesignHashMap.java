@@ -58,4 +58,16 @@ public class DesignHashMap {
         }
         return prev;
     }
+
+    public static void main(String[] args) {
+        DesignHashMap map = new DesignHashMap();
+        map.put(1, 1);
+        map.put(2, 2);
+        System.out.println("get(1): " + map.get(1)); // 1
+        System.out.println("get(3): " + map.get(3)); // -1
+        map.put(2, 1);
+        System.out.println("get(2): " + map.get(2)); // 1
+        map.remove(2);
+        System.out.println("get(2): " + map.get(2)); // -1
+    }
 }
