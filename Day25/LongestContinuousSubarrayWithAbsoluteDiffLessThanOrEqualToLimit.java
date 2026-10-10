@@ -29,4 +29,10 @@ public class LongestContinuousSubarrayWithAbsoluteDiffLessThanOrEqualToLimit {
         }
         return maxLen;
     }
+
+    public static void main(String[] args) {
+        LongestContinuousSubarrayWithAbsoluteDiffLessThanOrEqualToLimit solver = new LongestContinuousSubarrayWithAbsoluteDiffLessThanOrEqualToLimit();
+        int[] nums = {8, 2, 4, 7};
+        System.out.println("Longest subarray len (limit=4): " + solver.longestSubarray(nums, 4)); // 2
+    }
 }
