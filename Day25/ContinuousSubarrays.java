@@ -2,6 +2,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class ContinuousSubarrays {
+    // Counts total continuous subarrays where max - min <= 2 using dual deques
     public long continuousSubarrays(int[] nums) {
         Deque<Integer> maxDeque = new ArrayDeque<>();
         Deque<Integer> minDeque = new ArrayDeque<>();
