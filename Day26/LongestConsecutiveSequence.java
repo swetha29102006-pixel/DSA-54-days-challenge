@@ -2,6 +2,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class LongestConsecutiveSequence {
+    // Finds length of longest consecutive elements sequence in O(N) using HashSet
     public int longestConsecutive(int[] nums) {
         Set<Integer> set = new HashSet<>();
         for (int num : nums) {
