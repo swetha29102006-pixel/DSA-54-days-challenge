@@ -2,6 +2,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class MaximumNumberOfRobotsWithinBudget {
+    // Calculates max consecutive robots within budget using sliding window + max deque
     public int maximumRobots(int[] chargeTimes, int[] runningCosts, long budget) {
         Deque<Integer> maxDeque = new ArrayDeque<>();
         long costSum = 0;
