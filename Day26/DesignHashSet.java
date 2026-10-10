@@ -54,4 +54,16 @@ public class DesignHashSet {
         }
         return prev;
     }
+
+    public static void main(String[] args) {
+        DesignHashSet set = new DesignHashSet();
+        set.add(1);
+        set.add(2);
+        System.out.println("contains(1): " + set.contains(1)); // true
+        System.out.println("contains(3): " + set.contains(3)); // false
+        set.add(2);
+        System.out.println("contains(2): " + set.contains(2)); // true
+        set.remove(2);
+        System.out.println("contains(2): " + set.contains(2)); // false
+    }
 }
