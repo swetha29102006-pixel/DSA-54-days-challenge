@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 1438: Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+ * Find size of longest non-empty subarray where absolute difference between any two elements <= limit.
+ * Time Complexity: O(N) sliding window with max/min monotonic deques.
+ * Space Complexity: O(N) for deques.
+ */
 public class LongestContinuousSubarrayWithAbsoluteDiffLessThanOrEqualToLimit {
     // Computes longest continuous subarray with absolute difference <= limit using dual deques
     public int longestSubarray(int[] nums, int limit) {
