@@ -18,4 +18,13 @@ public class DesignHashSet {
     private int getHash(int key) {
         return key % SIZE;
     }
+
+    private SetBucketNode find(SetBucketNode bucket, int key) {
+        SetBucketNode curr = bucket, prev = null;
+        while (curr != null && curr.key != key) {
+            prev = curr;
+            curr = curr.next;
+        }
+        return prev;
+    }
 }
