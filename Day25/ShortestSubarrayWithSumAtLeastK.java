@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 862: Shortest Subarray with Sum at Least K
+ * Return the length of the shortest non-empty subarray of nums with sum at least k.
+ * Time Complexity: O(N) single pass with monotonic deque.
+ * Space Complexity: O(N) for prefix sum array and deque.
+ */
 public class ShortestSubarrayWithSumAtLeastK {
     // Finds shortest non-empty subarray with sum at least K using prefix sum + monotonic deque
     public int shortestSubarray(int[] nums, int k) {
