@@ -9,4 +9,12 @@ public class DesignFrontMiddleBackQueue {
         left = new ArrayDeque<>();
         right = new ArrayDeque<>();
     }
+
+    private void rebalance() {
+        if (left.size() > right.size() + 1) {
+            right.addFirst(left.removeLast());
+        } else if (left.size() < right.size()) {
+            left.addLast(right.removeFirst());
+        }
+    }
 }
