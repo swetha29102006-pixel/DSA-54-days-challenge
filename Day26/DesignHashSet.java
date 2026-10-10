@@ -10,4 +10,12 @@ class SetBucketNode {
 public class DesignHashSet {
     private static final int SIZE = 1009;
     private final SetBucketNode[] buckets;
+
+    public DesignHashSet() {
+        buckets = new SetBucketNode[SIZE];
+    }
+
+    private int getHash(int key) {
+        return key % SIZE;
+    }
 }
