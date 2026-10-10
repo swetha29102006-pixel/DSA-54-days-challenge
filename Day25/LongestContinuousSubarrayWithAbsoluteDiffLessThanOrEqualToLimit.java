@@ -17,6 +17,14 @@ public class LongestContinuousSubarrayWithAbsoluteDiffLessThanOrEqualToLimit {
             }
             maxDeque.addLast(nums[right]);
             minDeque.addLast(nums[right]);
+
+            while (maxDeque.peekFirst() - minDeque.peekFirst() > limit) {
+                if (maxDeque.peekFirst() == nums[left]) maxDeque.pollFirst();
+                if (minDeque.peekFirst() == nums[left]) minDeque.pollFirst();
+                left++;
+            }
+
+            maxLen = Math.max(maxLen, right - left + 1);
         }
         return maxLen;
     }
