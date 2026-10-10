@@ -4,6 +4,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * LeetCode 49: Group Anagrams
+ * Group an array of strings into anagram sets using HashMap.
+ * Time Complexity: O(N * K log K) where N is number of strings, K is maximum string length.
+ * Space Complexity: O(N * K) for hash map storing grouped anagrams.
+ */
 public class GroupAnagrams {
     // Groups anagrams together using sorted character array string keys in a HashMap
     public List<List<String>> groupAnagrams(String[] strs) {
