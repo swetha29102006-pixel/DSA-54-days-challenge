@@ -15,6 +15,9 @@ public class MovingAverageFromDataStream {
     public double next(int val) {
         queue.offer(val);
         windowSum += val;
-        return 0.0;
+        if (queue.size() > size) {
+            windowSum -= queue.poll();
+        }
+        return windowSum / queue.size();
     }
 }
