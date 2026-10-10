@@ -28,4 +28,12 @@ public class MaximumNumberOfRobotsWithinBudget {
         }
         return maxRobots;
     }
+
+    public static void main(String[] args) {
+        MaximumNumberOfRobotsWithinBudget solver = new MaximumNumberOfRobotsWithinBudget();
+        int[] chargeTimes = {3, 6, 1, 3, 4};
+        int[] runningCosts = {2, 1, 3, 4, 5};
+        long budget = 25;
+        System.out.println("Max Robots: " + solver.maximumRobots(chargeTimes, runningCosts, budget)); // 3
+    }
 }
