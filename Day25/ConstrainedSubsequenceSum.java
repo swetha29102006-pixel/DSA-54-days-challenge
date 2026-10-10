@@ -12,6 +12,13 @@ public class ConstrainedSubsequenceSum {
             if (!deque.isEmpty() && deque.peekFirst() < i - k) {
                 deque.pollFirst();
             }
+            dp[i] = nums[i] + (deque.isEmpty() ? 0 : Math.max(0, dp[deque.peekFirst()]));
+            maxSum = Math.max(maxSum, dp[i]);
+
+            while (!deque.isEmpty() && dp[deque.peekLast()] <= dp[i]) {
+                deque.pollLast();
+            }
+            deque.addLast(i);
         }
         return maxSum;
     }
