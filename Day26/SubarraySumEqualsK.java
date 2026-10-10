@@ -7,6 +7,10 @@ public class SubarraySumEqualsK {
         int sum = 0;
         Map<Integer, Integer> map = new HashMap<>();
         map.put(0, 1);
-        return 0;
+
+        for (int num : nums) {
+            sum += num;
+        }
+        return count;
     }
 }
