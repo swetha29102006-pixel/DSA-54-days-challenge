@@ -1,3 +1,9 @@
+/**
+ * LeetCode 706: Design HashMap
+ * Design a HashMap without using any built-in hash table libraries, resolving collisions via chaining.
+ * Time Complexity: Amortized O(1) for put, get, remove.
+ * Space Complexity: O(SIZE + N) for bucket array and chained nodes.
+ */
 class HashBucketNode {
     int key;
     int value;
