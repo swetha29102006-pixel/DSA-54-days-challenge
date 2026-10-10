@@ -14,6 +14,16 @@ public class MaximumNumberOfRobotsWithinBudget {
             }
             maxDeque.addLast(right);
             costSum += runningCosts[right];
+
+            while (!maxDeque.isEmpty() && chargeTimes[maxDeque.peekFirst()] + (right - left + 1) * costSum > budget) {
+                if (maxDeque.peekFirst() == left) {
+                    maxDeque.pollFirst();
+                }
+                costSum -= runningCosts[left];
+                left++;
+            }
+
+            maxRobots = Math.max(maxRobots, right - left + 1);
         }
         return maxRobots;
     }
