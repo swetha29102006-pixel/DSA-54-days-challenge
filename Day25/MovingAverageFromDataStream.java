@@ -2,6 +2,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class MovingAverageFromDataStream {
+    // Computes moving average over sliding window queue of size N
     private final int size;
     private final Deque<Integer> queue;
     private double windowSum;
