@@ -21,6 +21,19 @@ public class DesignHashMap {
         return key % SIZE;
     }
 
+    public void put(int key, int value) {
+        int index = getHash(key);
+        if (buckets[index] == null) {
+            buckets[index] = new HashBucketNode(-1, -1);
+        }
+        HashBucketNode prev = find(buckets[index], key);
+        if (prev.next == null) {
+            prev.next = new HashBucketNode(key, value);
+        } else {
+            prev.next.value = value;
+        }
+    }
+
     private HashBucketNode find(HashBucketNode bucket, int key) {
         HashBucketNode curr = bucket, prev = null;
         while (curr != null && curr.key != key) {
