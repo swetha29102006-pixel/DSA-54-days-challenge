@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 2762: Continuous Subarrays
+ * Return the total number of continuous subarrays where max(sub) - min(sub) <= 2.
+ * Time Complexity: O(N) sliding window with min and max deques.
+ * Space Complexity: O(N) for index deques.
+ */
 public class ContinuousSubarrays {
     // Counts total continuous subarrays where max - min <= 2 using dual deques
     public long continuousSubarrays(int[] nums) {
