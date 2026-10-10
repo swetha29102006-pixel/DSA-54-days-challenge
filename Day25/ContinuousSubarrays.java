@@ -17,6 +17,14 @@ public class ContinuousSubarrays {
             }
             maxDeque.addLast(right);
             minDeque.addLast(right);
+
+            while (nums[maxDeque.peekFirst()] - nums[minDeque.peekFirst()] > 2) {
+                if (maxDeque.peekFirst() == left) maxDeque.pollFirst();
+                if (minDeque.peekFirst() == left) minDeque.pollFirst();
+                left++;
+            }
+
+            count += (right - left + 1);
         }
         return count;
     }
