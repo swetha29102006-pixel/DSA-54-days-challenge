@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 2398: Maximum Number of Robots Within Budget
+ * Find maximum number of consecutive robots you can run such that total cost <= budget.
+ * Time Complexity: O(N) sliding window with monotonic max deque.
+ * Space Complexity: O(N) for deque.
+ */
 public class MaximumNumberOfRobotsWithinBudget {
     // Calculates max consecutive robots within budget using sliding window + max deque
     public int maximumRobots(int[] chargeTimes, int[] runningCosts, long budget) {
