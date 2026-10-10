@@ -7,6 +7,13 @@ public class LongestConsecutiveSequence {
         for (int num : nums) {
             set.add(num);
         }
-        return 0;
+
+        int longestStreak = 0;
+        for (int num : set) {
+            if (!set.contains(num - 1)) {
+                // Discover sequence start
+            }
+        }
+        return longestStreak;
     }
 }
