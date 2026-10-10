@@ -19,6 +19,17 @@ public class DesignHashSet {
         return key % SIZE;
     }
 
+    public void add(int key) {
+        int index = getHash(key);
+        if (buckets[index] == null) {
+            buckets[index] = new SetBucketNode(-1);
+        }
+        SetBucketNode prev = find(buckets[index], key);
+        if (prev.next == null) {
+            prev.next = new SetBucketNode(key);
+        }
+    }
+
     private SetBucketNode find(SetBucketNode bucket, int key) {
         SetBucketNode curr = bucket, prev = null;
         while (curr != null && curr.key != key) {
