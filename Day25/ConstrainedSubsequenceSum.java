@@ -2,6 +2,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class ConstrainedSubsequenceSum {
+    // Calculates max constrained subsequence sum where distance between indices <= k using DP + Deque
     public int constrainedSubsetSum(int[] nums, int k) {
         int n = nums.length;
         int[] dp = new int[n];
