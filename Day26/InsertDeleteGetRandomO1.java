@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Random;
 
 public class InsertDeleteGetRandomO1 {
+    // RandomizedSet data structure supporting O(1) insert, delete, and getRandom
     private final Map<Integer, Integer> map;
     private final List<Integer> list;
     private final Random rand;
