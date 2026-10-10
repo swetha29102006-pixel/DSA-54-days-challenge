@@ -2,6 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SubarraySumEqualsK {
+    // Calculates total continuous subarrays whose sum equals K using prefix sum hash map
     public int subarraySum(int[] nums, int k) {
         int count = 0;
         int sum = 0;
