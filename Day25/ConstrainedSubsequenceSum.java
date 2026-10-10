@@ -1,6 +1,12 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * LeetCode 1425: Constrained Subsequence Sum
+ * Return the maximum sum of a non-empty subsequence of nums such that for every two consecutive elements in subsequence, distance <= k.
+ * Time Complexity: O(N) DP optimization with monotonic deque.
+ * Space Complexity: O(N) for dp array and deque.
+ */
 public class ConstrainedSubsequenceSum {
     // Calculates max constrained subsequence sum where distance between indices <= k using DP + Deque
     public int constrainedSubsetSum(int[] nums, int k) {
