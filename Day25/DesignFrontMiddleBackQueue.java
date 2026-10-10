@@ -17,4 +17,22 @@ public class DesignFrontMiddleBackQueue {
             left.addLast(right.removeFirst());
         }
     }
+
+    public void pushFront(int val) {
+        left.addFirst(val);
+        rebalance();
+    }
+
+    public void pushMiddle(int val) {
+        if (left.size() > right.size()) {
+            right.addFirst(left.removeLast());
+        }
+        left.addLast(val);
+        rebalance();
+    }
+
+    public void pushBack(int val) {
+        right.addLast(val);
+        rebalance();
+    }
 }
