@@ -2,6 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MaxPointsOnALine {
+    // Computes max collinear 2D points using GCD slope fraction hashing to prevent precision collisions
     public int maxPoints(int[][] points) {
         if (points == null || points.length == 0) return 0;
         int n = points.length;
