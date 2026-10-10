@@ -29,4 +29,9 @@ public class ContinuousSubarrays {
         }
         return count;
     }
+
+    public static void main(String[] args) {
+        ContinuousSubarrays solver = new ContinuousSubarrays();
+        System.out.println("Continuous Subarrays: " + solver.continuousSubarrays(new int[]{5, 4, 2, 4})); // 8
+    }
 }
