@@ -30,6 +30,22 @@ public class DesignHashSet {
         }
     }
 
+    public void remove(int key) {
+        int index = getHash(key);
+        if (buckets[index] == null) return;
+        SetBucketNode prev = find(buckets[index], key);
+        if (prev.next != null) {
+            prev.next = prev.next.next;
+        }
+    }
+
+    public boolean contains(int key) {
+        int index = getHash(key);
+        if (buckets[index] == null) return false;
+        SetBucketNode prev = find(buckets[index], key);
+        return prev.next != null;
+    }
+
     private SetBucketNode find(SetBucketNode bucket, int key) {
         SetBucketNode curr = bucket, prev = null;
         while (curr != null && curr.key != key) {
