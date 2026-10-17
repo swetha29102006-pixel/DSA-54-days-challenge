@@ -3,6 +3,7 @@ public class RansomNote {
         if (ransomNote.length() > magazine.length()) {
             return false;
         }
+        int[] counts = new int[26];
         return false;
     }
 }
