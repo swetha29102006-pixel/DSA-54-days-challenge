@@ -1,6 +1,12 @@
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * LeetCode 454: 4Sum II
+ * Given four integer arrays of length n, return number of tuples (i, j, k, l) such that nums1[i] + nums2[j] + nums3[k] + nums4[l] == 0.
+ * Time Complexity: O(N^2) where N is array length.
+ * Space Complexity: O(N^2) for hash map storing pair sums.
+ */
 public class FourSumII {
     // Calculates total quadruplets that sum to 0 in O(N^2) using HashMap pairing
     public int fourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) {
