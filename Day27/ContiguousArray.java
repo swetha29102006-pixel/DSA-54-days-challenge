@@ -2,6 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ContiguousArray {
+    // Finds maximum length of contiguous subarray with equal number of 0s and 1s using prefix balance hashing
     public int findMaxLength(int[] nums) {
         Map<Integer, Integer> map = new HashMap<>();
         map.put(0, -1);
