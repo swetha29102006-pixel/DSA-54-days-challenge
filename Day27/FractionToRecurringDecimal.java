@@ -2,6 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FractionToRecurringDecimal {
+    // Converts fraction to decimal string detecting recurring repeating parts using remainder hash map
     public String fractionToDecimal(int numerator, int denominator) {
         if (numerator == 0) return "0";
         StringBuilder sb = new StringBuilder();
