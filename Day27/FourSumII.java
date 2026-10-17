@@ -23,4 +23,10 @@ public class FourSumII {
 
         return count;
     }
+
+    public static void main(String[] args) {
+        FourSumII solver = new FourSumII();
+        int[] nums1 = {1, 2}, nums2 = {-2, -1}, nums3 = {-1, 2}, nums4 = {0, 2};
+        System.out.println("4Sum II Count: " + solver.fourSumCount(nums1, nums2, nums3, nums4)); // 2
+    }
 }
