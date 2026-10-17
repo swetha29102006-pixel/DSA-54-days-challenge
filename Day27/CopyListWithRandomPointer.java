@@ -24,6 +24,13 @@ public class CopyListWithRandomPointer {
             curr = curr.next;
         }
 
-        return null;
+        curr = head;
+        while (curr != null) {
+            map.get(curr).next = map.get(curr.next);
+            map.get(curr).random = map.get(curr.random);
+            curr = curr.next;
+        }
+
+        return map.get(head);
     }
 }
