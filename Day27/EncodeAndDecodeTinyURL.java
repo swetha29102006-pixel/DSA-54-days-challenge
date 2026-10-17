@@ -2,6 +2,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
+/**
+ * LeetCode 535: Encode and Decode TinyURL
+ * Design a URL shortening service that encodes a URL to a shortened URL and decodes a shortened URL to original URL.
+ * Time Complexity: O(1) average time for encode and decode.
+ * Space Complexity: O(N) where N is number of shortened URLs.
+ */
 public class EncodeAndDecodeTinyURL {
     private static final String BASE_HOST = "http://tinyurl.com/";
     private static final String CHARS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
