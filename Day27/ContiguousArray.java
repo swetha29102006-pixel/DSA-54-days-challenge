@@ -1,6 +1,12 @@
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * LeetCode 525: Contiguous Array
+ * Given a binary array nums, return the maximum length of a contiguous subarray with an equal number of 0 and 1.
+ * Time Complexity: O(N) single pass through array.
+ * Space Complexity: O(N) for balance-to-earliest-index hash map.
+ */
 public class ContiguousArray {
     // Finds maximum length of contiguous subarray with equal number of 0s and 1s using prefix balance hashing
     public int findMaxLength(int[] nums) {
