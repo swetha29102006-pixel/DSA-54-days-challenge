@@ -16,4 +16,17 @@ public class EncodeAndDecodeTinyURL {
         }
         return sb.toString();
     }
+
+    public String encode(String longUrl) {
+        if (longToShort.containsKey(longUrl)) {
+            return BASE_HOST + longToShort.get(longUrl);
+        }
+        String key = getKey();
+        while (shortToLong.containsKey(key)) {
+            key = getKey();
+        }
+        shortToLong.put(key, longUrl);
+        longToShort.put(longUrl, key);
+        return BASE_HOST + key;
+    }
 }
