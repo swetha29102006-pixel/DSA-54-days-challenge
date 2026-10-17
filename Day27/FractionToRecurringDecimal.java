@@ -32,4 +32,11 @@ public class FractionToRecurringDecimal {
 
         return sb.toString();
     }
+
+    public static void main(String[] args) {
+        FractionToRecurringDecimal solver = new FractionToRecurringDecimal();
+        System.out.println("1/2: " + solver.fractionToDecimal(1, 2));     // 0.5
+        System.out.println("2/1: " + solver.fractionToDecimal(2, 1));     // 2
+        System.out.println("4/333: " + solver.fractionToDecimal(4, 333)); // 0.(012)
+    }
 }
