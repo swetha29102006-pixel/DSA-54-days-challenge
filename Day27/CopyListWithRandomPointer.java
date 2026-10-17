@@ -14,6 +14,7 @@ class Node {
 }
 
 public class CopyListWithRandomPointer {
+    // Deep copies a linked list with random pointers using node-to-clone hash table
     public Node copyRandomList(Node head) {
         if (head == null) return null;
         Map<Node, Node> map = new HashMap<>();
