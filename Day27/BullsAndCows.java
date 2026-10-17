@@ -1,4 +1,5 @@
 public class BullsAndCows {
+    // Calculates bulls (exact position matches) and cows (misplaced matches) using two-way frequency hashing
     public String getHint(String secret, String guess) {
         int bulls = 0;
         int cows = 0;
