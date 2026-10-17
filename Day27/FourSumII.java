@@ -13,6 +13,13 @@ public class FourSumII {
             }
         }
 
+        for (int c : nums3) {
+            for (int d : nums4) {
+                int target = -(c + d);
+                count += map.getOrDefault(target, 0);
+            }
+        }
+
         return count;
     }
 }
