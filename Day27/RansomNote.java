@@ -14,4 +14,10 @@ public class RansomNote {
         }
         return true;
     }
+
+    public static void main(String[] args) {
+        RansomNote solver = new RansomNote();
+        System.out.println("canConstruct('a', 'b'): " + solver.canConstruct("a", "b")); // false
+        System.out.println("canConstruct('aa', 'aab'): " + solver.canConstruct("aa", "aab")); // true
+    }
 }
