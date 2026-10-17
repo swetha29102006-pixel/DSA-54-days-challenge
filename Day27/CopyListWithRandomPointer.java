@@ -1,6 +1,12 @@
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * LeetCode 138: Copy List with Random Pointer
+ * Construct a deep copy of a linked list where each node contains an additional random pointer.
+ * Time Complexity: O(N) two pass traversal.
+ * Space Complexity: O(N) for node-to-clone hash map.
+ */
 class Node {
     int val;
     Node next;
