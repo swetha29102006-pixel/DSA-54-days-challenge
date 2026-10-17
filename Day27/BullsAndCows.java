@@ -1,3 +1,9 @@
+/**
+ * LeetCode 299: Bulls and Cows
+ * Provide hints for the Bulls and Cows game where bulls are exact matches and cows are digits in the wrong position.
+ * Time Complexity: O(N) single pass through the strings.
+ * Space Complexity: O(1) fixed 10 digit frequency tracker.
+ */
 public class BullsAndCows {
     // Calculates bulls (exact position matches) and cows (misplaced matches) using two-way frequency hashing
     public String getHint(String secret, String guess) {
