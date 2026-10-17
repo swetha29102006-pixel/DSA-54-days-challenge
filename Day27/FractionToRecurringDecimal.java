@@ -1,6 +1,13 @@
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * LeetCode 166: Fraction to Recurring Decimal
+ * Given two integers representing the numerator and denominator of a fraction, return the fraction in string format.
+ * If the fractional part is repeating, enclose repeating part in parentheses.
+ * Time Complexity: O(denominator) maximum distinct remainders.
+ * Space Complexity: O(denominator) for hash map storing remainder positions.
+ */
 public class FractionToRecurringDecimal {
     // Converts fraction to decimal string detecting recurring repeating parts using remainder hash map
     public String fractionToDecimal(int numerator, int denominator) {
