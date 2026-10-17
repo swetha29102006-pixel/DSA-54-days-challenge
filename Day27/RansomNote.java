@@ -4,6 +4,9 @@ public class RansomNote {
             return false;
         }
         int[] counts = new int[26];
+        for (char c : magazine.toCharArray()) {
+            counts[c - 'a']++;
+        }
         return false;
     }
 }
