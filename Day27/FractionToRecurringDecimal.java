@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class FractionToRecurringDecimal {
     public String fractionToDecimal(int numerator, int denominator) {
         if (numerator == 0) return "0";
@@ -12,6 +15,7 @@ public class FractionToRecurringDecimal {
         if (remainder == 0) return sb.toString();
 
         sb.append(".");
+        Map<Long, Integer> map = new HashMap<>();
         return sb.toString();
     }
 }
