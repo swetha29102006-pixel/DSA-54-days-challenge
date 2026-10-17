@@ -9,8 +9,13 @@ public class BullsAndCows {
             int g = guess.charAt(i) - '0';
             if (s == g) {
                 bulls++;
+            } else {
+                if (count[s] < 0) cows++;
+                count[s]++;
+                if (count[g] > 0) cows++;
+                count[g]--;
             }
         }
-        return "";
+        return bulls + "A" + cows + "B";
     }
 }
