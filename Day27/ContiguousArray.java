@@ -10,6 +10,11 @@ public class ContiguousArray {
 
         for (int i = 0; i < nums.length; i++) {
             balance += (nums[i] == 1 ? 1 : -1);
+            if (map.containsKey(balance)) {
+                maxLen = Math.max(maxLen, i - map.get(balance));
+            } else {
+                map.put(balance, i);
+            }
         }
         return maxLen;
     }
