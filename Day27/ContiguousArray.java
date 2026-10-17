@@ -19,4 +19,10 @@ public class ContiguousArray {
         }
         return maxLen;
     }
+
+    public static void main(String[] args) {
+        ContiguousArray solver = new ContiguousArray();
+        System.out.println("Max length [0, 1]: " + solver.findMaxLength(new int[]{0, 1})); // 2
+        System.out.println("Max length [0, 1, 0]: " + solver.findMaxLength(new int[]{0, 1, 0})); // 2
+    }
 }
