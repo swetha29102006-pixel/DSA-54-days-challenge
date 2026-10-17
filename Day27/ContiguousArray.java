@@ -7,6 +7,10 @@ public class ContiguousArray {
         map.put(0, -1);
         int maxLen = 0;
         int balance = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            balance += (nums[i] == 1 ? 1 : -1);
+        }
         return maxLen;
     }
 }
