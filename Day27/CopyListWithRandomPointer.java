@@ -11,4 +11,8 @@ class Node {
 }
 
 public class CopyListWithRandomPointer {
+    public Node copyRandomList(Node head) {
+        if (head == null) return null;
+        return null;
+    }
 }
