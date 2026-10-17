@@ -7,6 +7,11 @@ public class RansomNote {
         for (char c : magazine.toCharArray()) {
             counts[c - 'a']++;
         }
-        return false;
+        for (char c : ransomNote.toCharArray()) {
+            if (--counts[c - 'a'] < 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
