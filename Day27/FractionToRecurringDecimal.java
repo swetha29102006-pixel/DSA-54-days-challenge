@@ -16,6 +16,19 @@ public class FractionToRecurringDecimal {
 
         sb.append(".");
         Map<Long, Integer> map = new HashMap<>();
+
+        while (remainder != 0) {
+            if (map.containsKey(remainder)) {
+                sb.insert(map.get(remainder), "(");
+                sb.append(")");
+                break;
+            }
+            map.put(remainder, sb.length());
+            remainder *= 10;
+            sb.append(remainder / den);
+            remainder %= den;
+        }
+
         return sb.toString();
     }
 }
