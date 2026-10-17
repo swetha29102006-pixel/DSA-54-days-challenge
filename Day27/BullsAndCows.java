@@ -19,4 +19,10 @@ public class BullsAndCows {
         }
         return bulls + "A" + cows + "B";
     }
+
+    public static void main(String[] args) {
+        BullsAndCows solver = new BullsAndCows();
+        System.out.println("Hint (1807, 7810): " + solver.getHint("1807", "7810")); // 1A3B
+        System.out.println("Hint (1123, 0111): " + solver.getHint("1123", "0111")); // 1A1B
+    }
 }
