@@ -34,4 +34,17 @@ public class CopyListWithRandomPointer {
 
         return map.get(head);
     }
+
+    public static void main(String[] args) {
+        Node n1 = new Node(7);
+        Node n2 = new Node(13);
+        Node n3 = new Node(11);
+        n1.next = n2; n2.next = n3;
+        n2.random = n1; n3.random = n2;
+
+        CopyListWithRandomPointer solver = new CopyListWithRandomPointer();
+        Node clonedHead = solver.copyRandomList(n1);
+        System.out.println("Original head val: " + n1.val + ", Cloned head val: " + clonedHead.val);
+        System.out.println("Cloned node2 random val: " + clonedHead.next.random.val); // 7
+    }
 }
