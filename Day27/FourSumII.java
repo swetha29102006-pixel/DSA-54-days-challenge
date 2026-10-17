@@ -2,6 +2,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FourSumII {
+    // Calculates total quadruplets that sum to 0 in O(N^2) using HashMap pairing
     public int fourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) {
         Map<Integer, Integer> map = new HashMap<>();
         int count = 0;
