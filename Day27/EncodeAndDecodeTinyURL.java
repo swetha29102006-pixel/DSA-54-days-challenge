@@ -29,4 +29,9 @@ public class EncodeAndDecodeTinyURL {
         longToShort.put(longUrl, key);
         return BASE_HOST + key;
     }
+
+    public String decode(String shortUrl) {
+        String key = shortUrl.replace(BASE_HOST, "");
+        return shortToLong.get(key);
+    }
 }
