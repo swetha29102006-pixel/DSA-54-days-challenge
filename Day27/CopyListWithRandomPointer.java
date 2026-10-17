@@ -17,6 +17,13 @@ public class CopyListWithRandomPointer {
     public Node copyRandomList(Node head) {
         if (head == null) return null;
         Map<Node, Node> map = new HashMap<>();
+
+        Node curr = head;
+        while (curr != null) {
+            map.put(curr, new Node(curr.val));
+            curr = curr.next;
+        }
+
         return null;
     }
 }
