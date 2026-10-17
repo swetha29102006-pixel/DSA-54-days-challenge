@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 class Node {
     int val;
     Node next;
@@ -13,6 +16,7 @@ class Node {
 public class CopyListWithRandomPointer {
     public Node copyRandomList(Node head) {
         if (head == null) return null;
+        Map<Node, Node> map = new HashMap<>();
         return null;
     }
 }
