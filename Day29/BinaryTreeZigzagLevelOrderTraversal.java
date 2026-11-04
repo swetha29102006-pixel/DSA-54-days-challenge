@@ -4,6 +4,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * LeetCode 103: Binary Tree Zigzag Level Order Traversal
+ * Given root of a binary tree, return zigzag level order traversal of nodes' values.
+ * Time Complexity: O(N) where N is number of nodes in tree.
+ * Space Complexity: O(N) for BFS queue and level buffers.
+ */
 class TreeNode {
     int val;
     TreeNode left;
