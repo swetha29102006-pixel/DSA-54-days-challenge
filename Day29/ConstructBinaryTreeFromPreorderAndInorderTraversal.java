@@ -15,6 +15,7 @@ class TreeNode {
 }
 
 public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
+    // Reconstructs binary tree from preorder and inorder sequences using HashMap index lookup
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         Map<Integer, Integer> inMap = new HashMap<>();
         for (int i = 0; i < inorder.length; i++) {
