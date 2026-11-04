@@ -38,4 +38,14 @@ public class BinaryTreePostorderTraversal {
         }
         return result;
     }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(1);
+        root.right = new TreeNode(2);
+        root.right.left = new TreeNode(3);
+
+        BinaryTreePostorderTraversal solver = new BinaryTreePostorderTraversal();
+        List<Integer> traversal = solver.postorderTraversal(root);
+        System.out.println("Postorder Traversal: " + traversal); // [3, 2, 1]
+    }
 }
