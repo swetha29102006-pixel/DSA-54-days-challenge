@@ -1,5 +1,7 @@
+import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 class TreeNode {
     int val;
@@ -20,6 +22,9 @@ public class BinaryTreeLevelOrderTraversalII {
         if (root == null) {
             return result;
         }
+
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
         return result;
     }
 }
