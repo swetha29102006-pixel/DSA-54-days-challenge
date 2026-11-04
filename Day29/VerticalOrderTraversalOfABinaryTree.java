@@ -30,6 +30,14 @@ public class VerticalOrderTraversalOfABinaryTree {
             return result;
         }
         List<CoordinatePoint> points = new ArrayList<>();
+        dfs(root, 0, 0, points);
         return result;
+    }
+
+    private void dfs(TreeNode node, int row, int col, List<CoordinatePoint> points) {
+        if (node == null) return;
+        points.add(new CoordinatePoint(row, col, node.val));
+        dfs(node.left, row + 1, col - 1, points);
+        dfs(node.right, row + 1, col + 1, points);
     }
 }
