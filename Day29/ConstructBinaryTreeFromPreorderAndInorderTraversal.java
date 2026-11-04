@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 class TreeNode {
     int val;
     TreeNode left;
@@ -13,6 +16,10 @@ class TreeNode {
 
 public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
     public TreeNode buildTree(int[] preorder, int[] inorder) {
+        Map<Integer, Integer> inMap = new HashMap<>();
+        for (int i = 0; i < inorder.length; i++) {
+            inMap.put(inorder[i], i);
+        }
         return null;
     }
 }
