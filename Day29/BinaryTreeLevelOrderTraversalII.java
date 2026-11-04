@@ -4,6 +4,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * LeetCode 107: Binary Tree Level Order Traversal II
+ * Given root of a binary tree, return the bottom-up level order traversal of its nodes' values.
+ * Time Complexity: O(N) where N is number of nodes in tree.
+ * Space Complexity: O(N) for BFS queue and resulting level lists.
+ */
 class TreeNode {
     int val;
     TreeNode left;
