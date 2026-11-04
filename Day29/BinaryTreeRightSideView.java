@@ -25,6 +25,19 @@ public class BinaryTreeRightSideView {
 
         Queue<TreeNode> queue = new ArrayDeque<>();
         queue.offer(root);
+
+        while (!queue.isEmpty()) {
+            int levelSize = queue.size();
+            for (int i = 0; i < levelSize; i++) {
+                TreeNode curr = queue.poll();
+                if (i == levelSize - 1) {
+                    visibleValues.add(curr.val);
+                }
+                if (curr.left != null) queue.offer(curr.left);
+                if (curr.right != null) queue.offer(curr.right);
+            }
+        }
+
         return visibleValues;
     }
 }
