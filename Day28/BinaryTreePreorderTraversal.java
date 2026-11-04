@@ -17,6 +17,9 @@ class TreeNode {
 public class BinaryTreePreorderTraversal {
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
         return result;
     }
 }
