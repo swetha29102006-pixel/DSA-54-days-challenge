@@ -18,6 +18,7 @@ class TreeNode {
 }
 
 public class BinaryTreeLevelOrderTraversalII {
+    // Bottom-up level order traversal returning level lists from bottom leaves up to root
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         LinkedList<List<Integer>> result = new LinkedList<>();
         if (root == null) {
