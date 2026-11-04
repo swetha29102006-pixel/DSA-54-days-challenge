@@ -3,6 +3,12 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * LeetCode 145: Binary Tree Postorder Traversal
+ * Given the root of a binary tree, return the postorder traversal of its nodes' values.
+ * Time Complexity: O(N) single pass visiting every tree node.
+ * Space Complexity: O(H) for tree height in stack.
+ */
 class TreeNode {
     int val;
     TreeNode left;
