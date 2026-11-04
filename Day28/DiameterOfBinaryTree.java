@@ -12,4 +12,10 @@ class TreeNode {
 }
 
 public class DiameterOfBinaryTree {
+    private int maxDiameter;
+
+    public int diameterOfBinaryTree(TreeNode root) {
+        maxDiameter = 0;
+        return maxDiameter;
+    }
 }
