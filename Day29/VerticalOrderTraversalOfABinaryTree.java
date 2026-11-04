@@ -26,6 +26,10 @@ class CoordinatePoint {
 public class VerticalOrderTraversalOfABinaryTree {
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
+        List<CoordinatePoint> points = new ArrayList<>();
         return result;
     }
 }
