@@ -17,6 +17,7 @@ class Node {
 }
 
 public class PopulatingNextRightPointersInEachNode {
+    // Connects each node's next pointer to its right sibling using O(1) extra space level order traversal
     public Node connect(Node root) {
         if (root == null) {
             return null;
