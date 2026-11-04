@@ -30,6 +30,16 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal {
         if (inStart > inEnd || postStart > postEnd) {
             return null;
         }
-        return null;
+
+        TreeNode root = new TreeNode(postorder[postEnd]);
+        int inRoot = inMap.get(root.val);
+        int numsLeft = inRoot - inStart;
+
+        root.left = build(inorder, inStart, inRoot - 1,
+                          postorder, postStart, postStart + numsLeft - 1, inMap);
+        root.right = build(inorder, inRoot + 1, inEnd,
+                           postorder, postStart + numsLeft, postEnd - 1, inMap);
+
+        return root;
     }
 }
