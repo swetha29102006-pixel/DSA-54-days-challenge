@@ -21,6 +21,10 @@ public class PopulatingNextRightPointersInEachNode {
         if (root == null) {
             return null;
         }
+        Node leftmost = root;
+        while (leftmost.left != null) {
+            leftmost = leftmost.left;
+        }
         return root;
     }
 }
