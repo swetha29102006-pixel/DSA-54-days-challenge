@@ -13,6 +13,9 @@ class TreeNode {
 
 public class BalancedBinaryTree {
     public boolean isBalanced(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
         return false;
     }
 }
