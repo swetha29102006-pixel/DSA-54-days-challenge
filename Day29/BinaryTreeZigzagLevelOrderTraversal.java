@@ -18,6 +18,7 @@ class TreeNode {
 }
 
 public class BinaryTreeZigzagLevelOrderTraversal {
+    // Alternating direction zigzag level order traversal using BFS queue and deque
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         if (root == null) {
