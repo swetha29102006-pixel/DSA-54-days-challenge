@@ -22,6 +22,6 @@ public class SameTree {
         if (p.val != q.val) {
             return false;
         }
-        return true;
+        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
 }
