@@ -1,6 +1,12 @@
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * LeetCode 105: Construct Binary Tree from Preorder and Inorder Traversal
+ * Given two integer arrays preorder and inorder, construct and return the binary tree.
+ * Time Complexity: O(N) where N is number of nodes.
+ * Space Complexity: O(N) for hash map storing inorder indices.
+ */
 class TreeNode {
     int val;
     TreeNode left;
