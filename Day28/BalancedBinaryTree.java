@@ -35,4 +35,13 @@ public class BalancedBinaryTree {
         }
         return Math.max(left, right) + 1;
     }
+
+    public static void main(String[] args) {
+        TreeNode balanced = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
+        TreeNode unbalanced = new TreeNode(1, new TreeNode(2, new TreeNode(3, new TreeNode(4), null), null), null);
+
+        BalancedBinaryTree solver = new BalancedBinaryTree();
+        System.out.println("Tree 1 is balanced: " + solver.isBalanced(balanced));     // true
+        System.out.println("Tree 2 is balanced: " + solver.isBalanced(unbalanced));   // false
+    }
 }
