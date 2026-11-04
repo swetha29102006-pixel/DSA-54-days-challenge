@@ -41,4 +41,14 @@ public class BinaryTreeRightSideView {
 
         return visibleValues;
     }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2, null, new TreeNode(5));
+        root.right = new TreeNode(3, null, new TreeNode(4));
+
+        BinaryTreeRightSideView solver = new BinaryTreeRightSideView();
+        List<Integer> view = solver.rightSideView(root);
+        System.out.println("Right Side View: " + view); // [1, 3, 4]
+    }
 }
