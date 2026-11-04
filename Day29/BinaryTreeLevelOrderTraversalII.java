@@ -45,4 +45,14 @@ public class BinaryTreeLevelOrderTraversalII {
 
         return result;
     }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(9);
+        root.right = new TreeNode(20, new TreeNode(15), new TreeNode(7));
+
+        BinaryTreeLevelOrderTraversalII solver = new BinaryTreeLevelOrderTraversalII();
+        List<List<Integer>> result = solver.levelOrderBottom(root);
+        System.out.println("Bottom-Up Level Order: " + result); // [[15, 7], [9, 20], [3]]
+    }
 }
