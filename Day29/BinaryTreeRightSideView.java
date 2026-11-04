@@ -17,6 +17,7 @@ class TreeNode {
 }
 
 public class BinaryTreeRightSideView {
+    // Collects rightmost node value of each level using BFS level order traversal
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> visibleValues = new ArrayList<>();
         if (root == null) {
