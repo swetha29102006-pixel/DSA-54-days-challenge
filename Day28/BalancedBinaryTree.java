@@ -16,6 +16,13 @@ public class BalancedBinaryTree {
         if (root == null) {
             return true;
         }
-        return false;
+        return checkHeight(root) != -1;
+    }
+
+    private int checkHeight(TreeNode node) {
+        if (node == null) {
+            return 0;
+        }
+        return 0;
     }
 }
