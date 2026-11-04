@@ -19,6 +19,9 @@ public class SameTree {
         if (p == null || q == null) {
             return false;
         }
-        return false;
+        if (p.val != q.val) {
+            return false;
+        }
+        return true;
     }
 }
