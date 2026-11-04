@@ -16,6 +16,9 @@ public class DiameterOfBinaryTree {
 
     public int diameterOfBinaryTree(TreeNode root) {
         maxDiameter = 0;
+        if (root == null) {
+            return 0;
+        }
         return maxDiameter;
     }
 }
