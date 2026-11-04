@@ -3,6 +3,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * LeetCode 199: Binary Tree Right Side View
+ * Return values of nodes you can see ordered from top to bottom standing on right side of tree.
+ * Time Complexity: O(N) visits every node once.
+ * Space Complexity: O(D) where D is maximum diameter / level width of tree.
+ */
 class TreeNode {
     int val;
     TreeNode left;
