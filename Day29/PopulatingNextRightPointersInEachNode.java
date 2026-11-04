@@ -1,3 +1,9 @@
+/**
+ * LeetCode 116: Populating Next Right Pointers in Each Node
+ * Populate each next pointer to point to its next right node in a perfect binary tree.
+ * Time Complexity: O(N) where N is number of nodes.
+ * Space Complexity: O(1) auxiliary memory.
+ */
 class Node {
     public int val;
     public Node left;
