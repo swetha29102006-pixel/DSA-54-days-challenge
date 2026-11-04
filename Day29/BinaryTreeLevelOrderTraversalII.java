@@ -17,6 +17,9 @@ class TreeNode {
 public class BinaryTreeLevelOrderTraversalII {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         LinkedList<List<Integer>> result = new LinkedList<>();
+        if (root == null) {
+            return result;
+        }
         return result;
     }
 }
