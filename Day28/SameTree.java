@@ -25,4 +25,14 @@ public class SameTree {
         }
         return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
+
+    public static void main(String[] args) {
+        TreeNode t1 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+        TreeNode t2 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+        TreeNode t3 = new TreeNode(1, new TreeNode(2), null);
+
+        SameTree solver = new SameTree();
+        System.out.println("t1 and t2 are same: " + solver.isSameTree(t1, t2)); // true
+        System.out.println("t1 and t3 are same: " + solver.isSameTree(t1, t3)); // false
+    }
 }
