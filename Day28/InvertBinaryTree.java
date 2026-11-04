@@ -12,6 +12,7 @@ class TreeNode {
 }
 
 public class InvertBinaryTree {
+    // Recursively inverts/mirrors a binary tree by swapping left and right subtrees
     public TreeNode invertTree(TreeNode root) {
         if (root == null) {
             return null;
