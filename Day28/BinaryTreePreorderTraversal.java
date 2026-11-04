@@ -1,4 +1,6 @@
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
 
 class TreeNode {
@@ -20,6 +22,8 @@ public class BinaryTreePreorderTraversal {
         if (root == null) {
             return result;
         }
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        stack.push(root);
         return result;
     }
 }
