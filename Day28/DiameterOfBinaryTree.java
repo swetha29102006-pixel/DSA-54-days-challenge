@@ -30,4 +30,13 @@ public class DiameterOfBinaryTree {
         maxDiameter = Math.max(maxDiameter, left + right);
         return Math.max(left, right) + 1;
     }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2, new TreeNode(4), new TreeNode(5));
+        root.right = new TreeNode(3);
+
+        DiameterOfBinaryTree solver = new DiameterOfBinaryTree();
+        System.out.println("Diameter: " + solver.diameterOfBinaryTree(root)); // 3
+    }
 }
