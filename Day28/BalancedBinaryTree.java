@@ -12,6 +12,7 @@ class TreeNode {
 }
 
 public class BalancedBinaryTree {
+    // Verifies height-balanced binary tree in O(N) time with bottom-up height verification
     public boolean isBalanced(TreeNode root) {
         if (root == null) {
             return true;
