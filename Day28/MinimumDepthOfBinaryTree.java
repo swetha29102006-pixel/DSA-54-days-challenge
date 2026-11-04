@@ -12,6 +12,7 @@ class TreeNode {
 }
 
 public class MinimumDepthOfBinaryTree {
+    // Calculates minimum depth from root node to the nearest leaf node
     public int minDepth(TreeNode root) {
         if (root == null) {
             return 0;
@@ -25,6 +26,6 @@ public class MinimumDepthOfBinaryTree {
         if (root.right == null) {
             return minDepth(root.left) + 1;
         }
-        return 0;
+        return Math.min(minDepth(root.left), minDepth(root.right)) + 1;
     }
 }
