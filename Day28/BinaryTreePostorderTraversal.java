@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.List;
+
 class TreeNode {
     int val;
     TreeNode left;
@@ -12,4 +15,8 @@ class TreeNode {
 }
 
 public class BinaryTreePostorderTraversal {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        LinkedList<Integer> result = new LinkedList<>();
+        return result;
+    }
 }
