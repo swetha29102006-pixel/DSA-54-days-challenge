@@ -51,4 +51,14 @@ public class BinaryTreeZigzagLevelOrderTraversal {
 
         return result;
     }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(9);
+        root.right = new TreeNode(20, new TreeNode(15), new TreeNode(7));
+
+        BinaryTreeZigzagLevelOrderTraversal solver = new BinaryTreeZigzagLevelOrderTraversal();
+        List<List<Integer>> levels = solver.zigzagLevelOrder(root);
+        System.out.println("Zigzag Level Order: " + levels); // [[3], [20, 9], [15, 7]]
+    }
 }
