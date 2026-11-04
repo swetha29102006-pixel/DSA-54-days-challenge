@@ -1,3 +1,9 @@
+/**
+ * LeetCode 111: Minimum Depth of Binary Tree
+ * Find the minimum depth of a binary tree (number of nodes along shortest path from root to nearest leaf).
+ * Time Complexity: O(N) visiting nodes up to the closest leaf.
+ * Space Complexity: O(H) where H is tree height for recursion stack.
+ */
 class TreeNode {
     int val;
     TreeNode left;
