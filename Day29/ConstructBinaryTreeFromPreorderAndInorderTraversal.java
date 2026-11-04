@@ -42,4 +42,15 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
 
         return root;
     }
+
+    public static void main(String[] args) {
+        int[] preorder = {3, 9, 20, 15, 7};
+        int[] inorder = {9, 3, 15, 20, 7};
+
+        ConstructBinaryTreeFromPreorderAndInorderTraversal solver = new ConstructBinaryTreeFromPreorderAndInorderTraversal();
+        TreeNode root = solver.buildTree(preorder, inorder);
+        System.out.println("Reconstructed Root: " + root.val); // 3
+        System.out.println("Left Child: " + root.left.val);     // 9
+        System.out.println("Right Child: " + root.right.val);   // 20
+    }
 }
