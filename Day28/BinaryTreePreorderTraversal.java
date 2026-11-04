@@ -17,6 +17,7 @@ class TreeNode {
 }
 
 public class BinaryTreePreorderTraversal {
+    // Iterative preorder traversal (Root -> Left -> Right) using a LIFO stack
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) {
