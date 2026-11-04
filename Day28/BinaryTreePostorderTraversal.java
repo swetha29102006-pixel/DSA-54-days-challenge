@@ -17,6 +17,7 @@ class TreeNode {
 }
 
 public class BinaryTreePostorderTraversal {
+    // Postorder traversal (Left -> Right -> Root) using modified preorder and front insertion
     public List<Integer> postorderTraversal(TreeNode root) {
         LinkedList<Integer> result = new LinkedList<>();
         if (root == null) {
