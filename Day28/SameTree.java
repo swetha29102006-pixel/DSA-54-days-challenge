@@ -1,3 +1,9 @@
+/**
+ * LeetCode 100: Same Tree
+ * Given roots of two binary trees p and q, return true if they are structurally identical and nodes have same value.
+ * Time Complexity: O(min(N, M)) where N and M are nodes in p and q.
+ * Space Complexity: O(min(H1, H2)) recursion stack depth.
+ */
 class TreeNode {
     int val;
     TreeNode left;
