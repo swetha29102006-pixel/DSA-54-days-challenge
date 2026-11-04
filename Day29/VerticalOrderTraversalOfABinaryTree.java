@@ -25,6 +25,7 @@ class CoordinatePoint {
 }
 
 public class VerticalOrderTraversalOfABinaryTree {
+    // 2D coordinate vertical order traversal sorted by col, row, and val
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         if (root == null) {
