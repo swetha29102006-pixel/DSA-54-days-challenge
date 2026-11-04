@@ -2,6 +2,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * LeetCode 987: Vertical Order Traversal of a Binary Tree
+ * Calculate vertical order traversal where nodes are sorted by col, row, and value.
+ * Time Complexity: O(N log N) sorting points by coordinates.
+ * Space Complexity: O(N) for storing coordinates of all nodes.
+ */
 class TreeNode {
     int val;
     TreeNode left;
