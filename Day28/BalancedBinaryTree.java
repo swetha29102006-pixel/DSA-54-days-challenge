@@ -1,3 +1,9 @@
+/**
+ * LeetCode 110: Balanced Binary Tree
+ * Given a binary tree, determine if it is height-balanced.
+ * Time Complexity: O(N) each node is checked once bottom-up.
+ * Space Complexity: O(H) where H is tree height for recursion stack.
+ */
 class TreeNode {
     int val;
     TreeNode left;
