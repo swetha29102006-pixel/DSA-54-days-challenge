@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class TreeNode {
     int val;
     TreeNode left;
@@ -11,5 +14,18 @@ class TreeNode {
     }
 }
 
+class CoordinatePoint {
+    int row, col, val;
+    CoordinatePoint(int row, int col, int val) {
+        this.row = row;
+        this.col = col;
+        this.val = val;
+    }
+}
+
 public class VerticalOrderTraversalOfABinaryTree {
+    public List<List<Integer>> verticalTraversal(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
+        return result;
+    }
 }
