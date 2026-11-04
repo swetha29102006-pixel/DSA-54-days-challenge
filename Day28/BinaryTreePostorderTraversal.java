@@ -17,6 +17,9 @@ class TreeNode {
 public class BinaryTreePostorderTraversal {
     public List<Integer> postorderTraversal(TreeNode root) {
         LinkedList<Integer> result = new LinkedList<>();
+        if (root == null) {
+            return result;
+        }
         return result;
     }
 }
