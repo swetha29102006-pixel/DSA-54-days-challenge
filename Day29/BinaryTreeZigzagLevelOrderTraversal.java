@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class TreeNode {
     int val;
     TreeNode left;
@@ -12,4 +15,8 @@ class TreeNode {
 }
 
 public class BinaryTreeZigzagLevelOrderTraversal {
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
+        return result;
+    }
 }
