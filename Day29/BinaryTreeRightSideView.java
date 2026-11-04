@@ -1,5 +1,7 @@
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 
 class TreeNode {
     int val;
@@ -20,6 +22,9 @@ public class BinaryTreeRightSideView {
         if (root == null) {
             return visibleValues;
         }
+
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
         return visibleValues;
     }
 }
