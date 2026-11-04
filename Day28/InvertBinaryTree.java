@@ -16,6 +16,8 @@ public class InvertBinaryTree {
         if (root == null) {
             return null;
         }
+        TreeNode leftInverted = invertTree(root.left);
+        TreeNode rightInverted = invertTree(root.right);
         return root;
     }
 }
