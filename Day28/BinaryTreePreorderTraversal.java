@@ -3,6 +3,12 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
+/**
+ * LeetCode 144: Binary Tree Preorder Traversal
+ * Given the root of a binary tree, return the preorder traversal of its nodes' values.
+ * Time Complexity: O(N) where N is number of nodes in binary tree.
+ * Space Complexity: O(H) where H is tree height for call stack / deque.
+ */
 class TreeNode {
     int val;
     TreeNode left;
