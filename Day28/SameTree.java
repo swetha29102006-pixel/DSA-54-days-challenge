@@ -12,6 +12,7 @@ class TreeNode {
 }
 
 public class SameTree {
+    // Recursively verifies structural and value equality between two binary trees
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == null && q == null) {
             return true;
