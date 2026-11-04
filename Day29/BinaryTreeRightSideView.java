@@ -17,6 +17,9 @@ class TreeNode {
 public class BinaryTreeRightSideView {
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> visibleValues = new ArrayList<>();
+        if (root == null) {
+            return visibleValues;
+        }
         return visibleValues;
     }
 }
