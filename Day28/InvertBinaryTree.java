@@ -1,3 +1,9 @@
+/**
+ * LeetCode 226: Invert Binary Tree
+ * Given the root of a binary tree, invert the tree, and return its root.
+ * Time Complexity: O(N) visiting each node once.
+ * Space Complexity: O(H) where H is tree height for recursive call stack.
+ */
 class TreeNode {
     int val;
     TreeNode left;
