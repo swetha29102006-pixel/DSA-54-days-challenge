@@ -1,5 +1,7 @@
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 
 class TreeNode {
     int val;
@@ -20,6 +22,10 @@ public class BinaryTreeZigzagLevelOrderTraversal {
         if (root == null) {
             return result;
         }
+
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.offer(root);
+        boolean leftToRight = true;
         return result;
     }
 }
