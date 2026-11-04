@@ -12,6 +12,7 @@ class TreeNode {
 }
 
 public class DiameterOfBinaryTree {
+    // Calculates diameter (longest path between any two nodes) using bottom-up depth DFS
     private int maxDiameter;
 
     public int diameterOfBinaryTree(TreeNode root) {
