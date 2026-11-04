@@ -24,6 +24,17 @@ public class BinaryTreePostorderTraversal {
         }
         Deque<TreeNode> stack = new ArrayDeque<>();
         stack.push(root);
+
+        while (!stack.isEmpty()) {
+            TreeNode curr = stack.pop();
+            result.addFirst(curr.val);
+            if (curr.left != null) {
+                stack.push(curr.left);
+            }
+            if (curr.right != null) {
+                stack.push(curr.right);
+            }
+        }
         return result;
     }
 }
