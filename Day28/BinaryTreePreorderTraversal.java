@@ -38,4 +38,14 @@ public class BinaryTreePreorderTraversal {
         }
         return result;
     }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(1);
+        root.right = new TreeNode(2);
+        root.right.left = new TreeNode(3);
+
+        BinaryTreePreorderTraversal solver = new BinaryTreePreorderTraversal();
+        List<Integer> traversal = solver.preorderTraversal(root);
+        System.out.println("Preorder Traversal: " + traversal); // [1, 2, 3]
+    }
 }
