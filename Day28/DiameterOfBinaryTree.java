@@ -1,3 +1,9 @@
+/**
+ * LeetCode 543: Diameter of Binary Tree
+ * Return the length of the diameter of the tree (longest path between any two nodes).
+ * Time Complexity: O(N) visiting every node once.
+ * Space Complexity: O(H) where H is tree height for recursive stack.
+ */
 class TreeNode {
     int val;
     TreeNode left;
