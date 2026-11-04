@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 class TreeNode {
@@ -31,6 +32,22 @@ public class VerticalOrderTraversalOfABinaryTree {
         }
         List<CoordinatePoint> points = new ArrayList<>();
         dfs(root, 0, 0, points);
+
+        Collections.sort(points, (a, b) -> {
+            if (a.col != b.col) return Integer.compare(a.col, b.col);
+            if (a.row != b.row) return Integer.compare(a.row, b.row);
+            return Integer.compare(a.val, b.val);
+        });
+
+        int prevCol = Integer.MIN_VALUE;
+        for (CoordinatePoint p : points) {
+            if (p.col != prevCol) {
+                result.add(new ArrayList<>());
+                prevCol = p.col;
+            }
+            result.get(result.size() - 1).add(p.val);
+        }
+
         return result;
     }
 
